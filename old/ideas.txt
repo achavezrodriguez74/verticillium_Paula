@@ -1,0 +1,4 @@
+- Plant harvest
+http://www.sthda.com/english/wiki/comparing-proportions-in-r
+- Gene
+T-test

@@ -1,0 +1,6 @@
+Symptoms	MOCK	WT	ΔLLM1	comp.LLM1	LLM1.GFP	oeLLM1
+healthy	177	31	59	11	10	59
+weak symptoms	3	66	54	14	7	68
+strong symptoms	0	65	32	32	10	44
+very strong symptoms	0	18	5	3	3	9
+dead	0	0	0	0	0	0
