@@ -10,18 +10,14 @@ library(emmeans)
 library(rcompanion)
 library(scales)
 library(ggsignif)
+library(rstatix)  # https://github.com/kassambara/rstatix
+library(tibble)
+library(dplyr)
 
 plates   = read.delim("C:/Users/lucia/OneDrive - Wageningen University & Research/UCI_projects/Project_8 (Reviews)/Family/Pere/doctorado/datasets/plates.txt",dec=".")
-model    = aov(Normalized ~ variable, data = plates)
+model    = aov(Normalized ~ Biological.Rep, data = plates)
 
 # Assumptions----
-par(mfrow = c(1, 2)) # combine plots
-# 1. Homogeneity of variances
-plot(model, which = 3)
-# 2. Normality
-plot(model, which = 2)
-
-# Assumptions 2
 # 2. Normality
 ols_plot_resid_qq(model)
 # 1. Homogeneity of variances
@@ -33,19 +29,18 @@ summary(model)
 TUKEY = TukeyHSD(model, conf.level=.95)
 TUKEY
 
-# t-test
-t.test(plates$Normalized[1:6] , plates$Normalized[25:30],
-       alternative = "two.sided", var.equal = FALSE)
-
 # Figure----
 
-my_comparisons = list( c("WT", "ΔLLM1"), c("WT", "LLM1-NoGFP"), 
-                       c("WT", "LLM1+GFP-C"),  c("WT", "oeLLM1"),
-                       c("ΔLLM1", "oeLLM1"))
+# Testing a non-parametric model
+stat.test = aov(Normalized ~ Biological.Rep, data = plates) %>%
+  tukey_hsd()
+
+stat.test = stat.test %>% filter(!(p.adj.signif == "ns"))
 
 figure_melanization = ggboxplot(plates, x = "Biological.Rep", y = "Normalized",
           ylab = "Normalized melanization", xlab = "") + 
-  stat_compare_means(comparisons = my_comparisons, label = "p.signif")
+  stat_pvalue_manual(stat.test, label = "p.adj.signif", 
+                     y.position = c(1.7, 1.8, 1.9, 1.7,2.0,1.9))
 figure_melanization
 
 png("C:/Users/lucia/OneDrive - Wageningen University & Research/UCI_projects/Project_8 (Reviews)/Family/Pere/doctorado/Figures/figure_melanization.png",
@@ -182,5 +177,107 @@ anova(model.1)
 model.lm1 = artlm(model.1, "treatments")
 marginal.1 = emmeans(model.lm1,~ treatments)
 pairs(marginal.1,adjust = "tukey")
+
+# Sporulation ----
+
+sporas = read.delim("C:/Users/lucia/OneDrive - Wageningen University & Research/UCI_projects/Project_8 (Reviews)/Family/Pere/doctorado/datasets/sporulation.txt")
+model  = aov(Normalized ~ Biological.Rep, data = sporas)
+
+# Assumptions----
+# 2. Normality
+ols_plot_resid_qq(model)
+# 1. Homogeneity of variances
+ols_plot_resid_fit(model)
+bartlett.test(Normalized ~ Biological.Rep, data = sporas)
+
+# Tukey----
+summary(model)
+TUKEY = TukeyHSD(model, conf.level=.95)
+TUKEY
+
+# Testing a non-parametric model
+stat.test = aov(Normalized ~ Biological.Rep, data = sporas) %>%
+  tukey_hsd()
+
+stat.test = stat.test %>% filter(!(p.adj.signif == "ns"))
+
+figure_spores = ggbarplot(sporas, x = "Biological.Rep", y = "Normalized", 
+          ylab = "Normalized conidia formation", xlab = "", add = "mean_se") + 
+  stat_pvalue_manual(stat.test, label = "p.adj.signif", 
+    y.position = c(1.1, 1.2, 1.3, 1.4))
+figure_spores
+
+png("C:/Users/lucia/OneDrive - Wageningen University & Research/UCI_projects/Project_8 (Reviews)/Family/Pere/doctorado/Figures/figure_sporulation.png",
+    width=3500*1.35,height=1969*1.35,res=300)
+print(figure_spores)
+dev.off()
+
+# Real time PCR ----
+# Not normally and not homogenous variances 
+
+realtimePCR = read.delim("C:/Users/lucia/OneDrive - Wageningen University & Research/UCI_projects/Project_8 (Reviews)/Family/Pere/doctorado/datasets/realtimePCR.txt")
+
+model    = aov((Values) ~ Treatments, data = realtimePCR)
+
+# Assumptions----
+# 2. Normality
+ols_plot_resid_qq(model)
+e = resid(model)
+shapiro.test(e)
+# 1. Homogeneity of variances
+ols_plot_resid_fit(model)
+bartlett.test(Values ~ Treatments, data = realtimePCR)
+
+# Kruskall
+kruskal.test(Values ~ Treatments, data = realtimePCR)
+
+# Pairwise
+
+# Dunn's test
+install.packages('dunn.test')
+library(dunn.test)
+dunn.test(realtimePCR$Values, realtimePCR$Treatments, kw=TRUE,
+          method="bh")
+# Conover-Iman
+library(DescTools)
+ConoverTest(realtimePCR$Values, realtimePCR$Treatments,method="holm")
+kwAllPairsConoverTest(realtimePCR$Values ~ as.factor(realtimePCR$Treatments))
+
+# Dwass-steel-critchlow-fligner
+install.packages("PMCMRplus")
+library(PMCMRplus)
+dscfAllPairsTest(realtimePCR$Values ~ as.factor(realtimePCR$Treatments))
+
+# Plotting
+
+stat.test = ConoverTest(realtimePCR$Values, realtimePCR$Treatments,method="holm")
+stat.test = as.data.frame(stat.test[1])
+stat.test$Treatments = row.names(stat.test)
+stat.test = stat.test[, c("Treatments", "mean.rank.diff", "pval")]
+stat.test = stat.test %>% mutate(p.adj.signif = case_when(pval <= 0.05 & pval > 0.01 ~ "*",
+                                                          pval <= 0.01 & pval > 0.001 ~ "**",
+                                                          pval <= 0.001 & pval > 0.0001 ~ "***",
+                                                          pval <= 0.0001 & pval > 0.00001 ~ "****",
+                                                          pval > 0.05 ~ "NS"))
+stat.test = stat.test %>% filter(!(p.adj.signif == "NS"))
+group1    = c("Vel1","Vel2","WT","WT")
+group2    = c("IDD","IDD","Vel1","Vel2")
+stat.test = cbind(stat.test,group1,group2)
+
+figure_pcr = ggbarplot(realtimePCR, x = "Treatments", y = "Values", 
+                          ylab = "Relative Normalized Expression", xlab = "", add = "mean_se") + 
+  stat_pvalue_manual((stat.test), label = "p.adj.signif",
+                     y.position = c(32, 26, 26, 29))
+
+figure_pcr
+
+png("C:/Users/lucia/OneDrive - Wageningen University & Research/UCI_projects/Project_8 (Reviews)/Family/Pere/doctorado/Figures/figure_pcr.png",
+    width=3500*1.35,height=1969*1.35,res=300)
+print(figure_pcr)
+dev.off()
+
+
+
+
 
 

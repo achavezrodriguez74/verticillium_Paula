@@ -1,0 +1,13 @@
+Treatments	Values
+WT	1
+WT	1
+WT	1
+Vel1	14.973
+Vel1	27.053
+Vel1	14.966
+Vel2	5.960
+Vel2	5.427
+Vel2	6.691
+IDD	0.908
+IDD	0.726
+IDD	1.096
