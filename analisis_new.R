@@ -276,6 +276,147 @@ png("C:/Users/lucia/OneDrive - Wageningen University & Research/UCI_projects/Pro
 print(figure_pcr)
 dev.off()
 
+# Real time PCR FINAL ----
+
+realtimePCR     = read.delim("C:/Users/lucia/OneDrive - Wageningen University & Research/UCI_projects/Project_8 (Reviews)/Family/Pere/doctorado/datasets/realtimePCR.txt")
+
+# SXM (normal not homogeneous variances) ----
+realtimePCR.SXM   = realtimePCR %>% filter(Medium == "SXM")
+model.SXM         = aov((Values) ~ Treatments, data = realtimePCR.SXM)
+
+# Assumptions
+# 2. Normality
+ols_plot_resid_qq(model.SXM)
+e = resid(model.SXM)
+shapiro.test(e)
+# 1. Homogeneity of variances
+ols_plot_resid_fit(model.SXM)
+bartlett.test(Values ~ Treatments, data = realtimePCR.SXM)
+
+# PDM (normal not homogeneous variances) ----
+realtimePCR.PDM   = realtimePCR %>% filter(Medium == "PDM")
+model.PDM         = aov((Values) ~ Treatments, data = realtimePCR.PDM)
+
+# Assumptions
+# 2. Normality
+ols_plot_resid_qq(model.PDM)
+e = resid(model.PDM)
+shapiro.test(e)
+# 1. Homogeneity of variances
+ols_plot_resid_fit(model.PDM)
+bartlett.test(Values ~ Treatments, data = realtimePCR.PDM)
+
+# PLATE (not normal not homogeneous variances) ----
+realtimePCR.PLATE = realtimePCR %>% filter(Medium == "PLATE")
+model.PLATE       = aov((Values) ~ Treatments, data = realtimePCR.PLATE)
+
+# Assumptions
+# 2. Normality
+ols_plot_resid_qq(model.PLATE)
+e = resid(model.PLATE)
+shapiro.test(e)
+# 1. Homogeneity of variances
+ols_plot_resid_fit(model.PLATE)
+bartlett.test(Values ~ Treatments, data = realtimePCR.PLATE)
+
+# Conover-Iman ----
+library(DescTools)
+
+# SXM ----
+SXM.pairwise = ConoverTest(realtimePCR.SXM$Values, realtimePCR.SXM$Treatments,method="holm")
+SXM.pairwise
+
+# Plotting
+
+stat.test = ConoverTest(realtimePCR.SXM$Values, realtimePCR.SXM$Treatments,method="holm")
+stat.test = as.data.frame(stat.test[1])
+stat.test$Treatments = row.names(stat.test)
+stat.test = stat.test[, c("Treatments", "mean.rank.diff", "pval")]
+stat.test = stat.test %>% mutate(p.adj.signif = case_when(pval <= 0.05 & pval > 0.01 ~ "*",
+                                                          pval <= 0.01 & pval > 0.001 ~ "**",
+                                                          pval <= 0.001 & pval > 0.0001 ~ "***",
+                                                          pval <= 0.0001 & pval > 0.00001 ~ "****",
+                                                          pval > 0.05 ~ "NS"))
+stat.test = stat.test %>% filter(!(p.adj.signif == "NS"))
+group1    = c("Vel2","WT","Vel2","WT","WT")
+group2    = c("IDD","IDD","Vel1","Vel1","Vel2")
+stat.test.SXM = cbind(stat.test,group1,group2)
+
+figure_pcr.SXM = ggbarplot(realtimePCR.SXM, x = "Treatments", y = "Values", 
+                       ylab = "Relative Normalized Expression", xlab = "", add = "mean_se") + 
+  stat_pvalue_manual((stat.test.SXM), label = "p.adj.signif",
+                     y.position = c(10, 18, 22, 26,30))
+
+figure_pcr.SXM
+
+png("C:/Users/lucia/OneDrive - Wageningen University & Research/UCI_projects/Project_8 (Reviews)/Family/Pere/doctorado/Figures/figure_pcr.SXM.png",
+    width=3500*1.35,height=1969*1.35,res=300)
+print(figure_pcr.SXM)
+dev.off()
+
+# PDM ----
+PDM.pairwise = ConoverTest(realtimePCR.PDM$Values, realtimePCR.PDM$Treatments,method="holm")
+PDM.pairwise
+
+# Plotting
+
+stat.test = ConoverTest(realtimePCR.PDM$Values, realtimePCR.PDM$Treatments,method="holm")
+stat.test = as.data.frame(stat.test[1])
+stat.test$Treatments = row.names(stat.test)
+stat.test = stat.test[, c("Treatments", "mean.rank.diff", "pval")]
+stat.test = stat.test %>% mutate(p.adj.signif = case_when(pval <= 0.05 & pval > 0.01 ~ "*",
+                                                          pval <= 0.01 & pval > 0.001 ~ "**",
+                                                          pval <= 0.001 & pval > 0.0001 ~ "***",
+                                                          pval <= 0.0001 & pval > 0.00001 ~ "****",
+                                                          pval > 0.05 ~ "NS"))
+stat.test = stat.test %>% filter(!(p.adj.signif == "NS"))
+group1    = c("Vel1","Vel2","WT","WT")
+group2    = c("IDD","IDD","Vel1","Vel2")
+stat.test.PDM = cbind(stat.test,group1,group2)
+
+figure_pcr.PDM = ggbarplot(realtimePCR.PDM, x = "Treatments", y = "Values", 
+                       ylab = "Relative Normalized Expression", xlab = "", add = "mean_se") + 
+  stat_pvalue_manual((stat.test.PDM), label = "p.adj.signif",
+                     y.position = c(8, 12, 16, 20))
+
+figure_pcr.PDM
+
+png("C:/Users/lucia/OneDrive - Wageningen University & Research/UCI_projects/Project_8 (Reviews)/Family/Pere/doctorado/Figures/figure_pcr.PDM.png",
+    width=3500*1.35,height=1969*1.35,res=300)
+print(figure_pcr.PDM)
+dev.off()
+
+# PLATE ----
+PLATE.pairwise = ConoverTest(realtimePCR.PLATE$Values, realtimePCR.PLATE$Treatments,method="holm")
+PLATE.pairwise
+
+# Plotting
+
+stat.test = ConoverTest(realtimePCR.PLATE$Values, realtimePCR.PLATE$Treatments,method="holm")
+stat.test = as.data.frame(stat.test[1])
+stat.test$Treatments = row.names(stat.test)
+stat.test = stat.test[, c("Treatments", "mean.rank.diff", "pval")]
+stat.test = stat.test %>% mutate(p.adj.signif = case_when(pval <= 0.05 & pval > 0.01 ~ "*",
+                                                          pval <= 0.01 & pval > 0.001 ~ "**",
+                                                          pval <= 0.001 & pval > 0.0001 ~ "***",
+                                                          pval <= 0.0001 & pval > 0.00001 ~ "****",
+                                                          pval > 0.05 ~ "NS"))
+stat.test = stat.test %>% filter(!(p.adj.signif == "NS"))
+group1    = c("Vel1","Vel2","WT","WT")
+group2    = c("IDD","IDD","Vel1","Vel2")
+stat.test.PLATE = cbind(stat.test,group1,group2)
+
+figure_pcr.PLATE = ggbarplot(realtimePCR.PLATE, x = "Treatments", y = "Values", 
+                       ylab = "Relative Normalized Expression", xlab = "", add = "mean_se") + 
+  stat_pvalue_manual((stat.test.PLATE), label = "p.adj.signif",
+                     y.position = c(32, 26, 26, 29))
+
+figure_pcr.PLATE
+
+png("C:/Users/lucia/OneDrive - Wageningen University & Research/UCI_projects/Project_8 (Reviews)/Family/Pere/doctorado/Figures/figure_pcr.PLATE.png",
+    width=3500*1.35,height=1969*1.35,res=300)
+print(figure_pcr.PLATE)
+dev.off()
 
 
 
