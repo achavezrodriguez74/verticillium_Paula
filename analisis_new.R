@@ -102,24 +102,14 @@ test     = pairs(marginal,adjust = "tukey")
 
 # Figure plant ----
 
-figure_plant = ggplot(total, aes(treatments, as.numeric(rank), fill = (rank))) +
+figure_plant = ggplot(df, aes(treatments, Percent, fill = (rank))) +
   geom_bar(position = "fill", stat = "identity") +
   scale_y_continuous(labels = percent) + 
   scale_fill_manual(name = "", values = c("#ff7f00", "#fdc086", "#ffff99",
                                           "#7fc97f"),
                     breaks=c('4', '3', '2', '1'),
                     labels = c("very strong","strong","weak","healthy")) + 
-  ylab("# Plants [%]") + xlab("") + 
-  geom_signif(comparisons = list(c("WT", "ΔLLM1")), map_signif_level = TRUE,
-              y_position = 1.1,tip_length = 0.01) + 
-  geom_signif(comparisons = list(c("WT", "oeLLM1")), map_signif_level = TRUE,
-                                            y_position = 1.05, tip_length = 0.01) + 
-  geom_signif(comparisons = list(c("ΔLLM1", "oeLLM1")), map_signif_level = TRUE,
-              y_position = 1.0, tip_length = 0.01) + 
-  geom_signif(comparisons = list(c("WT", "comp.LLM1")), map_signif_level = TRUE,
-              y_position = 0.90, tip_length = 0.01) + 
-  geom_signif(comparisons = list(c("WT", "LLM1.GFP")), map_signif_level = TRUE,
-              y_position = 0.95, tip_length = 0.01)
+  ylab("# Plants [%]") + xlab("")
 figure_plant
 
 png("C:/Users/lucia/OneDrive - Wageningen University & Research/UCI_projects/Project_8 (Reviews)/Family/Pere/doctorado/Figures/figure_plant.png",
@@ -291,7 +281,7 @@ e = resid(model.SXM)
 shapiro.test(e)
 # 1. Homogeneity of variances
 ols_plot_resid_fit(model.SXM)
-bartlett.test(Values ~ Treatments, data = realtimePCR.SXM)
+bartlett.test((Values) ~ Treatments, data = realtimePCR.SXM)
 
 # PDM (normal not homogeneous variances) ----
 realtimePCR.PDM   = realtimePCR %>% filter(Medium == "PDM")
@@ -326,6 +316,10 @@ library(DescTools)
 SXM.pairwise = ConoverTest(realtimePCR.SXM$Values, realtimePCR.SXM$Treatments,method="holm")
 SXM.pairwise
 
+library(dunn.test)
+dunn.test(realtimePCR.SXM$Values, realtimePCR.SXM$Treatments, kw=TRUE,
+          method="none")
+
 # Plotting
 
 stat.test = ConoverTest(realtimePCR.SXM$Values, realtimePCR.SXM$Treatments,method="holm")
@@ -358,6 +352,9 @@ dev.off()
 PDM.pairwise = ConoverTest(realtimePCR.PDM$Values, realtimePCR.PDM$Treatments,method="holm")
 PDM.pairwise
 
+dunn.test(realtimePCR.PDM$Values, realtimePCR.PDM$Treatments, kw=TRUE,
+          method="none")
+
 # Plotting
 
 stat.test = ConoverTest(realtimePCR.PDM$Values, realtimePCR.PDM$Treatments,method="holm")
@@ -389,6 +386,9 @@ dev.off()
 # PLATE ----
 PLATE.pairwise = ConoverTest(realtimePCR.PLATE$Values, realtimePCR.PLATE$Treatments,method="holm")
 PLATE.pairwise
+
+dunn.test(realtimePCR.PLATE$Values, realtimePCR.PLATE$Treatments, kw=TRUE,
+          method="none",list=TRUE)
 
 # Plotting
 
