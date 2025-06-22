@@ -1,6 +1,5 @@
-# Melanization----
+# Call packages ----
 
-# Plates----
 library(olsrr)
 library(multcomp)
 library(multcompView)
@@ -13,6 +12,9 @@ library(ggsignif)
 library(rstatix)  # https://github.com/kassambara/rstatix
 library(tibble)
 library(dplyr)
+
+
+# LLM1----
 
 plates   = read.delim("C:/Users/lucia/OneDrive - Wageningen University & Research/UCI_projects/Project_8 (Reviews)/Family/Pere/doctorado/datasets/plates.txt",dec=".")
 model    = aov(Normalized ~ Biological.Rep, data = plates)
@@ -101,6 +103,11 @@ marginal = emmeans(model.lm,~ treatments)
 test     = pairs(marginal,adjust = "tukey")
 
 # Figure plant ----
+
+df = read.delim("C:/Users/lucia/OneDrive - Wageningen University & Research/UCI_projects/Project_8 (Reviews)/Family/Pere/doctorado/datasets/df_LLM1_plant.txt")
+
+df$rank = factor(df$rank,levels=unique(df$rank))
+df$treatments = factor(df$treatments,levels=unique(df$treatments))
 
 figure_plant = ggplot(df, aes(treatments, Percent, fill = (rank))) +
   geom_bar(position = "fill", stat = "identity") +
@@ -418,7 +425,48 @@ png("C:/Users/lucia/OneDrive - Wageningen University & Research/UCI_projects/Pro
 print(figure_pcr.PLATE)
 dev.off()
 
+# AML ----
 
+# Plants total ----
+
+total_AML = read.delim("C:/Users/lucia/OneDrive - Wageningen University & Research/UCI_projects/Project_8 (Reviews)/Family/Pere/doctorado/datasets/new_data_plant_AML.txt")
+
+# Aligned ranks anova ----
+# https://rcompanion.org/handbook/F_16.html
+
+total_AML$treatments = factor(total_AML$treatments,
+                              levels=unique(total_AML$treatments))
+
+model = art(as.numeric(rank) ~ treatments,data = total_AML)
+anova(model)
+
+# Post-hoc comparisons ----
+
+model.lm = artlm(model, "treatments")
+marginal = emmeans(model.lm,~ treatments)
+test     = pairs(marginal,adjust = "tukey")
+
+# Figure plant ----
+
+df = read.delim("C:/Users/lucia/OneDrive - Wageningen University & Research/UCI_projects/Project_8 (Reviews)/Family/Pere/doctorado/datasets/df_AML_plant.txt")
+
+df$rank = factor(df$rank,levels=unique(df$rank))
+df$treatments = factor(df$treatments,levels=unique(df$treatments))
+
+figure_plant_AML = ggplot(df, aes(treatments, Percent, fill = (rank))) +
+  geom_bar(position = "fill", stat = "identity") +
+  scale_y_continuous(labels = percent) + 
+  scale_fill_manual(name = "", values = c("#ff7f00", "#fdc086", "#ffff99",
+                                          "#7fc97f"),
+                    breaks=c('4', '3', '2', '1'),
+                    labels = c("very strong","strong","weak","healthy")) + 
+  ylab("# Plants [%]") + xlab("")
+figure_plant_AML
+
+png("C:/Users/lucia/OneDrive - Wageningen University & Research/UCI_projects/Project_8 (Reviews)/Family/Pere/doctorado/Figures/figure_plant_AML.png",
+    width=3500*1.35,height=1969*1.35,res=300)
+print(figure_plant_AML)
+dev.off()
 
 
 
