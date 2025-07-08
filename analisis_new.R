@@ -15,9 +15,9 @@ library(dplyr)
 # Conover-Iman
 library(DescTools)
 
-# LLM1----
+# Microesclerotia LLM1----
 
-plates   = read.delim("C:/Users/lucia/OneDrive - Wageningen University & Research/UCI_projects/Project_8 (Reviews)/Family/Pere/doctorado/datasets/plates.txt",dec=".")
+plates   = read.delim("C:/Users/lucia/OneDrive - Wageningen University & Research/UCI_projects/Project_8 (Reviews)/Family/Pere/doctorado/datasets/plates_LLM1.txt",dec=".")
 model    = aov(Normalized ~ Biological.Rep, data = plates)
 
 # Assumptions----
@@ -51,7 +51,7 @@ png("C:/Users/lucia/OneDrive - Wageningen University & Research/UCI_projects/Pro
 print(figure_melanization)
 dev.off()
 
-# Plants total ----
+# Plants total LLM1 ----
 
 plants.total = read.delim("C:/Users/lucia/OneDrive - Wageningen University & Research/UCI_projects/Project_8 (Reviews)/Family/Pere/doctorado/datasets/new_data_plant.txt",dec=".")
 
@@ -656,4 +656,79 @@ png("C:/Users/lucia/OneDrive - Wageningen University & Research/UCI_projects/Pro
 print(figure_pcr.PLATE.NML1)
 dev.off()
 
+# Plants total NML1 ----
 
+total_NML = read.delim("C:/Users/lucia/OneDrive - Wageningen University & Research/UCI_projects/Project_8 (Reviews)/Family/Pere/doctorado/datasets/new_data_plant_NML.txt")
+
+# Aligned ranks anova ----
+# https://rcompanion.org/handbook/F_16.html
+
+total_NML$treatments = factor(total_NML$treatments,
+                              levels=unique(total_NML$treatments))
+
+model = art(as.numeric(rank) ~ treatments,data = total_NML)
+anova(model)
+
+# Post-hoc comparisons ----
+
+model.lm = artlm(model, "treatments")
+marginal = emmeans(model.lm,~ treatments)
+test     = pairs(marginal,adjust = "tukey")
+
+# Figure plant ----
+
+df = read.delim("C:/Users/lucia/OneDrive - Wageningen University & Research/UCI_projects/Project_8 (Reviews)/Family/Pere/doctorado/datasets/df_NML1_plant.txt")
+
+df$rank = factor(df$rank,levels=unique(df$rank))
+df$treatments = factor(df$treatments,levels=unique(df$treatments))
+
+figure_plant_NML = ggplot(df, aes(treatments, Percent, fill = (rank))) +
+  geom_bar(position = "fill", stat = "identity") +
+  scale_y_continuous(labels = percent) + 
+  scale_fill_manual(name = "", values = c("#ff7f00", "#fdc086", "#ffff99",
+                                          "#7fc97f"),
+                    breaks=c('4', '3', '2', '1'),
+                    labels = c("very strong","strong","weak","healthy")) + 
+  ylab("# Plants [%]") + xlab("")
+figure_plant_NML
+
+png("C:/Users/lucia/OneDrive - Wageningen University & Research/UCI_projects/Project_8 (Reviews)/Family/Pere/doctorado/Figures/figure_plant_NML.png",
+    width=3500*1.35,height=1969*1.35,res=300)
+print(figure_plant_NML)
+dev.off()
+
+# Microesclerotia AML1 ----
+
+plates   = read.delim("C:/Users/lucia/OneDrive - Wageningen University & Research/UCI_projects/Project_8 (Reviews)/Family/Pere/doctorado/datasets/plates_AML1.txt",dec=".")
+model    = aov(Normalized ~ Biological.Rep, data = plates)
+
+# Assumptions----
+# 2. Normality
+ols_plot_resid_qq(model)
+# 1. Homogeneity of variances
+ols_plot_resid_fit(model)
+bartlett.test(Normalized ~ Biological.Rep, data = plates)
+
+# Tukey----
+summary(model)
+TUKEY = TukeyHSD(model, conf.level=.95)
+TUKEY
+
+# Figure----
+
+# Testing a non-parametric model
+stat.test = aov(Normalized ~ Biological.Rep, data = plates) %>%
+  tukey_hsd()
+
+stat.test = stat.test %>% filter(!(p.adj.signif == "ns"))
+
+figure_melanization = ggboxplot(plates, x = "Biological.Rep", y = "Normalized",
+                                ylab = "Normalized melanization", xlab = "") + 
+  stat_pvalue_manual(stat.test, label = "p.adj.signif", 
+                     y.position = c(1.7, 1.8, 1.9))
+figure_melanization
+
+png("C:/Users/lucia/OneDrive - Wageningen University & Research/UCI_projects/Project_8 (Reviews)/Family/Pere/doctorado/Figures/figure_melanization_AML1.png",
+    width=3500*1.35,height=1969*1.35,res=300)
+print(figure_melanization)
+dev.off()

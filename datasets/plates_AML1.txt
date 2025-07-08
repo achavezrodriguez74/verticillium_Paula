@@ -1,0 +1,17 @@
+Biological.Rep	Treatment	Normalized
+WT	a	0.935
+WT	a	1.091
+WT	a	0.867
+WT	a	1.107
+ΔAML1	b	0.928
+ΔAML1	b	0.529
+ΔAML1	b	0.673
+ΔAML1	b	0.698
+comp.AML1	c	1.127
+comp.AML1	c	1.084
+comp.AML1	c	0.914
+comp.AML1	c	1.162
+AML1.GFP	d	0.720
+AML1.GFP	d	0.681
+AML1.GFP	d	0.896
+AML1.GFP	d	0.644
