@@ -1,0 +1,5 @@
+Symptoms	Mock	WT	ΔLLM1 	comp.LLM1
+healthy	60	6	25	11
+weak symptoms	0	17	28	14
+strong symptoms	0	30	32	32
+very strong symptoms	0	7	5	3

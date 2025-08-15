@@ -14,6 +14,8 @@ library(tibble)
 library(dplyr)
 # Conover-Iman
 library(DescTools)
+library(tidyverse)
+library(readxl)
 
 # Microesclerotia LLM1----
 
@@ -732,3 +734,84 @@ png("C:/Users/lucia/OneDrive - Wageningen University & Research/UCI_projects/Pro
     width=3500*1.35,height=1969*1.35,res=300)
 print(figure_melanization)
 dev.off()
+
+# PCR graphs ----
+
+# Call data ----
+PCR_data = read_excel("datasets/All data combined.xlsx", sheet = "Thesis")
+
+# Transform to Log2 ----
+PCR_data = PCR_data %>%  mutate(across(c(Expression), function(x) log2(x)))
+
+# Delete WT ----
+PCR_data = PCR_data %>% filter(Treatment != "WT")
+
+# Plot ----  
+
+# SXM ----
+PCR_data_SXM   = PCR_data %>% filter(Stage == "SXM")
+PCR_data_SXM.1 = PCR_data_SXM %>% group_by(Gen,Treatment,Order) %>% 
+  summarize(avg = mean(Expression), n = n(), 
+            sd = sd(Expression), se = sd/sqrt(n))
+
+Figure_PCR_SXM = ggplot(PCR_data_SXM.1, aes(x=Gen, y=avg, fill=as.factor(Order))) + 
+  geom_bar(stat="identity", color="black", 
+           position=position_dodge()) +
+  geom_errorbar(aes(ymin=avg-se, ymax=avg+se), width=.2,
+                position=position_dodge(.9)) + 
+  scale_fill_manual(name = "", values = c("#d0d1e6", "#045a8d", "#fee391", "#e34a33",
+                                          "#74c476"), labels = c("ΔVel1", "oeVel1", "ΔVel2", 
+                                                                 "oeVel2", "ΔVel2_IDD")) + 
+  xlab("") + ylab("Expression") + theme_classic()
+Figure_PCR_SXM
+
+pdf("Figures/Figure_PCR_SXM.pdf",
+    width=12,height=12*3/5)
+print(Figure_PCR_SXM)
+dev.off()
+
+# PDM ----
+PCR_data_PDM   = PCR_data %>% filter(Stage == "PDM")
+PCR_data_PDM.1 = PCR_data_PDM %>% group_by(Gen,Treatment,Order) %>% 
+  summarize(avg = mean(Expression), n = n(), 
+            sd = sd(Expression), se = sd/sqrt(n))
+
+Figure_PCR_PDM = ggplot(PCR_data_PDM.1, aes(x=Gen, y=avg, fill=as.factor(Order))) + 
+  geom_bar(stat="identity", color="black", 
+           position=position_dodge()) +
+  geom_errorbar(aes(ymin=avg-se, ymax=avg+se), width=.2,
+                position=position_dodge(.9)) + 
+  scale_fill_manual(name = "", values = c("#d0d1e6", "#045a8d", "#fee391", "#e34a33",
+                                          "#74c476"), labels = c("ΔVel1", "oeVel1", "ΔVel2", 
+                                                                 "oeVel2", "ΔVel2_IDD")) + 
+  xlab("") + ylab("Expression") + theme_classic()
+Figure_PCR_PDM
+
+pdf("Figures/Figure_PCR_PDM.pdf",
+    width=12,height=12*3/5)
+print(Figure_PCR_PDM)
+dev.off()
+
+# PLATE ----
+PCR_data_PLATE   = PCR_data %>% filter(Stage == "PLATE")
+PCR_data_PLATE.1 = PCR_data_PLATE %>% group_by(Gen,Treatment,Order) %>% 
+  summarize(avg = mean(Expression), n = n(), 
+            sd = sd(Expression), se = sd/sqrt(n))
+
+Figure_PCR_PLATE = ggplot(PCR_data_PLATE.1, aes(x=Gen, y=avg, fill=as.factor(Order))) + 
+  geom_bar(stat="identity", color="black", 
+           position=position_dodge()) +
+  geom_errorbar(aes(ymin=avg-se, ymax=avg+se), width=.2,
+                position=position_dodge(.9)) + 
+  scale_fill_manual(name = "", values = c("#d0d1e6", "#045a8d", "#fee391", "#e34a33",
+                                          "#74c476"), labels = c("ΔVel1", "oeVel1", "ΔVel2", 
+                                                                 "oeVel2", "ΔVel2_IDD")) + 
+  xlab("") + ylab("Expression") + theme_classic()
+Figure_PCR_PLATE
+
+pdf("Figures/Figure_PCR_PLATE.pdf",
+    width=12,height=12*3/5)
+print(Figure_PCR_PLATE)
+dev.off()
+
+
