@@ -1669,3 +1669,42 @@ Parameter          |   Median |        95% CI |     pd |          ROPE | % in RO
 ----------------------------------------------------------------------------------------------------
 (Intercept)        | 2.53e-03 | [-0.65, 0.73] | 50.42% | [-0.04, 0.04] |    12.92% | 1.001 | 1448.00
 TreatmentΔVel2_IDD |    -0.33 | [-1.35, 0.62] | 81.77% | [-0.04, 0.04] |     4.89% | 1.001 | 1817.00
+
+# AML1 radio ----
+
+AML1_colony_size = read_excel("datasets/AML1 colony size in glucose.xlsx",
+                              sheet = "statistics")
+model            = aov(Radio ~ Condition*Treatment, data = AML1_colony_size)
+
+# Assumptions----
+# 2. Normality
+ols_plot_resid_qq(model)
+# 1. Homogeneity of variances
+ols_plot_resid_fit(model)
+bartlett.test(Radio ~ Condition:Treatment, data = AML1_colony_size)
+
+# Tukey----
+summary(model)
+TUKEY = TukeyHSD(model, conf.level=.95)
+TUKEY
+
+stat.test = aov(Radio ~ Condition*Treatment, data = AML1_colony_size) %>%
+  tukey_hsd()
+
+# Barplot ----
+
+AML1_colony_size_1 = AML1_colony_size %>% group_by(Condition,Treatment) %>%
+  summarize(radio_mean = mean(Radio),
+            radio_sd   = sd(Radio))
+
+radio_AML1 = ggplot(AML1_colony_size_1, aes(x=Treatment, y=radio_mean, fill=Condition)) + 
+  geom_bar(stat="identity", position=position_dodge()) + 
+  geom_errorbar(aes(ymin=radio_mean-radio_sd, ymax=radio_mean+radio_sd), width=.2,
+                position=position_dodge(.9)) + scale_fill_manual(values=c('black','lightgray')) + 
+  theme_classic()
+radio_AML1
+
+png("C:/Users/lucia/OneDrive - Wageningen University & Research/UCI_projects/Project_8 (Reviews)/Family/Pere/doctorado/Figures/radio_AML1.png",
+    width=3500*1.35,height=1969*1.35,res=300)
+print(radio_AML1)
+dev.off()
