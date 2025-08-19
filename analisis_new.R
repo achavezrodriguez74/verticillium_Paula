@@ -699,7 +699,7 @@ png("C:/Users/lucia/OneDrive - Wageningen University & Research/UCI_projects/Pro
 print(figure_plant_NML)
 dev.off()
 
-# Microesclerotia AML1 ----
+# Microesclerotia AML1 dark ----
 
 plates   = read.delim("C:/Users/lucia/OneDrive - Wageningen University & Research/UCI_projects/Project_8 (Reviews)/Family/Pere/doctorado/datasets/plates_AML1.txt",dec=".")
 model    = aov(Normalized ~ Biological.Rep, data = plates)
@@ -733,6 +733,80 @@ figure_melanization
 png("C:/Users/lucia/OneDrive - Wageningen University & Research/UCI_projects/Project_8 (Reviews)/Family/Pere/doctorado/Figures/figure_melanization_AML1.png",
     width=3500*1.35,height=1969*1.35,res=300)
 print(figure_melanization)
+dev.off()
+
+# Microesclerotia AML1 light ----
+
+plates_light = read_excel("datasets/Quantification AML1 light.xlsx",
+                          sheet = "ESTADISTICAA")
+model        = aov(Normalized ~ Biological.Rep, data = plates_light)
+
+# Assumptions----
+# 2. Normality
+ols_plot_resid_qq(model)
+# 1. Homogeneity of variances
+ols_plot_resid_fit(model)
+bartlett.test(Normalized ~ Biological.Rep, data = plates_light)
+
+# Tukey----
+summary(model)
+TUKEY = TukeyHSD(model, conf.level=.95)
+TUKEY
+
+# Figure----
+
+# Testing a non-parametric model
+stat.test = aov(Normalized ~ Treatment, data = plates_light) %>%
+  tukey_hsd()
+
+stat.test = stat.test %>% filter(!(p.adj.signif == "ns"))
+
+figure_melanization_light = ggboxplot(plates_light, x = "Treatment", y = "Normalized",
+                                      ylab = "Normalized melanization", xlab = "") + 
+  stat_pvalue_manual(stat.test, label = "p.adj.signif", 
+                     y.position = c(1.7, 1.8, 1.9))
+figure_melanization_light
+
+png("C:/Users/lucia/OneDrive - Wageningen University & Research/UCI_projects/Project_8 (Reviews)/Family/Pere/doctorado/Figures/figure_melanization_light_AML1.png",
+    width=3500*1.35,height=1969*1.35,res=300)
+print(figure_melanization_light)
+dev.off()
+
+# Microesclerotia AML1 glucosa dark ----
+
+plant_glucose = read_excel("datasets/Glucose AML1 quantification.xlsx", 
+                           sheet = "Statistics")
+model         = aov(Normalized ~ Treatment, data = plant_glucose)
+
+# Assumptions----
+# 2. Normality
+ols_plot_resid_qq(model)
+# 1. Homogeneity of variances
+ols_plot_resid_fit(model)
+bartlett.test(Normalized ~ Treatment, data = plant_glucose)
+
+# Tukey----
+summary(model)
+TUKEY = TukeyHSD(model, conf.level=.95)
+TUKEY
+
+# Figure----
+
+# Testing a non-parametric model
+stat.test = aov(Normalized ~ Treatment, data = plant_glucose) %>%
+  tukey_hsd()
+
+stat.test = stat.test %>% filter(!(p.adj.signif == "ns"))
+
+figure_melanization_glucose = ggboxplot(plant_glucose, x = "Treatment", y = "Normalized",
+                                        ylab = "Normalized melanization", xlab = "") + 
+  stat_pvalue_manual(stat.test, label = "p.adj.signif", 
+                     y.position = c(1.7, 1.8, 1.9, 2.1, 2.3))
+figure_melanization_glucose
+
+png("C:/Users/lucia/OneDrive - Wageningen University & Research/UCI_projects/Project_8 (Reviews)/Family/Pere/doctorado/Figures/figure_melanization_glucose_AML1.png",
+    width=3500*1.35,height=1969*1.35,res=300)
+print(figure_melanization_glucose)
 dev.off()
 
 # PCR graphs ----
