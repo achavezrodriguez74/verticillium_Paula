@@ -1691,6 +1691,8 @@ TUKEY
 stat.test = aov(Radio ~ Condition*Treatment, data = AML1_colony_size) %>%
   tukey_hsd()
 
+write.csv(stat.test, "Figures/stat.test_AML1_radio.csv")
+
 # Barplot ----
 
 AML1_colony_size_1 = AML1_colony_size %>% group_by(Condition,Treatment) %>%
