@@ -1695,18 +1695,40 @@ write.csv(stat.test, "Figures/stat.test_AML1_radio.csv")
 
 # Barplot ----
 
-AML1_colony_size_1 = AML1_colony_size %>% group_by(Condition,Treatment) %>%
+AML1_colony_size_1 = AML1_colony_size %>% group_by(Condition,Treatment,Plots) %>%
   summarize(radio_mean = mean(Radio),
             radio_sd   = sd(Radio))
 
-radio_AML1 = ggplot(AML1_colony_size_1, aes(x=Treatment, y=radio_mean, fill=Condition)) + 
+radio_AML1 = ggplot(AML1_colony_size_1, aes(x=Plots, y=radio_mean, fill=Condition)) + 
   geom_bar(stat="identity", position=position_dodge()) + 
   geom_errorbar(aes(ymin=radio_mean-radio_sd, ymax=radio_mean+radio_sd), width=.2,
-                position=position_dodge(.9)) + scale_fill_manual(values=c('black','lightgray')) + 
+                position=position_dodge(.9)) + scale_fill_manual(values=c('#525252','lightgray')) + 
   theme_classic()
 radio_AML1
 
 png("C:/Users/lucia/OneDrive - Wageningen University & Research/UCI_projects/Project_8 (Reviews)/Family/Pere/doctorado/Figures/radio_AML1.png",
     width=3500*1.35,height=1969*1.35,res=300)
 print(radio_AML1)
+dev.off()
+
+# NML1 microsclearotia ----
+
+nml1_stress   = read_excel("datasets/New quantification.xlsx",
+                           sheet = "Sheet1")
+# Barplot ----
+
+nml1_stress_1 = nml1_stress %>% group_by(Treatment,Plot) %>%
+  summarize(Normalized_mean = mean(Normalized),
+            Normalized_sd   = sd(Normalized))
+
+NML1_microsclerotia = ggplot(nml1_stress_1, aes(x=Plot, y=Normalized_mean, fill=Plot)) + 
+  geom_bar(stat="identity", position=position_dodge()) + 
+  geom_errorbar(aes(ymin=Normalized_mean-Normalized_sd, ymax=Normalized_mean+Normalized_sd), width=.2,
+                position=position_dodge(.9)) + scale_fill_manual(values=c('#525252','#969696',"#d9d9d9")) + 
+  theme_classic()
+NML1_microsclerotia
+
+png("C:/Users/lucia/OneDrive - Wageningen University & Research/UCI_projects/Project_8 (Reviews)/Family/Pere/doctorado/Figures/NML1_microsclerotia.png",
+    width=3500*1.35,height=1969*1.35,res=300)
+print(NML1_microsclerotia)
 dev.off()
