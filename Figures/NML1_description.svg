@@ -27,7 +27,7 @@
      showgrid="true"
      inkscape:zoom="0.72426347"
      inkscape:cx="642.03155"
-     inkscape:cy="1906.0743"
+     inkscape:cy="1904.6936"
      inkscape:window-width="1920"
      inkscape:window-height="991"
      inkscape:window-x="-9"
@@ -896,7 +896,7 @@
          id="text52"><tspan
            x="178.94421"
            y="-58.506023"
-           id="tspan4">A</tspan></text>
+           id="tspan1">A</tspan></text>
       <text
          xml:space="preserve"
          style="font-size:37.3333px;font-family:'Lucida Bright';-inkscape-font-specification:'Lucida Bright, Normal';text-align:center;text-anchor:middle;white-space:pre;inline-size:8.46367;display:inline;fill:none;stroke:#000000;stroke-width:0.755906;stroke-dasharray:none"
@@ -905,9 +905,9 @@
          id="text53"><tspan
            x="159.61423"
            y="-81.978149"
-           id="tspan6"><tspan
+           id="tspan3"><tspan
              style="font-family:Century;-inkscape-font-specification:Century"
-             id="tspan5">A</tspan></tspan></text>
+             id="tspan2">A</tspan></tspan></text>
       <text
          font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
          font-weight="400"
@@ -938,9 +938,8 @@
            x="697.40198"
            y="2370.8584" /></text>
       <g
-         id="g188"
-         transform="translate(176.73127)"
-         inkscape:export-filename="NML1_description.png"
+         id="g1"
+         inkscape:export-filename="NML1_description.pdf"
          inkscape:export-xdpi="96"
          inkscape:export-ydpi="96">
         <rect
@@ -948,14 +947,14 @@
            id="rect24-8-4"
            width="543.75696"
            height="499.7941"
-           x="-62.781208"
+           x="113.95007"
            y="1516.9664" />
         <rect
            style="fill:#ffffff;stroke:#000000;stroke-width:0.928462;stroke-dasharray:none"
            id="rect24-0-9-4"
            width="1263.2544"
            height="304.75711"
-           x="-62.531551"
+           x="114.19972"
            y="2016.764" />
         <text
            font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
@@ -963,7 +962,7 @@
            font-stretch="condensed"
            font-size="16px"
            id="text50-1-3-3-0-66-6"
-           x="548.86536"
+           x="725.59662"
            y="2300.6489"
            style="font-size:21.3333px"><tspan
              style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21.3333px;font-family:Arial;-inkscape-font-specification:Arial"
@@ -974,7 +973,7 @@
            font-stretch="condensed"
            font-size="16px"
            id="text50-1-3-3-0-66-6-0"
-           x="615.83051"
+           x="792.56177"
            y="2301.3438"
            style="font-size:21.3333px"><tspan
              style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21.3333px;font-family:Arial;-inkscape-font-specification:Arial"
@@ -985,7 +984,7 @@
            font-stretch="condensed"
            font-size="16px"
            id="text50-1-3-3-0-5-0"
-           x="482.36276"
+           x="659.09406"
            y="2301.6489"
            style="font-size:21.3333px"><tspan
              style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21.3333px;font-family:Arial;-inkscape-font-specification:Arial"
@@ -996,7 +995,7 @@
            font-stretch="condensed"
            font-size="16px"
            id="text50-1-3-3-0-6-5"
-           x="419.77481"
+           x="596.5061"
            y="2301.2319"
            style="font-size:21.3333px"><tspan
              style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21.3333px;font-family:Arial;-inkscape-font-specification:Arial"
@@ -1007,7 +1006,7 @@
            font-stretch="condensed"
            font-size="16px"
            id="text50-1-3-3-0-3-3"
-           x="357.21558"
+           x="533.94684"
            y="2300.9587"
            style="font-size:21.3333px"><tspan
              style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21.3333px;font-family:Arial;-inkscape-font-specification:Arial"
@@ -1018,7 +1017,7 @@
            font-stretch="condensed"
            font-size="16px"
            id="text50-1-3-3-0-4"
-           x="295.14383"
+           x="471.87509"
            y="2301.1372"
            style="font-size:21.3333px"><tspan
              style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21.3333px;font-family:Arial;-inkscape-font-specification:Arial"
@@ -1029,7 +1028,7 @@
            font-stretch="condensed"
            font-size="16px"
            id="text50-1-3-3-8-30"
-           x="228.7648"
+           x="405.49606"
            y="2301.0754"
            style="font-size:21.3333px"><tspan
              style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21.3333px;font-family:Arial;-inkscape-font-specification:Arial"
@@ -1040,7 +1039,7 @@
            font-stretch="condensed"
            font-size="16px"
            id="text50-1-3-8"
-           x="167.00241"
+           x="343.73367"
            y="2301.3503"
            style="font-size:21.3333px"><tspan
              style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21.3333px;font-family:Arial;-inkscape-font-specification:Arial"
@@ -1051,7 +1050,7 @@
            font-stretch="condensed"
            font-size="16px"
            id="text50-1-3-3-89"
-           x="-46.906124"
+           x="129.82515"
            y="2091.9934"
            style="font-size:21.3333px"><tspan
              style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21.3333px;font-family:Arial;-inkscape-font-specification:Arial"
@@ -1061,10 +1060,10 @@
            id="rect24-7-9-8"
            width="719.50482"
            height="499.67709"
-           x="481.27472"
+           x="658.00598"
            y="1517.2744" />
         <g
-           transform="translate(-29.984719,1562.89)"
+           transform="translate(146.74655,1562.89)"
            id="g35">
           <g
              clip-path="url(#clip0-3)"
@@ -1378,38 +1377,38 @@
         <text
            xml:space="preserve"
            style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:32px;font-family:Century;-inkscape-font-specification:Century;text-align:center;text-anchor:middle;fill:none;stroke:#000000;stroke-width:0.755906;stroke-dasharray:none"
-           x="-34.173897"
+           x="142.55737"
            y="1558.3759"
            id="text54-0-3"><tspan
              sodipodi:role="line"
              id="tspan54-7-2"
-             x="-34.173897"
+             x="142.55737"
              y="1558.3759"
-             style="font-size:32px;fill:#000000">A</tspan></text>
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:32px;font-family:Arial;-inkscape-font-specification:Arial;fill:#000000">A</tspan></text>
         <text
            xml:space="preserve"
            style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:32px;font-family:Century;-inkscape-font-specification:Century;text-align:center;text-anchor:middle;fill:none;stroke:#000000;stroke-width:0.755906;stroke-dasharray:none"
-           x="530.50238"
+           x="707.23364"
            y="1561.1902"
            id="text54-6-7-6"><tspan
              sodipodi:role="line"
              id="tspan54-2-2-6"
-             x="530.50238"
+             x="707.23364"
              y="1561.1902"
-             style="font-size:32px;fill:#000000">B</tspan></text>
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:32px;font-family:Arial;-inkscape-font-specification:Arial;fill:#000000">B</tspan></text>
         <text
            xml:space="preserve"
            style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:32px;font-family:Century;-inkscape-font-specification:Century;text-align:center;text-anchor:middle;fill:#000000;stroke:#000000;stroke-width:0.755906;stroke-dasharray:none"
-           x="-37.940346"
+           x="138.79092"
            y="2055.8115"
            id="text55-4-7"><tspan
              sodipodi:role="line"
              id="tspan55-7-5"
-             x="-37.940346"
+             x="138.79092"
              y="2055.8115"
-             style="font-size:32px">C</tspan></text>
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:32px;font-family:Arial;-inkscape-font-specification:Arial">C</tspan></text>
         <g
-           transform="translate(-266.51409,1597.7312)"
+           transform="translate(-89.78282,1597.7312)"
            id="g2">
           <text
              font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
@@ -1428,7 +1427,7 @@
            font-stretch="condensed"
            font-size="16px"
            id="text50-1-3-3-0-66-4-4"
-           x="-44.431393"
+           x="132.29988"
            y="2246.6687"
            style="font-size:21.3333px"><tspan
              style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21.3333px;font-family:Arial;-inkscape-font-specification:Arial"
@@ -1439,7 +1438,7 @@
            font-stretch="condensed"
            font-size="16px"
            id="text50-1-3-3-0-5-7-3"
-           x="-44.544781"
+           x="132.18649"
            y="2219.4148"
            style="font-size:21.3333px"><tspan
              style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21.3333px;font-family:Arial;-inkscape-font-specification:Arial"
@@ -1450,7 +1449,7 @@
            font-stretch="condensed"
            font-size="16px"
            id="text50-1-3-3-0-6-2-7"
-           x="-44.648754"
+           x="132.08252"
            y="2195.5068"
            style="font-size:21.3333px"><tspan
              style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21.3333px;font-family:Arial;-inkscape-font-specification:Arial"
@@ -1461,7 +1460,7 @@
            font-stretch="condensed"
            font-size="16px"
            id="text50-1-3-3-0-3-4-3"
-           x="-45.700344"
+           x="131.03093"
            y="2169.8496"
            style="font-size:21.3333px"><tspan
              style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21.3333px;font-family:Arial;-inkscape-font-specification:Arial"
@@ -1472,7 +1471,7 @@
            font-stretch="condensed"
            font-size="16px"
            id="text50-1-3-3-0-8-1"
-           x="-45.572445"
+           x="131.15883"
            y="2144.6914"
            style="font-size:21.3333px"><tspan
              style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21.3333px;font-family:Arial;-inkscape-font-specification:Arial"
@@ -1483,7 +1482,7 @@
            font-stretch="condensed"
            font-size="16px"
            id="text50-1-3-3-8-3-9"
-           x="-46.455685"
+           x="130.27559"
            y="2117.2456"
            style="font-size:21.3333px"><tspan
              style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21.3333px;font-family:Arial;-inkscape-font-specification:Arial"
@@ -1494,14 +1493,14 @@
            font-stretch="condensed"
            font-size="16px"
            id="text50-1-3-3-0-66-6-0-9"
-           x="-44.274086"
+           x="132.45718"
            y="2272.3535"
            style="font-size:21.3333px"><tspan
              style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21.3333px;font-family:Arial;-inkscape-font-specification:Arial"
              id="tspan98-0-1-5-5-6-5-1">8</tspan></text>
         <g
            clip-path="url(#clip0-2)"
-           transform="matrix(1.04987e-4,0,0,1.04987e-4,20.614692,1591.3116)"
+           transform="matrix(1.04987e-4,0,0,1.04987e-4,197.34596,1591.3116)"
            id="g7">
           <g
              clip-path="url(#clip2-3)"
@@ -1516,7 +1515,7 @@
           </g>
         </g>
         <path
-           d="M 20.281392,1590.9786 H 196.9477 v 414.666 H 20.281392 Z"
+           d="m 197.01266,1590.9786 h 176.66631 v 414.666 H 197.01266 Z"
            stroke="#404040"
            stroke-width="0.666667"
            stroke-linejoin="round"
@@ -1525,11 +1524,11 @@
            fill-rule="evenodd"
            id="path7-5" />
         <path
-           d="m 157.1147,1973.3116 h 12.231 v 1 h -12.231 z m 10.898,-3.5 8,4 -8,4 z"
+           d="m 333.84597,1973.3116 h 12.231 v 1 h -12.231 z m 10.898,-3.5 8,4 -8,4 z"
            id="path8-3" />
         <g
            clip-path="url(#clip3-9)"
-           transform="matrix(1.04987e-4,0,0,1.04987e-4,21.614692,1807.3116)"
+           transform="matrix(1.04987e-4,0,0,1.04987e-4,198.34596,1807.3116)"
            id="g9-3">
           <g
              clip-path="url(#clip4-2)"
@@ -1545,7 +1544,7 @@
         </g>
         <g
            clip-path="url(#clip5-9)"
-           transform="matrix(1.04987e-4,0,0,1.04987e-4,21.614692,1678.3116)"
+           transform="matrix(1.04987e-4,0,0,1.04987e-4,198.34596,1678.3116)"
            id="g11">
           <g
              clip-path="url(#clip6-2)"
@@ -1567,7 +1566,7 @@
            transform="rotate(-90)"
            id="text11-0"
            x="-1967.3115"
-           y="4.7848878">Normalised ChIP</text>
+           y="181.51616">Normalised ChIP</text>
         <text
            font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
            font-weight="700"
@@ -1576,7 +1575,7 @@
            transform="rotate(-90)"
            id="text12-1"
            x="-1798.3115"
-           y="4.7848878">–</text>
+           y="181.51616">–</text>
         <text
            font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
            font-weight="700"
@@ -1585,17 +1584,17 @@
            transform="rotate(-90)"
            id="text13-8"
            x="-1786.3115"
-           y="4.7848878">seq read counts</text>
+           y="181.51616">seq read counts</text>
         <text
            font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
            font-weight="700"
            font-stretch="condensed"
            font-size="16px"
            id="text14"
-           x="98.007698"
+           x="274.73898"
            y="2000.3115">Chr6g07660a</text>
         <path
-           d="m 148.1147,1980.8116 3,-8 3,8 z"
+           d="m 324.84597,1980.8116 3,-8 3,8 z"
            stroke="#ff0000"
            stroke-width="2.66667"
            stroke-linejoin="round"
@@ -1610,7 +1609,7 @@
            font-stretch="condensed"
            font-size="21px"
            id="text15"
-           x="83.8507"
+           x="260.58197"
            y="1545.3115">NML1</text>
         <text
            font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
@@ -1618,7 +1617,7 @@
            font-stretch="condensed"
            font-size="19px"
            id="text16"
-           x="8.1465931"
+           x="184.87787"
            y="1574.3115">(</text>
         <text
            font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
@@ -1626,7 +1625,7 @@
            font-stretch="condensed"
            font-size="19px"
            id="text17"
-           x="14.313192"
+           x="191.04446"
            y="1574.3115">VDAG_JR2_Chr</text>
         <text
            font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
@@ -1634,7 +1633,7 @@
            font-stretch="condensed"
            font-size="19px"
            id="text18"
-           x="160.27969"
+           x="337.01096"
            y="1574.3115">6</text>
         <text
            font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
@@ -1642,7 +1641,7 @@
            font-stretch="condensed"
            font-size="19px"
            id="text19"
-           x="171.61369"
+           x="348.34497"
            y="1574.3115">g0</text>
         <text
            font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
@@ -1650,7 +1649,7 @@
            font-stretch="condensed"
            font-size="19px"
            id="text20"
-           x="192.27969"
+           x="369.01096"
            y="1574.3115">766</text>
         <text
            font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
@@ -1658,7 +1657,7 @@
            font-stretch="condensed"
            font-size="19px"
            id="text21"
-           x="228.27969"
+           x="405.01096"
            y="1574.3115">0a</text>
         <text
            font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
@@ -1666,7 +1665,7 @@
            font-stretch="condensed"
            font-size="19px"
            id="text22"
-           x="249.30669"
+           x="426.03796"
            y="1574.3115">)</text>
         <text
            font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
@@ -1674,7 +1673,7 @@
            font-stretch="condensed"
            font-size="17px"
            id="text23"
-           x="221.4397"
+           x="398.17096"
            y="1737.3115">ChIP IPs with anti</text>
         <text
            font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
@@ -1682,7 +1681,7 @@
            font-stretch="condensed"
            font-size="17px"
            id="text24"
-           x="398.14569"
+           x="574.87695"
            y="1737.3115">-</text>
         <text
            font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
@@ -1690,7 +1689,7 @@
            font-stretch="condensed"
            font-size="17px"
            id="text25"
-           x="407.97971"
+           x="584.711"
            y="1737.3115">GFP:</text>
         <text
            fill="#0000ff"
@@ -1699,7 +1698,7 @@
            font-stretch="condensed"
            font-size="17px"
            id="text26"
-           x="221.4397"
+           x="398.17096"
            y="1769.3115">WT</text>
         <text
            fill="#ff0000"
@@ -1708,7 +1707,7 @@
            font-stretch="condensed"
            font-size="17px"
            id="text27"
-           x="221.4397"
+           x="398.17096"
            y="1800.3115">Vel2</text>
         <text
            fill="#ff0000"
@@ -1717,7 +1716,7 @@
            font-stretch="condensed"
            font-size="17px"
            id="text28"
-           x="256.50571"
+           x="433.23697"
            y="1800.3115">-</text>
         <text
            fill="#ff0000"
@@ -1726,7 +1725,7 @@
            font-stretch="condensed"
            font-size="17px"
            id="text29"
-           x="264.33969"
+           x="441.07095"
            y="1800.3115">GFP</text>
         <text
            fill="#339933"
@@ -1735,7 +1734,7 @@
            font-stretch="condensed"
            font-size="17px"
            id="text30"
-           x="221.4397"
+           x="398.17096"
            y="1831.3115">Vel2</text>
         <text
            fill="#339933"
@@ -1744,7 +1743,7 @@
            font-stretch="condensed"
            font-size="12px"
            id="text31"
-           x="256.50571"
+           x="433.23697"
            y="1826.3115">Δ</text>
         <text
            fill="#339933"
@@ -1753,7 +1752,7 @@
            font-stretch="condensed"
            font-size="12px"
            id="text32"
-           x="265.1727"
+           x="441.90396"
            y="1826.3115">IDD</text>
         <text
            fill="#339933"
@@ -1762,7 +1761,7 @@
            font-stretch="condensed"
            font-size="17px"
            id="text33"
-           x="288.85971"
+           x="465.59097"
            y="1831.3115">-</text>
         <text
            fill="#339933"
@@ -1771,7 +1770,7 @@
            font-stretch="condensed"
            font-size="17px"
            id="text34"
-           x="296.69272"
+           x="473.42398"
            y="1831.3115">GFP</text>
         <text
            font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
@@ -1779,13 +1778,13 @@
            font-stretch="condensed"
            font-size="17px"
            id="text35"
-           x="250.43968"
+           x="427.17096"
            y="1862.3115">Transcription</text>
         <path
-           d="m 220.1147,1858.1446 h 16.8 v 1.334 h -16.8 z m 15.467,-3.333 8,4 -8,4 z"
+           d="m 396.84597,1858.1446 h 16.8 v 1.334 h -16.8 z m 15.467,-3.333 8,4 -8,4 z"
            id="path35" />
         <path
-           d="m 139.23892,2071.7529 v 206.939"
+           d="m 315.97019,2071.7529 v 206.939"
            stroke="#000000"
            stroke-width="1.33333"
            stroke-linejoin="round"
@@ -1794,7 +1793,7 @@
            fill-rule="evenodd"
            id="path1" />
         <path
-           d="m 198.48392,2071.7529 v 206.939"
+           d="m 375.21519,2071.7529 v 206.939"
            stroke="#000000"
            stroke-width="1.33333"
            stroke-linejoin="round"
@@ -1803,7 +1802,7 @@
            fill-rule="evenodd"
            id="path2" />
         <path
-           d="m 263.67892,2097.4529 v 181.239"
+           d="m 440.41019,2097.4529 v 181.239"
            stroke="#000000"
            stroke-width="1.33333"
            stroke-linejoin="round"
@@ -1812,7 +1811,7 @@
            fill-rule="evenodd"
            id="path3" />
         <path
-           d="m 326.87392,2123.1539 v 155.538"
+           d="m 503.60519,2123.1539 v 155.538"
            stroke="#000000"
            stroke-width="1.33333"
            stroke-linejoin="round"
@@ -1821,7 +1820,7 @@
            fill-rule="evenodd"
            id="path4" />
         <path
-           d="m 392.06892,2148.8549 v 129.837"
+           d="m 568.80019,2148.8549 v 129.837"
            stroke="#000000"
            stroke-width="1.33333"
            stroke-linejoin="round"
@@ -1830,7 +1829,7 @@
            fill-rule="evenodd"
            id="path5" />
         <path
-           d="m 455.26392,2174.5559 v 104.136"
+           d="m 631.99519,2174.5559 v 104.136"
            stroke="#000000"
            stroke-width="1.33333"
            stroke-linejoin="round"
@@ -1839,7 +1838,7 @@
            fill-rule="evenodd"
            id="path6" />
         <path
-           d="m 518.45892,2200.2569 v 78.435"
+           d="m 695.19019,2200.2569 v 78.435"
            stroke="#000000"
            stroke-width="1.33333"
            stroke-linejoin="round"
@@ -1848,7 +1847,7 @@
            fill-rule="evenodd"
            id="path7" />
         <path
-           d="m 581.65392,2225.9569 v 52.735"
+           d="m 758.38519,2225.9569 v 52.735"
            stroke="#000000"
            stroke-width="1.33333"
            stroke-linejoin="round"
@@ -1857,7 +1856,7 @@
            fill-rule="evenodd"
            id="path8" />
         <path
-           d="M -24.06908,2098.4651 H 263.86889"
+           d="M 152.66219,2098.4651 H 440.60016"
            stroke="#000000"
            stroke-width="1.54511"
            stroke-linejoin="round"
@@ -1866,7 +1865,7 @@
            fill-rule="evenodd"
            id="path9-6" />
         <path
-           d="M -24.06908,2123.9935 H 327.14513"
+           d="M 152.66219,2123.9935 H 503.8764"
            stroke="#000000"
            stroke-width="1.53321"
            stroke-linejoin="round"
@@ -1875,7 +1874,7 @@
            fill-rule="evenodd"
            id="path10" />
         <path
-           d="M -24.06908,2149.5219 H 392.14726"
+           d="M 152.66219,2149.5219 H 568.87853"
            stroke="#000000"
            stroke-width="1.52827"
            stroke-linejoin="round"
@@ -1884,7 +1883,7 @@
            fill-rule="evenodd"
            id="path11" />
         <path
-           d="M -24.06908,2175.0493 H 455.4235"
+           d="M 152.66219,2175.0493 H 632.15477"
            stroke="#000000"
            stroke-width="1.52197"
            stroke-linejoin="round"
@@ -1893,7 +1892,7 @@
            fill-rule="evenodd"
            id="path12" />
         <path
-           d="M -24.06908,2200.9229 H 518.35456"
+           d="M 152.66219,2200.9229 H 695.08583"
            stroke="#000000"
            stroke-width="1.5167"
            stroke-linejoin="round"
@@ -1902,7 +1901,7 @@
            fill-rule="evenodd"
            id="path13" />
         <path
-           d="M -24.06908,2226.6239 H 581.6308"
+           d="M 152.66219,2226.6239 H 758.36207"
            stroke="#000000"
            stroke-width="1.51299"
            stroke-linejoin="round"
@@ -1911,7 +1910,7 @@
            fill-rule="evenodd"
            id="path14-0" />
         <path
-           d="M -24.06908,2252.3249 H 647.32328"
+           d="M 152.66219,2252.3249 H 824.05455"
            stroke="#000000"
            stroke-width="1.51274"
            stroke-linejoin="round"
@@ -1920,7 +1919,7 @@
            fill-rule="evenodd"
            id="path15" />
         <path
-           d="m -23.40208,2071.7529 v 206.939"
+           d="m 153.32919,2071.7529 v 206.939"
            stroke="#000000"
            stroke-width="1.33333"
            stroke-linejoin="round"
@@ -1929,7 +1928,7 @@
            fill-rule="evenodd"
            id="path16" />
         <path
-           d="m 646.84892,2251.6579 v 27.034"
+           d="m 823.58019,2251.6579 v 27.034"
            stroke="#000000"
            stroke-width="1.33333"
            stroke-linejoin="round"
@@ -1938,7 +1937,7 @@
            fill-rule="evenodd"
            id="path17" />
         <path
-           d="M -24.06908,2072.4189 H 198.52158"
+           d="M 152.66219,2072.4189 H 375.25285"
            stroke="#000000"
            stroke-width="1.55706"
            stroke-linejoin="round"
@@ -1947,7 +1946,7 @@
            fill-rule="evenodd"
            id="path18" />
         <path
-           d="M -24.06908,2278.1985 H 646.97811"
+           d="M 152.66219,2278.1985 H 823.70938"
            stroke="#000000"
            stroke-width="1.51235"
            stroke-linejoin="round"
@@ -1957,7 +1956,7 @@
            id="path19" />
         <g
            id="g19"
-           transform="translate(-260.99408,1627.8239)">
+           transform="translate(-84.26281,1627.8239)">
           <text
              font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
              font-weight="400"
@@ -1971,7 +1970,7 @@
         </g>
         <g
            id="g20-9"
-           transform="translate(-304.99408,1627.8239)">
+           transform="translate(-128.26281,1627.8239)">
           <text
              font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
              font-style="italic"
@@ -1986,7 +1985,7 @@
         </g>
         <g
            id="g21-7"
-           transform="translate(-244.99408,1627.8239)">
+           transform="translate(-68.26281,1627.8239)">
           <text
              font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
              font-weight="400"
@@ -2000,7 +1999,7 @@
         </g>
         <g
            id="g22"
-           transform="translate(-260.99408,1627.8239)">
+           transform="translate(-84.26281,1627.8239)">
           <text
              font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
              font-weight="400"
@@ -2014,7 +2013,7 @@
         </g>
         <g
            id="g23"
-           transform="translate(-304.99408,1627.8239)">
+           transform="translate(-128.26281,1627.8239)">
           <text
              font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
              font-style="italic"
@@ -2029,7 +2028,7 @@
         </g>
         <g
            id="g24"
-           transform="translate(-230.99408,1627.8239)">
+           transform="translate(-54.26281,1627.8239)">
           <text
              font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
              font-weight="400"
@@ -2043,7 +2042,7 @@
         </g>
         <g
            id="g25"
-           transform="translate(-244.99408,1627.8239)">
+           transform="translate(-68.26281,1627.8239)">
           <text
              font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
              font-weight="400"
@@ -2057,7 +2056,7 @@
         </g>
         <g
            id="g26"
-           transform="translate(-260.99408,1627.8239)">
+           transform="translate(-84.26281,1627.8239)">
           <text
              font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
              font-weight="400"
@@ -2071,7 +2070,7 @@
         </g>
         <g
            id="g27"
-           transform="translate(-304.99408,1627.8239)">
+           transform="translate(-128.26281,1627.8239)">
           <text
              font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
              font-style="italic"
@@ -2086,7 +2085,7 @@
         </g>
         <g
            id="g28"
-           transform="translate(-218.99408,1627.8239)">
+           transform="translate(-42.26281,1627.8239)">
           <text
              font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
              font-weight="400"
@@ -2100,7 +2099,7 @@
         </g>
         <g
            id="g29"
-           transform="translate(-230.99408,1627.8239)">
+           transform="translate(-54.26281,1627.8239)">
           <text
              font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
              font-weight="400"
@@ -2114,7 +2113,7 @@
         </g>
         <g
            id="g30"
-           transform="translate(-244.99408,1627.8239)">
+           transform="translate(-68.26281,1627.8239)">
           <text
              font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
              font-weight="400"
@@ -2128,7 +2127,7 @@
         </g>
         <g
            id="g31"
-           transform="translate(-260.99408,1627.8239)">
+           transform="translate(-84.26281,1627.8239)">
           <text
              font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
              font-weight="400"
@@ -2142,7 +2141,7 @@
         </g>
         <g
            id="g32"
-           transform="translate(-304.99408,1627.8239)">
+           transform="translate(-128.26281,1627.8239)">
           <text
              font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
              font-style="italic"
@@ -2157,7 +2156,7 @@
         </g>
         <g
            id="g33"
-           transform="translate(-204.99408,1627.8239)">
+           transform="translate(-28.26281,1627.8239)">
           <text
              font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
              font-weight="400"
@@ -2171,7 +2170,7 @@
         </g>
         <g
            id="g34"
-           transform="translate(-218.99408,1627.8239)">
+           transform="translate(-42.26281,1627.8239)">
           <text
              font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
              font-weight="400"
@@ -2185,7 +2184,7 @@
         </g>
         <g
            id="g35-5"
-           transform="translate(-230.99408,1627.8239)">
+           transform="translate(-54.26281,1627.8239)">
           <text
              font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
              font-weight="400"
@@ -2199,7 +2198,7 @@
         </g>
         <g
            id="g36"
-           transform="translate(-244.99408,1627.8239)">
+           transform="translate(-68.26281,1627.8239)">
           <text
              font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
              font-weight="400"
@@ -2213,7 +2212,7 @@
         </g>
         <g
            id="g37"
-           transform="translate(-260.99408,1627.8239)">
+           transform="translate(-84.26281,1627.8239)">
           <text
              font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
              font-weight="400"
@@ -2227,7 +2226,7 @@
         </g>
         <g
            id="g38"
-           transform="translate(-304.99408,1627.8239)">
+           transform="translate(-128.26281,1627.8239)">
           <text
              font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
              font-style="italic"
@@ -2242,7 +2241,7 @@
         </g>
         <g
            id="g39"
-           transform="translate(-192.99408,1627.8239)">
+           transform="translate(-16.26281,1627.8239)">
           <text
              font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
              font-weight="400"
@@ -2256,7 +2255,7 @@
         </g>
         <g
            id="g40"
-           transform="translate(-204.99408,1627.8239)">
+           transform="translate(-28.26281,1627.8239)">
           <text
              font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
              font-weight="400"
@@ -2270,7 +2269,7 @@
         </g>
         <g
            id="g41"
-           transform="translate(-218.99408,1627.8239)">
+           transform="translate(-42.26281,1627.8239)">
           <text
              font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
              font-weight="400"
@@ -2284,7 +2283,7 @@
         </g>
         <g
            id="g42"
-           transform="translate(-230.99408,1627.8239)">
+           transform="translate(-54.26281,1627.8239)">
           <text
              font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
              font-weight="400"
@@ -2298,7 +2297,7 @@
         </g>
         <g
            id="g43"
-           transform="translate(-244.99408,1627.8239)">
+           transform="translate(-68.26281,1627.8239)">
           <text
              font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
              font-weight="400"
@@ -2312,7 +2311,7 @@
         </g>
         <g
            id="g44-5"
-           transform="translate(-260.99408,1627.8239)">
+           transform="translate(-84.26281,1627.8239)">
           <text
              font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
              font-weight="400"
@@ -2326,7 +2325,7 @@
         </g>
         <g
            id="g45"
-           transform="translate(-304.99408,1627.8239)">
+           transform="translate(-128.26281,1627.8239)">
           <text
              font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
              font-style="italic"
@@ -2341,7 +2340,7 @@
         </g>
         <g
            id="g46"
-           transform="translate(-180.99408,1627.8239)">
+           transform="translate(-4.26281,1627.8239)">
           <text
              font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
              font-weight="400"
@@ -2355,7 +2354,7 @@
         </g>
         <g
            id="g47"
-           transform="translate(-192.99408,1627.8239)">
+           transform="translate(-16.26281,1627.8239)">
           <text
              font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
              font-weight="400"
@@ -2369,7 +2368,7 @@
         </g>
         <g
            id="g48-2"
-           transform="translate(-204.99408,1627.8239)">
+           transform="translate(-28.26281,1627.8239)">
           <text
              font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
              font-weight="400"
@@ -2383,7 +2382,7 @@
         </g>
         <g
            id="g49"
-           transform="translate(-218.99408,1627.8239)">
+           transform="translate(-42.26281,1627.8239)">
           <text
              font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
              font-weight="400"
@@ -2397,7 +2396,7 @@
         </g>
         <g
            id="g50"
-           transform="translate(-230.99408,1627.8239)">
+           transform="translate(-54.26281,1627.8239)">
           <text
              font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
              font-weight="400"
@@ -2411,7 +2410,7 @@
         </g>
         <g
            id="g51"
-           transform="translate(-244.99408,1627.8239)">
+           transform="translate(-68.26281,1627.8239)">
           <text
              font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
              font-weight="400"
@@ -2425,7 +2424,7 @@
         </g>
         <g
            id="g52"
-           transform="translate(-260.99408,1627.8239)">
+           transform="translate(-84.26281,1627.8239)">
           <text
              font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
              font-weight="400"
@@ -2439,7 +2438,7 @@
         </g>
         <g
            id="g53"
-           transform="translate(-304.99408,1627.8239)">
+           transform="translate(-128.26281,1627.8239)">
           <text
              font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
              font-style="italic"
@@ -2459,7 +2458,7 @@
            font-size="17px"
            id="text54"
            style="font-size:21.3333px"
-           x="587.75189"
+           x="764.48315"
            y="2271.824"><tspan
    style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21.3333px;font-family:Arial;-inkscape-font-specification:Arial"
    id="tspan135">100</tspan><tspan
@@ -2467,7 +2466,7 @@
    id="tspan136">,</tspan>0</text>
         <g
            clip-path="url(#clipPath147)"
-           transform="matrix(1.04987e-4,0,0,1.04987e-4,684.47115,2040.0119)"
+           transform="matrix(1.04987e-4,0,0,1.04987e-4,861.20242,2040.0119)"
            id="g4">
           <g
              clip-path="url(#clip3-3)"
@@ -2488,7 +2487,8 @@
            height="30"
            fill="#ffffff"
            id="rect4-94"
-           clip-path="url(#clipPath146)" />
+           clip-path="url(#clipPath146)"
+           transform="translate(176.73127)" />
         <text
            font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
            font-style="italic"
@@ -2496,7 +2496,7 @@
            font-stretch="condensed"
            font-size="17px"
            id="text4-50"
-           x="974.65112"
+           x="1151.3824"
            y="2099.012"
            style="font-size:21.3333px"><tspan
              style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21.3333px;font-family:Arial;-inkscape-font-specification:'Arial Italic'"
@@ -2508,7 +2508,8 @@
            height="30"
            fill="#ffffff"
            id="rect5-5"
-           clip-path="url(#clipPath145)" />
+           clip-path="url(#clipPath145)"
+           transform="translate(176.73127)" />
         <text
            font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
            font-style="italic"
@@ -2516,7 +2517,7 @@
            font-stretch="condensed"
            font-size="17px"
            id="text5"
-           x="855.93414"
+           x="1032.6654"
            y="2200.012"
            style="font-size:21.3333px"><tspan
              style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21.3333px;font-family:Arial;-inkscape-font-specification:'Arial Italic'"
@@ -2528,7 +2529,8 @@
            height="30"
            fill="#ffffff"
            id="rect6-7"
-           clip-path="url(#clipPath144)" />
+           clip-path="url(#clipPath144)"
+           transform="translate(176.73127)" />
         <text
            font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
            font-style="italic"
@@ -2536,7 +2538,7 @@
            font-stretch="condensed"
            font-size="17px"
            id="text6"
-           x="892.39313"
+           x="1069.1244"
            y="2150.012"
            style="font-size:21.3333px"><tspan
              style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21.3333px;font-family:Arial;-inkscape-font-specification:'Arial Italic'"
@@ -2548,7 +2550,8 @@
            height="30"
            fill="#ffffff"
            id="rect7"
-           clip-path="url(#clipPath143)" />
+           clip-path="url(#clipPath143)"
+           transform="translate(176.73127)" />
         <text
            font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
            font-style="italic"
@@ -2556,7 +2559,7 @@
            font-stretch="condensed"
            font-size="17px"
            id="text7-8"
-           x="870.31818"
+           x="1047.0494"
            y="2251.012"
            style="font-size:21.3333px"><tspan
              style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21.3333px;font-family:Arial;-inkscape-font-specification:'Arial Italic'"
@@ -2568,7 +2571,8 @@
            height="29"
            fill="#ffffff"
            id="rect8"
-           clip-path="url(#clipPath142)" />
+           clip-path="url(#clipPath142)"
+           transform="translate(176.73127)" />
         <text
            font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
            font-style="italic"
@@ -2576,7 +2580,7 @@
            font-stretch="condensed"
            font-size="17px"
            id="text9-5"
-           x="887.91217"
+           x="1064.6434"
            y="2125.012"
            style="font-size:21.3333px"><tspan
              style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21.3333px;font-family:Arial;-inkscape-font-specification:'Arial Italic'"
@@ -2588,7 +2592,7 @@
            font-stretch="condensed"
            font-size="17px"
            id="text10-9"
-           x="902.24115"
+           x="1078.9724"
            y="2125.012"
            style="font-size:21.3333px"><tspan
              style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21.3333px;font-family:Arial;-inkscape-font-specification:'Arial Italic'"
@@ -2600,7 +2604,8 @@
            height="30"
            fill="#ffffff"
            id="rect11"
-           clip-path="url(#clipPath141)" />
+           clip-path="url(#clipPath141)"
+           transform="translate(176.73127)" />
         <text
            font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
            font-style="italic"
@@ -2608,7 +2613,7 @@
            font-stretch="condensed"
            font-size="17px"
            id="text12-0"
-           x="891.37817"
+           x="1068.1095"
            y="2177.012"
            style="font-size:21.3333px"><tspan
              style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21.3333px;font-family:Arial;-inkscape-font-specification:'Arial Italic'"
@@ -2620,7 +2625,8 @@
            height="30"
            fill="#ffffff"
            id="rect12"
-           clip-path="url(#clipPath140)" />
+           clip-path="url(#clipPath140)"
+           transform="translate(176.73127)" />
         <text
            font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
            font-style="italic"
@@ -2628,7 +2634,7 @@
            font-stretch="condensed"
            font-size="17px"
            id="text13-4"
-           x="850.52814"
+           x="1027.2594"
            y="2276.012"
            style="font-size:21.3333px"><tspan
              style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21.3333px;font-family:Arial;-inkscape-font-specification:'Arial Italic'"
@@ -2640,7 +2646,7 @@
            font-stretch="condensed"
            font-size="17px"
            id="text14-5"
-           x="863.50818"
+           x="1040.2395"
            y="2276.012"
            style="font-size:21.3333px"><tspan
              style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21.3333px;font-family:Arial;-inkscape-font-specification:'Arial Italic'"
@@ -2652,7 +2658,8 @@
            height="26"
            fill="#ffffff"
            id="rect15-0"
-           clip-path="url(#clipPath139)" />
+           clip-path="url(#clipPath139)"
+           transform="translate(176.73127)" />
         <text
            font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
            font-style="italic"
@@ -2660,7 +2667,7 @@
            font-stretch="condensed"
            font-size="17px"
            id="text16-61"
-           x="855.64917"
+           x="1032.3805"
            y="2227.012"
            style="font-size:21.3333px"><tspan
              style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21.3333px;font-family:Arial;-inkscape-font-specification:'Arial Italic'"
@@ -2672,7 +2679,8 @@
            height="30"
            fill="#ffffff"
            id="rect16-8"
-           clip-path="url(#clipPath138)" />
+           clip-path="url(#clipPath138)"
+           transform="translate(176.73127)" />
         <rect
            x="1008.4711"
            y="2230.012"
@@ -2680,7 +2688,8 @@
            height="30"
            fill="#ffffff"
            id="rect17-9"
-           clip-path="url(#clipPath137)" />
+           clip-path="url(#clipPath137)"
+           transform="translate(176.73127)" />
         <rect
            x="993.47113"
            y="2256.012"
@@ -2688,10 +2697,11 @@
            height="30"
            fill="#ffffff"
            id="rect18"
-           clip-path="url(#clipPath136)" />
+           clip-path="url(#clipPath136)"
+           transform="translate(176.73127)" />
         <g
            id="g55"
-           transform="translate(-180.99408,1627.8239)">
+           transform="translate(-4.26281,1627.8239)">
           <text
              font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
              font-weight="400"
@@ -2705,7 +2715,7 @@
         </g>
         <g
            id="g56-9"
-           transform="translate(-192.99408,1627.8239)">
+           transform="translate(-16.26281,1627.8239)">
           <text
              font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
              font-weight="400"
@@ -2719,7 +2729,7 @@
         </g>
         <g
            id="g57"
-           transform="translate(-204.99408,1627.8239)">
+           transform="translate(-28.26281,1627.8239)">
           <text
              font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
              font-weight="400"
@@ -2733,7 +2743,7 @@
         </g>
         <g
            id="g58"
-           transform="translate(-218.99408,1627.8239)">
+           transform="translate(-42.26281,1627.8239)">
           <text
              font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
              font-weight="400"
@@ -2747,7 +2757,7 @@
         </g>
         <g
            id="g59"
-           transform="translate(-230.99408,1627.8239)">
+           transform="translate(-54.26281,1627.8239)">
           <text
              font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
              font-weight="400"
@@ -2761,7 +2771,7 @@
         </g>
         <g
            id="g60"
-           transform="translate(-244.99408,1627.8239)">
+           transform="translate(-68.26281,1627.8239)">
           <text
              font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
              font-weight="400"
@@ -2775,7 +2785,7 @@
         </g>
         <g
            id="g61"
-           transform="translate(-260.99408,1627.8239)">
+           transform="translate(-84.26281,1627.8239)">
           <text
              font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
              font-weight="400"
@@ -2789,7 +2799,7 @@
         </g>
         <g
            id="g62"
-           transform="translate(-304.99408,1627.8239)">
+           transform="translate(-128.26281,1627.8239)">
           <text
              font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
              font-style="italic"
@@ -2809,7 +2819,7 @@
            font-stretch="condensed"
            font-size="17px"
            id="text11-1"
-           x="1001.9611"
+           x="1178.6924"
            y="2125.012"
            style="font-size:21.3333px"><tspan
              style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21.3333px;font-family:Arial;-inkscape-font-specification:'Arial Italic'"
@@ -2821,7 +2831,7 @@
            font-stretch="condensed"
            font-size="17px"
            id="text8"
-           x="993.43115"
+           x="1170.1625"
            y="2251.012"
            style="font-size:21.3333px"><tspan
              style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21.3333px;font-family:Arial;-inkscape-font-specification:'Arial Italic'"
@@ -2833,133 +2843,133 @@
            font-stretch="condensed"
            font-size="17px"
            id="text15-1"
-           x="941.84113"
+           x="1118.5724"
            y="2276.012"
            style="font-size:21.3333px"><tspan
              style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21.3333px;font-family:Arial;-inkscape-font-specification:'Arial Italic'"
              id="tspan160">oxysporum</tspan></text>
         <path
            style="fill:#000000;stroke:#000000;stroke-width:1.88976;stroke-dasharray:none"
-           d="m 740.17985,2094.0263 222.59903,-0.4882"
+           d="m 916.91112,2094.0263 222.59908,-0.4882"
            id="path160" />
         <path
            style="fill:#000000;stroke:#000000;stroke-width:1.88976;stroke-dasharray:none"
-           d="m 740.42393,2119.1663 131.06982,0.2441"
+           d="m 917.1552,2119.1663 131.0698,0.2441"
            id="path161" />
         <path
            style="fill:#000000;stroke:#000000;stroke-width:1.88976;stroke-dasharray:none"
-           d="m 739.93577,2156.9984 129.11721,-0.2441"
+           d="m 916.66704,2156.9984 129.11726,-0.2441"
            id="path162" />
         <path
            style="fill:#000000;stroke:#000000;stroke-width:1.88976;stroke-dasharray:none"
-           d="m 739.6917,2206.5462 63.9484,0.2441"
+           d="m 916.42297,2206.5462 63.9484,0.2441"
            id="path163" />
         <path
            style="fill:#000000;stroke:#000000;stroke-width:1.88976;stroke-dasharray:none"
-           d="m 808.0335,2194.0982 33.68275,0.2441"
+           d="m 984.76477,2194.0982 33.68273,0.2441"
            id="path164" />
         <path
            style="fill:#000000;stroke:#000000;stroke-width:1.88976;stroke-dasharray:none"
-           d="m 807.78943,2219.7264 36.12352,-0.2441"
+           d="m 984.5207,2219.7264 36.1235,-0.2441"
            id="path165" />
         <path
            style="fill:#000000;stroke:#000000;stroke-width:1.88976;stroke-dasharray:none"
-           d="m 754.82453,2269.2742 h 80.78978"
+           d="m 931.5558,2269.2742 h 80.7898"
            id="path166" />
         <path
            style="fill:#000000;stroke:#000000;stroke-width:1.88976;stroke-dasharray:none"
-           d="m 755.0686,2244.1342 103.7331,0.244"
+           d="m 931.79987,2244.1342 103.73313,0.244"
            id="path167" />
         <path
            style="fill:#000000;stroke:#000000;stroke-width:1.88976;stroke-dasharray:none"
-           d="M 733.10159,2071.0829 H 1017.4523"
+           d="M 909.83286,2071.0829 H 1194.1836"
            id="path168" />
         <path
            style="fill:#000000;stroke:#000000;stroke-width:1.88976;stroke-dasharray:none"
-           d="m 733.34567,2107.2065 -0.24408,71.0266"
+           d="m 910.07694,2107.2065 -0.24408,71.0266"
            id="path169" />
         <path
            style="fill:#000000;stroke:#000000;stroke-width:1.88976;stroke-dasharray:none"
-           d="m 732.85752,2185.5555 v 71.2707"
+           d="m 909.58879,2185.5555 v 71.2707"
            id="path170" />
         <path
            style="fill:#000000;stroke:#000000;stroke-width:1.88976;stroke-dasharray:none"
-           d="m 740.17985,2156.9984 v 20.5025"
+           d="m 916.91112,2156.9984 v 20.5025"
            id="path171" />
         <path
            style="fill:#000000;stroke:#000000;stroke-width:1.88976;stroke-dasharray:none"
-           d="m 739.93577,2185.7996 0.24408,20.2584"
+           d="m 916.66704,2185.7996 0.24408,20.2584"
            id="path172" />
         <path
            style="fill:#000000;stroke:#000000;stroke-width:1.88976;stroke-dasharray:none"
-           d="m 754.82453,2244.3782 v 7.5665"
+           d="m 931.5558,2244.3782 v 7.5665"
            id="path173" />
         <path
            style="fill:#000000;stroke:#000000;stroke-width:1.88976;stroke-dasharray:none"
-           d="m 754.82453,2260.9755 v 7.5665"
+           d="m 931.5558,2260.9755 v 7.5665"
            id="path174" />
         <path
            style="fill:#000000;stroke:#000000;stroke-width:1.88976;stroke-dasharray:none"
-           d="m 732.85752,2256.094 18.79399,0.4881"
+           d="m 909.58879,2256.094 18.79399,0.4881"
            id="path175" />
         <path
            style="fill:#000000;stroke:#000000;stroke-width:1.88976;stroke-dasharray:none"
-           d="m 807.78943,2193.8541 v 9.0309"
+           d="m 984.5207,2193.8541 v 9.0309"
            id="path176" />
         <path
            style="fill:#000000;stroke:#000000;stroke-width:1.88976;stroke-dasharray:none"
-           d="m 808.52166,2210.4514 0.24408,8.7868"
+           d="m 985.25293,2210.4514 0.24408,8.7868"
            id="path177" />
         <path
            style="fill:#000000;stroke:#000000;stroke-width:1.88976;stroke-dasharray:none"
-           d="m 740.42393,2094.2703 v 7.8105"
+           d="m 917.1552,2094.2703 v 7.8105"
            id="path178" />
         <path
            style="fill:#000000;stroke:#000000;stroke-width:1.88976;stroke-dasharray:none"
-           d="m 740.66801,2110.1354 v 9.0309"
+           d="m 917.39928,2110.1354 v 9.0309"
            id="path179" />
         <path
            style="fill:#000000;stroke:#000000;stroke-width:1.88976;stroke-dasharray:none"
-           d="m 872.6662,2144.4216 v 8.3706"
+           d="m 1049.3975,2144.4216 v 8.3706"
            id="path180" />
         <path
            style="fill:#000000;stroke:#000000;stroke-width:1.88976;stroke-dasharray:none"
-           d="m 872.6662,2160.7313 -0.0863,9.0609"
+           d="m 1049.3975,2160.7313 -0.086,9.0609"
            id="path181" />
         <path
            style="fill:#000000;stroke:#000000;stroke-width:1.88976;stroke-dasharray:none"
-           d="m 872.49362,2143.9901 h 4.31472"
+           d="m 1049.2249,2143.9901 h 4.3147"
            id="path182" />
         <path
            style="fill:#000000;stroke:#000000;stroke-width:1.88976;stroke-dasharray:none"
-           d="m 872.57991,2169.9648 h 7.76651"
+           d="m 1049.3112,2169.9648 h 7.7665"
            id="path183" />
         <path
            style="fill:#000000;stroke:#000000;stroke-width:1.88976;stroke-dasharray:none"
-           d="m 732.76599,2106.7183 4.36289,-0.061"
+           d="m 909.49726,2106.7183 4.36289,-0.061"
            id="path184" />
         <path
            style="fill:#000000;stroke:#000000;stroke-width:1.88976;stroke-dasharray:none"
-           d="m 869.38701,2065.2032 0.17259,5.1777"
+           d="m 1046.1183,2065.2032 0.1726,5.1777"
            id="path185" />
         <path
            style="fill:#000000;stroke:#000000;stroke-width:1.88976;stroke-dasharray:none"
-           d="m 1005.5535,2065.2251 0.061,5.1866"
+           d="m 1182.2848,2065.2251 0.061,5.1866"
            id="path186" />
         <path
            style="fill:#000000;stroke:#000000;stroke-width:1.88976;stroke-dasharray:none"
-           d="m 1017.0862,2065.4692 v 5.6137"
+           d="m 1193.8175,2065.4692 v 5.6137"
            id="path187" />
         <path
            style="fill:#000000;stroke:#000000;stroke-width:1.88976;stroke-dasharray:none"
-           d="m 733.08475,2065.4189 0.0863,5.6523"
+           d="m 909.81602,2065.4189 0.0863,5.6523"
            id="path188" />
         <rect
            style="fill:#ffffff;stroke:#000000;stroke-width:0;stroke-dasharray:none"
            id="rect188"
            width="173.62466"
            height="21.746229"
-           x="839.2702"
+           x="1016.0015"
            y="2042.8682" />
         <text
            font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
@@ -2967,7 +2977,7 @@
            font-stretch="condensed"
            font-size="16px"
            id="text50-1-3-3-0-66-6-0-5"
-           x="847.85645"
+           x="1024.5878"
            y="2062.5735"
            style="font-size:21.3333px"><tspan
              style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21.3333px;font-family:Arial;-inkscape-font-specification:Arial"
@@ -2978,7 +2988,7 @@
            font-stretch="condensed"
            font-size="16px"
            id="text50-1-3-3-0-66-6-0-5-7"
-           x="984.8562"
+           x="1161.5875"
            y="2063.2437"
            style="font-size:21.3333px"><tspan
              style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21.3333px;font-family:Arial;-inkscape-font-specification:Arial"

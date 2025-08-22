@@ -16,6 +16,8 @@ library(dplyr)
 library(DescTools)
 library(tidyverse)
 library(readxl)
+library(bayesplot)
+library(brms)
 
 # Microesclerotia LLM1----
 
@@ -762,13 +764,18 @@ stat.test = aov(Normalized ~ Treatment, data = plates_light) %>%
 stat.test = stat.test %>% filter(!(p.adj.signif == "ns"))
 
 figure_melanization_light = ggboxplot(plates_light, x = "Treatment", y = "Normalized",
-                                      ylab = "Normalized melanization", xlab = "") + 
-  stat_pvalue_manual(stat.test, label = "p.adj.signif", 
-                     y.position = c(1.7, 1.8, 1.9))
+                                      ylab = "Normalized melanization", xlab = "") #+ 
+#stat_pvalue_manual(stat.test, label = "p.adj.signif", 
+#y.position = c(1.7, 1.8, 1.9))
 figure_melanization_light
 
 png("C:/Users/lucia/OneDrive - Wageningen University & Research/UCI_projects/Project_8 (Reviews)/Family/Pere/doctorado/Figures/figure_melanization_light_AML1.png",
     width=3500*1.35,height=1969*1.35,res=300)
+print(figure_melanization_light)
+dev.off()
+
+pdf("Figures/figure_melanization_light.pdf",
+    width=6,height=6*3/5)
 print(figure_melanization_light)
 dev.off()
 
