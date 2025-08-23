@@ -1,0 +1,11 @@
+,term,group1,group2,null.value,estimate,conf.low,conf.high,p.adj,p.adj.signif
+1,Plot,WT,?LLM1,0,-0.23,-0.35,-0.12,3.83E-05,****
+2,Plot,WT,LLM1-C,0,-0.05,-0.18,0.07,0.73,ns
+3,Plot,WT,LLM1-GFP,0,-0.02,-0.15,0.10,0.99,ns
+4,Plot,WT,oeLLM1,0,-0.03,-0.14,0.08,0.94,ns
+5,Plot,?LLM1,LLM1-C,0,0.18,0.05,0.31,2.90E-03,**
+6,Plot,?LLM1,LLM1-GFP,0,0.21,0.09,0.34,5.35E-04,***
+7,Plot,?LLM1,oeLLM1,0,0.20,0.09,0.32,2.13E-04,***
+8,Plot,LLM1-C,LLM1-GFP,0,0.03,-0.11,0.17,0.96,ns
+9,Plot,LLM1-C,oeLLM1,0,0.02,-0.10,0.15,0.98,ns
+10,Plot,LLM1-GFP,oeLLM1,0,-0.01,-0.13,0.12,1,ns

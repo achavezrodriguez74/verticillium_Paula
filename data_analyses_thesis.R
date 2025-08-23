@@ -1215,10 +1215,22 @@ summary(model)
 
 # Assumptions
 # 2. Normality
-ols_plot_resid_qq(model)
+norm_LLM1_conidia = ols_plot_resid_qq(model)
 # 1. Homogeneity of variances
-ols_plot_resid_fit(model)
+var_LLM1_conidia  = ols_plot_resid_fit(model)
 bartlett.test(Spores ~ Treatment, data = spores_LLM1)
+
+# Figure assumptions
+
+assumptions_LLM1_conidia = ggarrange(norm_LLM1_conidia, var_LLM1_conidia,
+                                                labels = c("A", "B"),
+                                                ncol = 2, nrow = 1)
+assumptions_LLM1_conidia
+
+pdf("Figures/assumptions_LLM1_conidia.pdf",
+    width=6,height=6*3/5)
+print(assumptions_LLM1_conidia)
+dev.off()
 
 # Tukey
 summary(model)
@@ -1230,12 +1242,14 @@ TUKEY
 stat.test = aov(Spores ~ Plot, data = spores_LLM1) %>%
   tukey_hsd()
 
-stat.test = stat.test %>% filter(!(p.adj.signif == "ns"))
+write.csv(stat.test, "statistical_results/stat.test_LLM1_conidia.csv")
+
+# stat.test = stat.test %>% filter(!(p.adj.signif == "ns"))
 
 figure_spores_LLM1 = ggbarplot(spores_LLM1, x = "Plot", y = "Spores", 
                                ylab = "Normalized conidia formation", xlab = "", add = "mean_se", fill = "#525252") + 
-  stat_pvalue_manual(stat.test, label = "p.adj.signif", 
-                     y.position = c(1.1, 1.2, 1.3, 1.4)) + 
+  #  stat_pvalue_manual(stat.test, label = "p.adj.signif", 
+  #                     y.position = c(1.1, 1.2, 1.3, 1.4)) + 
   theme_classic()
 figure_spores_LLM1
 
@@ -1256,10 +1270,22 @@ summary(model)
 
 # Assumptions
 # 2. Normality
-ols_plot_resid_qq(model)
+norm_AML1_conidia = ols_plot_resid_qq(model)
 # 1. Homogeneity of variances
-ols_plot_resid_fit(model)
+var_AML1_conidia  = ols_plot_resid_fit(model)
 bartlett.test(Spores ~ Treatment, data = spores_AML1)
+
+# Figure assumptions
+
+assumptions_AML1_conidia = ggarrange(norm_AML1_conidia, var_AML1_conidia,
+                                     labels = c("A", "B"),
+                                     ncol = 2, nrow = 1)
+assumptions_AML1_conidia
+
+pdf("Figures/assumptions_AML1_conidia.pdf",
+    width=6,height=6*3/5)
+print(assumptions_AML1_conidia)
+dev.off()
 
 # Tukey
 summary(model)
@@ -1271,7 +1297,9 @@ TUKEY
 stat.test = aov(Spores ~ Plot, data = spores_AML1) %>%
   tukey_hsd()
 
-stat.test = stat.test %>% filter(!(p.adj.signif == "ns"))
+write.csv(stat.test, "statistical_results/stat.test_AML1_conidia.csv")
+
+# stat.test = stat.test %>% filter(!(p.adj.signif == "ns"))
 
 figure_spores_AML1 = ggbarplot(spores_AML1, x = "Plot", y = "Spores", 
                                ylab = "Normalized conidia formation", xlab = "", add = "mean_se", fill = "#525252") + 
@@ -1320,3 +1348,291 @@ pdf("Figures/figure_spores_NML1.pdf",
     width=6,height=6*3/5)
 print(figure_spores_NML1)
 dev.off()
+
+# Plant health ----
+
+# LLM1 ----
+LLM1_plant_main = read_excel("datasets/ALL DATA STATISTICS_plant.xlsx",
+                             sheet = "LLM1_stats_main")
+# Aligned ranks anova 
+# https://rcompanion.org/handbook/F_16.html
+
+LLM1_plant_main$Plot = factor(LLM1_plant_main$Plot,
+                              levels=unique(LLM1_plant_main$Plot))
+
+model = art(as.numeric(Rank) ~ Plot,data = LLM1_plant_main)
+anova(model)
+
+# Post-hoc comparisons 
+
+model.lm = artlm(model, "Plot")
+marginal = emmeans(model.lm,~ Plot)
+test     = pairs(marginal,adjust = "tukey")
+
+# Reorganizing data for plotting
+
+LLM1_plant_main_1  = LLM1_plant_main %>% count(Plot,Rank)
+LLM1_plant_main_2  = LLM1_plant_main %>% count(Plot)
+
+levels                = unique(LLM1_plant_main_1$Plot)
+LLM1_plant_main_plot  = c()
+
+for (i in levels){
+  temp_1 = LLM1_plant_main_1  %>% filter(Plot == i)
+  temp_2 = LLM1_plant_main_2 %>% filter(Plot == i)
+  temp_3 = temp_1 %>% mutate(Percentage = temp_1$n/temp_2$n)
+  LLM1_plant_main_plot = rbind(LLM1_plant_main_plot,temp_3)
+}
+
+# Plot
+
+LLM1_plant_main_plot$Rank = factor(LLM1_plant_main_plot$Rank,
+                                   levels=unique(LLM1_plant_main_plot$Rank))
+LLM1_plant_main_plot$Plot = factor(LLM1_plant_main_plot$Plot,
+                                   levels=unique(LLM1_plant_main_plot$Plot))
+
+figure_plant_LLM1 = ggplot(LLM1_plant_main_plot, aes(Plot, Percentage, fill = (Rank))) +
+  geom_bar(position = "fill", stat = "identity") +
+  scale_y_continuous(labels = percent) + 
+  scale_fill_manual(name = "", values = c("#ff7f00", "#fdc086", "#ffff99",
+                                          "#7fc97f"),
+                    breaks=c('4', '3', '2', '1'),
+                    labels = c("very strong","strong","weak","healthy")) + 
+  ylab("# Plants [%]") + xlab("")
+figure_plant_LLM1
+
+# Save
+
+pdf("Figures/figure_plant_LLM1.pdf",
+    width=6,height=6*3/5)
+print(figure_plant_LLM1)
+dev.off()
+
+# AML1 ----
+AML1_plant_main = read_excel("datasets/ALL DATA STATISTICS_plant.xlsx",
+                             sheet = "AML1_stats")
+# Aligned ranks anova 
+# https://rcompanion.org/handbook/F_16.html
+
+AML1_plant_main$Plot = factor(AML1_plant_main$Plot,
+                              levels=unique(AML1_plant_main$Plot))
+
+model = art(as.numeric(Rank) ~ Plot,data = AML1_plant_main)
+anova(model)
+
+# Post-hoc comparisons 
+
+model.lm = artlm(model, "Plot")
+marginal = emmeans(model.lm,~ Plot)
+test     = pairs(marginal,adjust = "tukey")
+
+# Reorganizing data for plotting
+
+AML1_plant_main_1  = AML1_plant_main %>% count(Plot,Rank)
+AML1_plant_main_2  = AML1_plant_main %>% count(Plot)
+
+levels                = unique(AML1_plant_main_1$Plot)
+AML1_plant_main_plot  = c()
+
+for (i in levels){
+  temp_1 = AML1_plant_main_1  %>% filter(Plot == i)
+  temp_2 = AML1_plant_main_2 %>% filter(Plot == i)
+  temp_3 = temp_1 %>% mutate(Percentage = temp_1$n/temp_2$n)
+  AML1_plant_main_plot = rbind(AML1_plant_main_plot,temp_3)
+}
+
+# Plot
+
+AML1_plant_main_plot$Rank = factor(AML1_plant_main_plot$Rank,
+                                   levels=unique(AML1_plant_main_plot$Rank))
+AML1_plant_main_plot$Plot = factor(AML1_plant_main_plot$Plot,
+                                   levels=unique(AML1_plant_main_plot$Plot))
+
+figure_plant_AML1 = ggplot(AML1_plant_main_plot, aes(Plot, Percentage, fill = (Rank))) +
+  geom_bar(position = "fill", stat = "identity") +
+  scale_y_continuous(labels = percent) + 
+  scale_fill_manual(name = "", values = c("#ff7f00", "#fdc086", "#ffff99",
+                                          "#7fc97f"),
+                    breaks=c('4', '3', '2', '1'),
+                    labels = c("very strong","strong","weak","healthy")) + 
+  ylab("# Plants [%]") + xlab("")
+figure_plant_AML1
+
+# Save
+
+pdf("Figures/figure_plant_AML1.pdf",
+    width=6,height=6*3/5)
+print(figure_plant_AML1)
+dev.off()
+
+# NML1 ----
+NML1_plant_main = read_excel("datasets/ALL DATA STATISTICS_plant.xlsx",
+                             sheet = "NML1_stats")
+# Aligned ranks anova 
+# https://rcompanion.org/handbook/F_16.html
+
+NML1_plant_main$Plot = factor(NML1_plant_main$Plot,
+                              levels=unique(NML1_plant_main$Plot))
+
+model = art(as.numeric(Rank) ~ Plot,data = NML1_plant_main)
+anova(model)
+
+# Post-hoc comparisons 
+
+model.lm = artlm(model, "Plot")
+marginal = emmeans(model.lm,~ Plot)
+test     = pairs(marginal,adjust = "tukey")
+
+# Reorganizing data for plotting
+
+NML1_plant_main_1  = NML1_plant_main %>% count(Plot,Rank)
+NML1_plant_main_2  = NML1_plant_main %>% count(Plot)
+
+levels                = unique(NML1_plant_main_1$Plot)
+NML1_plant_main_plot  = c()
+
+for (i in levels){
+  temp_1 = NML1_plant_main_1  %>% filter(Plot == i)
+  temp_2 = NML1_plant_main_2 %>% filter(Plot == i)
+  temp_3 = temp_1 %>% mutate(Percentage = temp_1$n/temp_2$n)
+  NML1_plant_main_plot = rbind(NML1_plant_main_plot,temp_3)
+}
+
+# Plot
+
+NML1_plant_main_plot$Rank = factor(NML1_plant_main_plot$Rank,
+                                   levels=unique(NML1_plant_main_plot$Rank))
+NML1_plant_main_plot$Plot = factor(NML1_plant_main_plot$Plot,
+                                   levels=unique(NML1_plant_main_plot$Plot))
+
+figure_plant_NML1 = ggplot(NML1_plant_main_plot, aes(Plot, Percentage, fill = (Rank))) +
+  geom_bar(position = "fill", stat = "identity") +
+  scale_y_continuous(labels = percent) + 
+  scale_fill_manual(name = "", values = c("#ff7f00", "#fdc086", "#ffff99",
+                                          "#7fc97f"),
+                    breaks=c('4', '3', '2', '1'),
+                    labels = c("very strong","strong","weak","healthy")) + 
+  ylab("# Plants [%]") + xlab("")
+figure_plant_NML1
+
+# Save
+
+pdf("Figures/figure_plant_NML1.pdf",
+    width=6,height=6*3/5)
+print(figure_plant_NML1)
+dev.off()
+
+# LLM1 SI ----
+LLM1_plant_main = read_excel("datasets/ALL DATA STATISTICS_plant.xlsx",
+                             sheet = "LLM1_stats_SI")
+# Aligned ranks anova 
+# https://rcompanion.org/handbook/F_16.html
+
+LLM1_plant_main$Plot = factor(LLM1_plant_main$Plot,
+                              levels=unique(LLM1_plant_main$Plot))
+
+model = art(as.numeric(Rank) ~ Plot,data = LLM1_plant_main)
+anova(model)
+
+# Post-hoc comparisons 
+
+model.lm = artlm(model, "Plot")
+marginal = emmeans(model.lm,~ Plot)
+test     = pairs(marginal,adjust = "tukey")
+
+# Reorganizing data for plotting
+
+LLM1_plant_main_1  = LLM1_plant_main %>% count(Plot,Rank)
+LLM1_plant_main_2  = LLM1_plant_main %>% count(Plot)
+
+levels                = unique(LLM1_plant_main_1$Plot)
+LLM1_plant_main_plot  = c()
+
+for (i in levels){
+  temp_1 = LLM1_plant_main_1  %>% filter(Plot == i)
+  temp_2 = LLM1_plant_main_2 %>% filter(Plot == i)
+  temp_3 = temp_1 %>% mutate(Percentage = temp_1$n/temp_2$n)
+  LLM1_plant_main_plot = rbind(LLM1_plant_main_plot,temp_3)
+}
+
+# Plot
+
+LLM1_plant_main_plot$Rank = factor(LLM1_plant_main_plot$Rank,
+                                   levels=unique(LLM1_plant_main_plot$Rank))
+LLM1_plant_main_plot$Plot = factor(LLM1_plant_main_plot$Plot,
+                                   levels=unique(LLM1_plant_main_plot$Plot))
+
+figure_plant_LLM1_sup = ggplot(LLM1_plant_main_plot, aes(Plot, Percentage, fill = (Rank))) +
+  geom_bar(position = "fill", stat = "identity") +
+  scale_y_continuous(labels = percent) + 
+  scale_fill_manual(name = "", values = c("#ff7f00", "#fdc086", "#ffff99",
+                                          "#7fc97f"),
+                    breaks=c('4', '3', '2', '1'),
+                    labels = c("very strong","strong","weak","healthy")) + 
+  ylab("# Plants [%]") + xlab("")
+figure_plant_LLM1_sup
+
+# Save
+
+pdf("Figures/figure_plant_LLM1_sup.pdf",
+    width=6,height=6*3/5)
+print(figure_plant_LLM1_sup)
+dev.off()
+
+# Other genes ----
+OTHER_plant_main = read_excel("datasets/ALL DATA STATISTICS_plant.xlsx",
+                              sheet = "OTHER_stats")
+# Aligned ranks anova 
+# https://rcompanion.org/handbook/F_16.html
+
+OTHER_plant_main$Plot = factor(OTHER_plant_main$Plot,
+                               levels=unique(OTHER_plant_main$Plot))
+
+model = art(as.numeric(Rank) ~ Plot,data = OTHER_plant_main)
+anova(model)
+
+# Post-hoc comparisons 
+
+model.lm = artlm(model, "Plot")
+marginal = emmeans(model.lm,~ Plot)
+test     = pairs(marginal,adjust = "tukey")
+
+# Reorganizing data for plotting
+
+OTHER_plant_main_1  = OTHER_plant_main %>% count(Plot,Rank)
+OTHER_plant_main_2  = OTHER_plant_main %>% count(Plot)
+
+levels                = unique(OTHER_plant_main_1$Plot)
+OTHER_plant_main_plot  = c()
+
+for (i in levels){
+  temp_1 = OTHER_plant_main_1  %>% filter(Plot == i)
+  temp_2 = OTHER_plant_main_2 %>% filter(Plot == i)
+  temp_3 = temp_1 %>% mutate(Percentage = temp_1$n/temp_2$n)
+  OTHER_plant_main_plot = rbind(OTHER_plant_main_plot,temp_3)
+}
+
+# Plot
+
+OTHER_plant_main_plot$Rank = factor(OTHER_plant_main_plot$Rank,
+                                    levels=unique(OTHER_plant_main_plot$Rank))
+OTHER_plant_main_plot$Plot = factor(OTHER_plant_main_plot$Plot,
+                                    levels=unique(OTHER_plant_main_plot$Plot))
+
+figure_plant_OTHER_sup = ggplot(OTHER_plant_main_plot, aes(Plot, Percentage, fill = (Rank))) +
+  geom_bar(position = "fill", stat = "identity") +
+  scale_y_continuous(labels = percent) + 
+  scale_fill_manual(name = "", values = c("#ff7f00", "#fdc086", "#ffff99",
+                                          "#7fc97f"),
+                    breaks=c('4', '3', '2', '1'),
+                    labels = c("very strong","strong","weak","healthy")) + 
+  ylab("# Plants [%]") + xlab("")
+figure_plant_OTHER_sup
+
+# Save
+
+pdf("Figures/figure_plant_OTHER_sup.pdf",
+    width=6,height=6*3/5)
+print(figure_plant_OTHER_sup)
+dev.off()
+
