@@ -18,6 +18,7 @@ library(tidyverse)
 library(readxl)
 library(bayesplot)
 library(brms)
+library(bayestestR)
 
 # PCR graphs ----
 
@@ -101,10 +102,9 @@ dev.off()
 
 # Bayesian Methods for Group Comparison ----
 library(brms)
-library(bayestestR)
 
 # SXM ----
-PCR_raw_SXM   = PCR_data %>% filter(Stage == "SXM")
+PCR_raw_SXM   = PCR_raw %>% filter(Stage == "SXM")
 PCR_raw_SXM$Treatment = as.factor(PCR_raw_SXM$Treatment)
 
 # LLM1 - ΔVel1
@@ -1404,7 +1404,7 @@ figure_plant_LLM1
 # Save
 
 pdf("Figures/figure_plant_LLM1.pdf",
-    width=6,height=6*3/5)
+    width=8,height=8*3/5)
 print(figure_plant_LLM1)
 dev.off()
 
@@ -1461,7 +1461,7 @@ figure_plant_AML1
 # Save
 
 pdf("Figures/figure_plant_AML1.pdf",
-    width=6,height=6*3/5)
+    width=8,height=8*3/5)
 print(figure_plant_AML1)
 dev.off()
 
@@ -1518,7 +1518,7 @@ figure_plant_NML1
 # Save
 
 pdf("Figures/figure_plant_NML1.pdf",
-    width=6,height=6*3/5)
+    width=8,height=8*3/5)
 print(figure_plant_NML1)
 dev.off()
 
@@ -1632,7 +1632,1097 @@ figure_plant_OTHER_sup
 # Save
 
 pdf("Figures/figure_plant_OTHER_sup.pdf",
-    width=6,height=6*3/5)
+    width=8,height=8*3/5)
 print(figure_plant_OTHER_sup)
 dev.off()
 
+# PCR Complex ----
+
+# Call data
+vel_expression     = read_excel("datasets/Summary Velvet expression in LLM1.xlsx",
+                            sheet = "statistics")
+vel_expression_raw = vel_expression
+
+# Transform to Log2
+vel_expression = vel_expression %>%  mutate(across(c(Expression), 
+                                                   function(x) log2(x)))
+
+# Delete WT
+vel_expression = vel_expression %>% filter(Treatment != "WT")
+
+# Vel1 ----
+
+vel_expression_vel1      = vel_expression %>% filter(Protein == "VEL1")
+
+vel_expression_vel1_plot = vel_expression_vel1 %>% group_by(Stage,Treatment,Plot) %>% 
+  summarize(avg = mean(Expression), n = n(), 
+            sd = sd(Expression), se = sd/sqrt(n))
+
+Figure_expression_vel1 = ggplot(vel_expression_vel1_plot, aes(x=Stage, y=avg, fill=as.factor(Plot))) + 
+  geom_bar(stat="identity", color="black", 
+           position=position_dodge()) +
+  geom_errorbar(aes(ymin=avg-se, ymax=avg+se), width=.2,
+                position=position_dodge(.9)) + 
+  scale_fill_manual(name = "", values = c("#e5f5e0", "#a1d99b", "#238b45", "#084594"), 
+                    labels = c("ΔLLM1", "LLM1-C", "oeLLM1","ΔVEL2")) + 
+  xlab("") + ylab("Expression") + theme_classic()
+Figure_expression_vel1
+
+pdf("Figures/Figure_expression_vel1.pdf",
+    width=6,height=6*3/5)
+print(Figure_expression_vel1)
+dev.off()
+
+# Vel2 ----
+
+vel_expression_vel2      = vel_expression %>% filter(Protein == "VEL2")
+
+vel_expression_vel2_plot = vel_expression_vel2 %>% group_by(Stage,Treatment,Plot) %>% 
+  summarize(avg = mean(Expression), n = n(), 
+            sd = sd(Expression), se = sd/sqrt(n))
+
+Figure_expression_vel2 = ggplot(vel_expression_vel2_plot, aes(x=Stage, y=avg, fill=as.factor(Plot))) + 
+  geom_bar(stat="identity", color="black", 
+           position=position_dodge()) +
+  geom_errorbar(aes(ymin=avg-se, ymax=avg+se), width=.2,
+                position=position_dodge(.9)) + 
+  scale_fill_manual(name = "", values = c("#e5f5e0", "#a1d99b", "#238b45", "#fff7bc","#7bccc4","#084594"), 
+                    labels = c("ΔLLM1", "LLM1-C", "oeLLM1","ΔVEL1ΔLLM1","ΔVEL1oeLLM1","ΔVEL1")) + 
+  xlab("") + ylab("Expression") + theme_classic()
+Figure_expression_vel2
+
+pdf("Figures/Figure_expression_vel2.pdf",
+    width=6,height=6*3/5)
+print(Figure_expression_vel2)
+dev.off()
+
+# Bayesian Methods for Group Comparison ----
+
+# VEL1 ----
+
+# SXM ----
+
+vel1_expression_raw_SXM  = vel_expression_raw %>% filter(Stage == "SXM" & Protein == "VEL1")
+vel1_expression_raw_SXM$Treatment    = as.factor(vel1_expression_raw_SXM$Treatment)
+
+# WT - ΔLLM1 ----
+
+model.vel1.SXM.ΔLLM1     = brm(Expression ~ Treatment, data = vel1_expression_raw_SXM[1:6,])
+
+posterior_summary(model.vel1.SXM.ΔLLM1)
+describe_posterior(model.vel1.SXM.ΔLLM1)
+rope(model.vel1.SXM.ΔLLM1)
+posterior = as_draws_df(model.vel1.SXM.ΔLLM1)
+1- mean(posterior$b_TreatmentΔLLM1 > 0) # 0.09375
+
+# Summary of Posterior Distribution 
+
+Parameter      | Median |        95% CI |     pd |          ROPE | % in ROPE |  Rhat |     ESS
+----------------------------------------------------------------------------------------------
+(Intercept)    |   1.00 | [ 0.79, 1.20] |   100% | [-0.01, 0.01] |        0% | 1.000 | 1552.00
+TreatmentΔLLM1 |   0.15 | [-0.14, 0.42] | 90.62% | [-0.01, 0.01] |     2.71% | 1.000 | 1855.00
+
+# WT - LLM1-C ----
+
+model.vel1.SXM.LLM1.C     = brm(Expression ~ Treatment, data = vel1_expression_raw_SXM[c(1:3,7:9),])
+
+posterior_summary(model.vel1.SXM.LLM1.C)
+describe_posterior(model.vel1.SXM.LLM1.C)
+rope(model.vel1.SXM.LLM1.C)
+posterior = as_draws_df(model.vel1.SXM.LLM1.C)
+1- mean(posterior$b_TreatmentWT > 0) # 0.086
+
+# Summary of Posterior Distribution 
+
+Parameter   | Median |        95% CI |     pd |          ROPE | % in ROPE |  Rhat |     ESS
+-------------------------------------------------------------------------------------------
+(Intercept) |   0.89 | [ 0.75, 1.03] |   100% | [-0.01, 0.01] |        0% | 1.000 | 1989.00
+TreatmentWT |   0.11 | [-0.08, 0.32] | 91.40% | [-0.01, 0.01] |     2.63% | 1.000 | 1651.00
+
+# WT - oeLLM1 ----
+
+model.vel1.SXM.oeLLM1     = brm(Expression ~ Treatment, data = vel1_expression_raw_SXM[c(1:3,10:12),])
+
+posterior_summary(model.vel1.SXM.oeLLM1)
+describe_posterior(model.vel1.SXM.oeLLM1)
+rope(model.vel1.SXM.oeLLM1)
+posterior = as_draws_df(model.vel1.SXM.oeLLM1)
+mean(posterior$b_TreatmentWT > 0) # 0.0335
+
+# Summary of Posterior Distribution 
+
+Parameter   | Median |        95% CI |     pd |          ROPE | % in ROPE |  Rhat |     ESS
+-------------------------------------------------------------------------------------------
+(Intercept) |   1.24 | [ 1.06, 1.45] |   100% | [-0.02, 0.02] |        0% | 1.000 | 2149.00
+TreatmentWT |  -0.25 | [-0.54, 0.04] | 96.65% | [-0.02, 0.02] |     1.13% | 1.001 | 2328.00
+
+# WT - ΔVEL2 ----
+
+model.vel1.SXM.ΔVEL2     = brm(Expression ~ Treatment, data = vel1_expression_raw_SXM[c(1:3,13:15),])
+
+posterior_summary(model.vel1.SXM.ΔVEL2)
+describe_posterior(model.vel1.SXM.ΔVEL2)
+rope(model.vel1.SXM.ΔVEL2)
+posterior = as_draws_df(model.vel1.SXM.ΔVEL2)
+1-mean(posterior$b_TreatmentΔVEL2  > 0) # 0.24325
+
+# Summary of Posterior Distribution 
+
+Parameter      | Median |        95% CI |     pd |          ROPE | % in ROPE |  Rhat |     ESS
+----------------------------------------------------------------------------------------------
+(Intercept)    |   1.00 | [ 0.72, 1.32] | 99.92% | [-0.01, 0.01] |        0% | 1.000 | 1883.00
+TreatmentΔVEL2 |   0.11 | [-0.33, 0.53] | 75.67% | [-0.01, 0.01] |     5.82% | 1.002 | 1753.00
+
+# PDM ----
+
+vel1_expression_raw_PDM  = vel_expression_raw %>% filter(Stage == "PDM" & Protein == "VEL1")
+vel1_expression_raw_PDM$Treatment    = as.factor(vel1_expression_raw_PDM$Treatment)
+
+# WT - ΔLLM1 ----
+
+model.vel1.PDM.ΔLLM1     = brm(Expression ~ Treatment, data = vel1_expression_raw_PDM[c(1:8),],
+                               iter = 4000)
+
+posterior_summary(model.vel1.PDM.ΔLLM1)
+describe_posterior(model.vel1.PDM.ΔLLM1)
+rope(model.vel1.PDM.ΔLLM1)
+posterior = as_draws_df(model.vel1.PDM.ΔLLM1)
+1-mean(posterior$b_TreatmentΔLLM1  > 0) # 0.0395
+
+# Summary of Posterior Distribution 
+
+Parameter      | Median |        95% CI |     pd |          ROPE | % in ROPE |  Rhat |     ESS
+----------------------------------------------------------------------------------------------
+(Intercept)    |   1.00 | [ 0.38, 1.59] | 99.60% | [-0.06, 0.06] |        0% | 1.000 | 2450.00
+TreatmentΔLLM1 |   0.73 | [-0.18, 1.60] | 96.05% | [-0.06, 0.06] |     1.76% | 1.000 | 2143.00
+
+# WT - LLM1-C ----
+
+model.vel1.PDM.LLM1.C     = brm(Expression ~ Treatment, data = vel1_expression_raw_PDM[c(1:4,9:12),])
+
+posterior_summary(model.vel1.PDM.LLM1.C)
+describe_posterior(model.vel1.PDM.LLM1.C)
+rope(model.vel1.PDM.LLM1.C)
+posterior = as_draws_df(model.vel1.PDM.LLM1.C)
+mean(posterior$b_TreatmentWT  > 0) # 0.25525
+
+# Summary of Posterior Distribution 
+
+Parameter   | Median |        95% CI |     pd |          ROPE | % in ROPE |  Rhat |     ESS
+-------------------------------------------------------------------------------------------
+(Intercept) |   1.25 | [ 0.64, 1.84] | 99.85% | [-0.04, 0.04] |        0% | 1.000 | 2365.00
+TreatmentWT |  -0.24 | [-1.09, 0.61] | 74.48% | [-0.04, 0.04] |     7.26% | 1.001 | 2199.00
+
+# WT - oeLLM1 ----
+
+model.vel1.PDM.oeLLM1     = brm(Expression ~ Treatment, data = vel1_expression_raw_PDM[c(1:4,13:16),],
+                                iter = 4000)
+
+posterior_summary(model.vel1.PDM.oeLLM1)
+describe_posterior(model.vel1.PDM.oeLLM1)
+rope(model.vel1.PDM.oeLLM1)
+posterior = as_draws_df(model.vel1.PDM.oeLLM1)
+mean(posterior$b_TreatmentWT  > 0) # 0.00
+
+# Summary of Posterior Distribution 
+
+Parameter   | Median |         95% CI |   pd |          ROPE | % in ROPE |  Rhat |     ESS
+------------------------------------------------------------------------------------------
+(Intercept) |   2.64 | [ 2.47,  2.82] | 100% | [-0.09, 0.09] |        0% | 1.000 | 4151.00
+TreatmentWT |  -1.64 | [-1.88, -1.40] | 100% | [-0.09, 0.09] |        0% | 1.000 | 4444.00
+
+# WT - ΔVEL2 ----
+
+model.vel1.PDM.ΔVEL2     = brm(Expression ~ Treatment, data = vel1_expression_raw_PDM[c(1:4,17:19),],
+                               iter = 4000)
+
+posterior_summary(model.vel1.PDM.ΔVEL2)
+describe_posterior(model.vel1.PDM.ΔVEL2)
+rope(model.vel1.PDM.ΔVEL2)
+posterior = as_draws_df(model.vel1.PDM.ΔVEL2)
+mean(posterior$b_TreatmentΔVEL2   > 0) # 0.180125
+
+# Summary of Posterior Distribution 
+
+Parameter      | Median |        95% CI |     pd |          ROPE | % in ROPE |  Rhat |     ESS
+----------------------------------------------------------------------------------------------
+(Intercept)    |   1.00 | [ 0.78, 1.20] |   100% | [-0.01, 0.01] |        0% | 1.000 | 4226.00
+TreatmentΔVEL2 |  -0.12 | [-0.45, 0.21] | 81.99% | [-0.01, 0.01] |     5.33% | 1.000 | 3857.00
+
+# PLATE ----
+
+vel1_expression_raw_PLATE  = vel_expression_raw %>% filter(Stage == "PLATE" & Protein == "VEL1")
+vel1_expression_raw_PLATE$Treatment    = as.factor(vel1_expression_raw_PLATE$Treatment)
+
+# WT - ΔLLM1 ----
+
+model.vel1.PLATE.ΔLLM1     = brm(Expression ~ Treatment, data = vel1_expression_raw_PLATE[c(1:8),],
+                                 iter = 4000)
+
+posterior_summary(model.vel1.PLATE.ΔLLM1)
+describe_posterior(model.vel1.PLATE.ΔLLM1)
+rope(model.vel1.PLATE.ΔLLM1)
+posterior = as_draws_df(model.vel1.PLATE.ΔLLM1)
+1-mean(posterior$b_TreatmentΔLLM1   > 0) # 0.05
+
+# Summary of Posterior Distribution 
+
+Parameter      | Median |        95% CI |     pd |          ROPE | % in ROPE |  Rhat |     ESS
+----------------------------------------------------------------------------------------------
+(Intercept)    |   1.00 | [ 0.82, 1.18] |   100% | [-0.02, 0.02] |        0% | 1.000 | 4313.00
+TreatmentΔLLM1 |   0.20 | [-0.06, 0.47] | 95.00% | [-0.02, 0.02] |     2.14% | 1.000 | 4145.00
+
+# WT - LLM1-C ----
+
+model.vel1.PLATE.LLM1.C     = brm(Expression ~ Treatment, data = vel1_expression_raw_PLATE[c(1:4,9:12),],
+                                  iter = 4000)
+
+posterior_summary(model.vel1.PLATE.LLM1.C)
+describe_posterior(model.vel1.PLATE.LLM1.C)
+rope(model.vel1.PLATE.LLM1.C)
+posterior = as_draws_df(model.vel1.PLATE.LLM1.C)
+1-mean(posterior$b_TreatmentWT   > 0) # 0.09225
+
+# Summary of Posterior Distribution 
+
+Parameter   | Median |        95% CI |     pd |          ROPE | % in ROPE |  Rhat |     ESS
+-------------------------------------------------------------------------------------------
+(Intercept) |   0.92 | [ 0.83, 1.01] |   100% | [-0.01, 0.01] |        0% | 1.001 | 3842.00
+TreatmentWT |   0.08 | [-0.05, 0.22] | 90.77% | [-0.01, 0.01] |     3.50% | 1.001 | 4255.00
+
+# WT - oeLLM1 ----
+
+model.vel1.PLATE.oeLLM1     = brm(Expression ~ Treatment, data = vel1_expression_raw_PLATE[c(1:4,13:16),],
+                                  iter = 4000)
+
+posterior_summary(model.vel1.PLATE.oeLLM1)
+describe_posterior(model.vel1.PLATE.oeLLM1)
+rope(model.vel1.PLATE.oeLLM1)
+posterior = as_draws_df(model.vel1.PLATE.oeLLM1)
+mean(posterior$b_TreatmentWT   > 0) # 0.171125
+
+# Summary of Posterior Distribution 
+
+Parameter   | Median |        95% CI |     pd |          ROPE | % in ROPE |  Rhat |     ESS
+-------------------------------------------------------------------------------------------
+(Intercept) |   1.06 | [ 0.95, 1.16] |   100% | [-0.01, 0.01] |        0% | 1.000 | 4404.00
+TreatmentWT |  -0.06 | [-0.20, 0.08] | 82.89% | [-0.01, 0.01] |     5.57% | 1.000 | 4020.00
+
+# WT - ΔVEL2 ----
+
+model.vel1.PLATE.ΔVEL2     = brm(Expression ~ Treatment, data = vel1_expression_raw_PLATE[c(1:4,17:19),],
+                                 iter = 4000)
+
+posterior_summary(model.vel1.PLATE.ΔVEL2)
+describe_posterior(model.vel1.PLATE.ΔVEL2)
+rope(model.vel1.PLATE.ΔVEL2)
+posterior = as_draws_df(model.vel1.PLATE.ΔVEL2)
+mean(posterior$b_TreatmentΔVEL2   > 0) # 0.00325
+
+# Summary of Posterior Distribution 
+
+Parameter      | Median |         95% CI |     pd |          ROPE | % in ROPE |  Rhat |     ESS
+-----------------------------------------------------------------------------------------------
+(Intercept)    |   1.00 | [ 0.91,  1.09] |   100% | [-0.02, 0.02] |        0% | 1.001 | 3917.00
+TreatmentΔVEL2 |  -0.28 | [-0.43, -0.14] | 99.67% | [-0.02, 0.02] |        0% | 1.001 | 3290.00
+
+# VEL2 ----
+
+# SXM ----
+
+VEL2_expression_raw_SXM  = vel_expression_raw %>% filter(Stage == "SXM" & Protein == "VEL2")
+VEL2_expression_raw_SXM$Treatment    = as.factor(VEL2_expression_raw_SXM$Treatment)
+
+# WT - ΔLLM1 ----
+
+model.VEL2.SXM.ΔLLM1     = brm(Expression ~ Treatment, data = VEL2_expression_raw_SXM[c(1:6),],
+                               iter = 4000)
+
+posterior_summary(model.VEL2.SXM.ΔLLM1)
+describe_posterior(model.VEL2.SXM.ΔLLM1)
+rope(model.VEL2.SXM.ΔLLM1)
+posterior = as_draws_df(model.VEL2.SXM.ΔLLM1)
+1-mean(posterior$b_TreatmentΔLLM1   > 0) # 0.1955
+
+# Summary of Posterior Distribution 
+
+Parameter      | Median |        95% CI |     pd |          ROPE | % in ROPE |  Rhat |     ESS
+----------------------------------------------------------------------------------------------
+(Intercept)    |   1.00 | [ 0.67, 1.32] | 99.87% | [-0.02, 0.02] |        0% | 1.001 | 4222.00
+TreatmentΔLLM1 |   0.15 | [-0.29, 0.62] | 80.45% | [-0.02, 0.02] |     5.05% | 1.001 | 4019.00
+
+# WT - LLM1-C ----
+
+model.VEL2.SXM.LLM1.C     = brm(Expression ~ Treatment, data = VEL2_expression_raw_SXM[c(1:3,7:9),],
+                                iter = 4000)
+
+posterior_summary(model.VEL2.SXM.LLM1.C)
+describe_posterior(model.VEL2.SXM.LLM1.C)
+rope(model.VEL2.SXM.LLM1.C)
+posterior = as_draws_df(model.VEL2.SXM.LLM1.C)
+mean(posterior$b_TreatmentWT   > 0) # 0.464875
+
+# Summary of Posterior Distribution 
+
+Parameter   |    Median |        95% CI |     pd |          ROPE | % in ROPE |  Rhat |     ESS
+----------------------------------------------------------------------------------------------
+(Intercept) |      1.01 | [ 0.80, 1.21] |   100% | [-0.01, 0.01] |        0% | 1.000 | 3809.00
+TreatmentWT | -8.77e-03 | [-0.30, 0.28] | 53.51% | [-0.01, 0.01] |     7.42% | 1.001 | 3118.00
+
+# WT - oeLLM1 ----
+
+model.VEL2.SXM.oeLLM1     = brm(Expression ~ Treatment, data = VEL2_expression_raw_SXM[c(1:3,10:12),],
+                                iter = 4000)
+
+posterior_summary(model.VEL2.SXM.oeLLM1)
+describe_posterior(model.VEL2.SXM.oeLLM1)
+rope(model.VEL2.SXM.oeLLM1)
+posterior = as_draws_df(model.VEL2.SXM.oeLLM1)
+mean(posterior$b_TreatmentWT   > 0) # 0.218375
+
+# Summary of Posterior Distribution 
+
+Parameter   | Median |        95% CI |     pd |          ROPE | % in ROPE |  Rhat |     ESS
+-------------------------------------------------------------------------------------------
+(Intercept) |   1.27 | [ 0.59, 1.90] | 99.38% | [-0.03, 0.03] |        0% | 1.000 | 3820.00
+TreatmentWT |  -0.27 | [-1.20, 0.70] | 78.16% | [-0.03, 0.03] |     5.24% | 1.000 | 3611.00
+
+# WT - ΔVEL1ΔLLM1 ----
+
+model.VEL2.SXM.ΔVEL1ΔLLM1     = brm(Expression ~ Treatment, data = VEL2_expression_raw_SXM[c(1:3,13:15),],
+                                    iter = 4000)
+
+posterior_summary(model.VEL2.SXM.ΔVEL1ΔLLM1)
+describe_posterior(model.VEL2.SXM.ΔVEL1ΔLLM1)
+rope(model.VEL2.SXM.ΔVEL1ΔLLM1)
+posterior = as_draws_df(model.VEL2.SXM.ΔVEL1ΔLLM1)
+1-mean(posterior$b_TreatmentΔVEL1ΔLLM1   > 0) # 0.1505
+
+# Summary of Posterior Distribution 
+
+Parameter           | Median |        95% CI |     pd |          ROPE | % in ROPE |  Rhat |     ESS
+---------------------------------------------------------------------------------------------------
+(Intercept)         |   0.99 | [ 0.08, 1.97] | 98.06% | [-0.05, 0.05] |        0% | 1.001 | 3689.00
+TreatmentΔVEL1ΔLLM1 |   0.57 | [-0.81, 1.95] | 84.95% | [-0.05, 0.05] |     4.26% | 1.001 | 3175.00
+
+# WT - ΔVEL1oeLLM1 ----
+
+model.VEL2.SXM.ΔVEL1oeLLM1     = brm(Expression ~ Treatment, data = VEL2_expression_raw_SXM[c(1:3,16:18),],
+                                     iter = 4000)
+
+posterior_summary(model.VEL2.SXM.ΔVEL1oeLLM1)
+describe_posterior(model.VEL2.SXM.ΔVEL1oeLLM1)
+rope(model.VEL2.SXM.ΔVEL1oeLLM1)
+posterior = as_draws_df(model.VEL2.SXM.ΔVEL1oeLLM1)
+1-mean(posterior$b_TreatmentΔVEL1oeLLM1   > 0) # 0.3805
+
+# Summary of Posterior Distribution 
+
+Parameter            | Median |        95% CI |     pd |          ROPE | % in ROPE |  Rhat |     ESS
+----------------------------------------------------------------------------------------------------
+(Intercept)          |   0.99 | [ 0.31, 1.67] | 99.16% | [-0.03, 0.03] |        0% | 1.001 | 4407.00
+TreatmentΔVEL1oeLLM1 |   0.10 | [-0.82, 1.07] | 61.95% | [-0.03, 0.03] |     6.71% | 1.001 | 4294.00
+
+# WT - ΔVEL1 ----
+
+model.VEL2.SXM.ΔVEL1     = brm(Expression ~ Treatment, data = VEL2_expression_raw_SXM[c(1:3,19:21),],
+                               iter = 4000)
+
+posterior_summary(model.VEL2.SXM.ΔVEL1)
+describe_posterior(model.VEL2.SXM.ΔVEL1)
+rope(model.VEL2.SXM.ΔVEL1)
+posterior = as_draws_df(model.VEL2.SXM.ΔVEL1)
+1-mean(posterior$b_TreatmentΔVEL1   > 0) # 0.074375
+
+# Summary of Posterior Distribution 
+
+Parameter      | Median |        95% CI |     pd |          ROPE | % in ROPE |  Rhat |     ESS
+----------------------------------------------------------------------------------------------
+(Intercept)    |   1.00 | [ 0.17, 1.88] | 98.45% | [-0.06, 0.06] |        0% | 1.001 | 4022.00
+TreatmentΔVEL1 |   0.77 | [-0.47, 1.90] | 92.56% | [-0.06, 0.06] |     2.08% | 1.001 | 3452.00
+
+# PDM ----
+
+VEL2_expression_raw_PDM  = vel_expression_raw %>% filter(Stage == "PDM" & Protein == "VEL2")
+VEL2_expression_raw_PDM$Treatment    = as.factor(VEL2_expression_raw_PDM$Treatment)
+
+# WT - ΔLLM1 ----
+
+model.VEL2.PDM.ΔLLM1     = brm(Expression ~ Treatment, data = VEL2_expression_raw_PDM[c(1:8),],
+                               iter = 4000)
+
+posterior_summary(model.VEL2.PDM.ΔLLM1)
+describe_posterior(model.VEL2.PDM.ΔLLM1)
+rope(model.VEL2.PDM.ΔLLM1)
+posterior = as_draws_df(model.VEL2.PDM.ΔLLM1)
+1-mean(posterior$b_TreatmentΔLLM1   > 0) # 0.02225
+
+# Summary of Posterior Distribution 
+
+Parameter      | Median |       95% CI |     pd |          ROPE | % in ROPE |  Rhat |     ESS
+---------------------------------------------------------------------------------------------
+(Intercept)    |   1.00 | [0.62, 1.40] | 99.95% | [-0.04, 0.04] |        0% | 1.000 | 4032.00
+TreatmentΔLLM1 |   0.59 | [0.03, 1.13] | 97.78% | [-0.04, 0.04] |     0.13% | 1.001 | 3991.00
+
+# WT - LLM1-C ----
+
+model.VEL2.PDM.LLM1.C     = brm(Expression ~ Treatment, data = VEL2_expression_raw_PDM[c(1:4,9:12),],
+                                iter = 4000)
+
+posterior_summary(model.VEL2.PDM.LLM1.C)
+describe_posterior(model.VEL2.PDM.LLM1.C)
+rope(model.VEL2.PDM.LLM1.C)
+posterior = as_draws_df(model.VEL2.PDM.LLM1.C)
+mean(posterior$b_TreatmentWT   > 0) # 0.008
+
+# Summary of Posterior Distribution 
+
+Parameter   | Median |         95% CI |     pd |          ROPE | % in ROPE |  Rhat |     ESS
+--------------------------------------------------------------------------------------------
+(Intercept) |   1.42 | [ 1.20,  1.64] |   100% | [-0.03, 0.03] |        0% | 1.000 | 4074.00
+TreatmentWT |  -0.42 | [-0.72, -0.12] | 99.20% | [-0.03, 0.03] |        0% | 1.000 | 4421.00
+
+# WT - oeLLM1 ----
+
+model.VEL2.PDM.oeLLM1     = brm(Expression ~ Treatment, data = VEL2_expression_raw_PDM[c(1:4,13:16),],
+                                iter = 4000)
+
+posterior_summary(model.VEL2.PDM.oeLLM1)
+describe_posterior(model.VEL2.PDM.oeLLM1)
+rope(model.VEL2.PDM.oeLLM1)
+posterior = as_draws_df(model.VEL2.PDM.oeLLM1)
+mean(posterior$b_TreatmentWT   > 0) # 0.00075
+
+# Summary of Posterior Distribution 
+
+Parameter   | Median |         95% CI |     pd |          ROPE | % in ROPE |  Rhat |     ESS
+--------------------------------------------------------------------------------------------
+(Intercept) |   2.26 | [ 1.90,  2.60] |   100% | [-0.07, 0.07] |        0% | 1.001 | 3965.00
+TreatmentWT |  -1.26 | [-1.74, -0.75] | 99.92% | [-0.07, 0.07] |        0% | 1.001 | 3730.00
+
+# WT - ΔVEL1ΔLLM1 ----
+
+model.VEL2.PDM.ΔVEL1ΔLLM1     = brm(Expression ~ Treatment, data = VEL2_expression_raw_PDM[c(1:4,17:19),],
+                                    iter = 4000)
+
+posterior_summary(model.VEL2.PDM.ΔVEL1ΔLLM1)
+describe_posterior(model.VEL2.PDM.ΔVEL1ΔLLM1)
+rope(model.VEL2.PDM.ΔVEL1ΔLLM1)
+posterior = as_draws_df(model.VEL2.PDM.ΔVEL1ΔLLM1)
+mean(posterior$b_TreatmentΔVEL1ΔLLM1   > 0) # 0.13825
+
+# Summary of Posterior Distribution 
+
+Parameter           | Median |        95% CI |     pd |          ROPE | % in ROPE |  Rhat |     ESS
+---------------------------------------------------------------------------------------------------
+(Intercept)         |   1.00 | [ 0.56, 1.44] | 99.95% | [-0.03, 0.03] |        0% | 1.000 | 4067.00
+TreatmentΔVEL1ΔLLM1 |  -0.31 | [-0.97, 0.37] | 86.17% | [-0.03, 0.03] |     4.39% | 1.002 | 3393.00
+
+# WT - ΔVEL1oeLLM1 ----
+
+model.VEL2.PDM.ΔVEL1oeLLM1     = brm(Expression ~ Treatment, data = VEL2_expression_raw_PDM[c(1:4,20:22),],
+                                     iter = 5000)
+
+posterior_summary(model.VEL2.PDM.ΔVEL1oeLLM1)
+describe_posterior(model.VEL2.PDM.ΔVEL1oeLLM1)
+rope(model.VEL2.PDM.ΔVEL1oeLLM1)
+posterior = as_draws_df(model.VEL2.PDM.ΔVEL1oeLLM1)
+1-mean(posterior$b_TreatmentΔVEL1oeLLM1   > 0) # 0.322
+
+# Summary of Posterior Distribution 
+
+Parameter            | Median |        95% CI |     pd |          ROPE | % in ROPE |  Rhat |     ESS
+----------------------------------------------------------------------------------------------------
+(Intercept)          |   1.00 | [ 0.05, 1.99] | 97.84% | [-0.06, 0.06] |     0.18% | 1.000 | 4106.00
+TreatmentΔVEL1oeLLM1 |   0.29 | [-1.23, 1.79] | 67.80% | [-0.06, 0.06] |     7.66% | 1.000 | 3594.00
+
+# WT - ΔVEL1 ----
+
+model.VEL2.PDM.ΔVEL1     = brm(Expression ~ Treatment, data = VEL2_expression_raw_PDM[c(1:4,23:25),],
+                               iter = 4000)
+
+posterior_summary(model.VEL2.PDM.ΔVEL1)
+describe_posterior(model.VEL2.PDM.ΔVEL1)
+rope(model.VEL2.PDM.ΔVEL1)
+posterior = as_draws_df(model.VEL2.PDM.ΔVEL1)
+mean(posterior$b_TreatmentΔVEL1   > 0) # 0.00325
+
+# Summary of Posterior Distribution 
+
+Parameter      | Median |         95% CI |     pd |          ROPE | % in ROPE |  Rhat |     ESS
+-----------------------------------------------------------------------------------------------
+(Intercept)    |   1.00 | [ 0.87,  1.11] |   100% | [-0.02, 0.02] |        0% | 1.000 | 3828.00
+TreatmentΔVEL1 |  -0.35 | [-0.52, -0.16] | 99.67% | [-0.02, 0.02] |        0% | 1.000 | 4390.00
+
+# PLATE ----
+
+VEL2_expression_raw_PLATE  = vel_expression_raw %>% filter(Stage == "PLATE" & Protein == "VEL2")
+VEL2_expression_raw_PLATE$Treatment    = as.factor(VEL2_expression_raw_PLATE$Treatment)
+
+# WT - ΔLLM1 ----
+
+model.VEL2.PLATE.ΔLLM1     = brm(Expression ~ Treatment, data = VEL2_expression_raw_PLATE[c(1:8),],
+                                 iter = 4000)
+
+posterior_summary(model.VEL2.PLATE.ΔLLM1)
+describe_posterior(model.VEL2.PLATE.ΔLLM1)
+rope(model.VEL2.PLATE.ΔLLM1)
+posterior = as_draws_df(model.VEL2.PLATE.ΔLLM1)
+1-mean(posterior$b_TreatmentΔLLM1   > 0) # 0.1145
+
+# Summary of Posterior Distribution 
+
+Parameter      | Median |        95% CI |     pd |          ROPE | % in ROPE |  Rhat |     ESS
+----------------------------------------------------------------------------------------------
+(Intercept)    |   1.00 | [ 0.45, 1.51] | 99.61% | [-0.04, 0.04] |        0% | 1.001 | 4005.00
+TreatmentΔLLM1 |   0.40 | [-0.33, 1.18] | 88.55% | [-0.04, 0.04] |     4.37% | 1.000 | 4197.00
+
+# WT - LLM1-C ----
+
+model.VEL2.PLATE.LLM1.C     = brm(Expression ~ Treatment, data = VEL2_expression_raw_PLATE[c(1:4,9:12),],
+                                  iter = 4000)
+
+posterior_summary(model.VEL2.PLATE.LLM1.C)
+describe_posterior(model.VEL2.PLATE.LLM1.C)
+rope(model.VEL2.PLATE.LLM1.C)
+posterior = as_draws_df(model.VEL2.PLATE.LLM1.C)
+mean(posterior$b_TreatmentWT   > 0) # 0.04425
+
+# Summary of Posterior Distribution 
+
+Parameter   | Median |        95% CI |     pd |          ROPE | % in ROPE |  Rhat |     ESS
+-------------------------------------------------------------------------------------------
+(Intercept) |   1.05 | [ 1.01, 1.09] |   100% | [ 0.00, 0.00] |        0% | 1.000 | 4385.00
+TreatmentWT |  -0.05 | [-0.11, 0.01] | 95.58% | [ 0.00, 0.00] |     1.87% | 1.000 | 3971.00
+
+# WT - oeLLM1 ----
+
+model.VEL2.PLATE.oeLLM1     = brm(Expression ~ Treatment, data = VEL2_expression_raw_PLATE[c(1:4,13:16),],
+                                  iter = 4000)
+
+posterior_summary(model.VEL2.PLATE.oeLLM1)
+describe_posterior(model.VEL2.PLATE.oeLLM1)
+rope(model.VEL2.PLATE.oeLLM1)
+posterior = as_draws_df(model.VEL2.PLATE.oeLLM1)
+1-mean(posterior$b_TreatmentWT   > 0) # 0.436125
+
+# Summary of Posterior Distribution 
+
+Parameter   | Median |        95% CI |     pd |          ROPE | % in ROPE |  Rhat |     ESS
+-------------------------------------------------------------------------------------------
+(Intercept) |   0.98 | [ 0.76, 1.20] | 99.96% | [-0.01, 0.01] |        0% | 1.001 | 3795.00
+TreatmentWT |   0.02 | [-0.29, 0.33] | 56.39% | [-0.01, 0.01] |     9.12% | 1.000 | 4751.00
+
+# WT - ΔVEL1ΔLLM1 ----
+
+model.VEL2.PLATE.ΔVEL1ΔLLM1     = brm(Expression ~ Treatment, data = VEL2_expression_raw_PLATE[c(1:4,17:19),],
+                                      iter = 4000)
+
+posterior_summary(model.VEL2.PLATE.ΔVEL1ΔLLM1)
+describe_posterior(model.VEL2.PLATE.ΔVEL1ΔLLM1)
+rope(model.VEL2.PLATE.ΔVEL1ΔLLM1)
+posterior = as_draws_df(model.VEL2.PLATE.ΔVEL1ΔLLM1)
+1-mean(posterior$b_TreatmentΔVEL1ΔLLM1   > 0) # 0.012
+
+# Summary of Posterior Distribution 
+
+Parameter           | Median |       95% CI |     pd |          ROPE | % in ROPE |  Rhat |     ESS
+--------------------------------------------------------------------------------------------------
+(Intercept)         |   1.00 | [0.85, 1.16] |   100% | [-0.02, 0.02] |        0% | 1.000 | 3385.00
+TreatmentΔVEL1ΔLLM1 |   0.32 | [0.08, 0.55] | 98.80% | [-0.02, 0.02] |        0% | 1.000 | 3301.00
+
+# WT - ΔVEL1oeLLM1 ----
+
+model.VEL2.PLATE.ΔVEL1oeLLM1     = brm(Expression ~ Treatment, data = VEL2_expression_raw_PLATE[c(1:4,20:22),],
+                                       iter = 4000)
+
+posterior_summary(model.VEL2.PLATE.ΔVEL1oeLLM1)
+describe_posterior(model.VEL2.PLATE.ΔVEL1oeLLM1)
+rope(model.VEL2.PLATE.ΔVEL1oeLLM1)
+posterior = as_draws_df(model.VEL2.PLATE.ΔVEL1oeLLM1)
+mean(posterior$b_TreatmentΔVEL1oeLLM1   > 0) # 0.4315
+
+# Summary of Posterior Distribution 
+
+Parameter            | Median |        95% CI |     pd |          ROPE | % in ROPE |  Rhat |     ESS
+----------------------------------------------------------------------------------------------------
+(Intercept)          |   1.00 | [ 0.50, 1.54] | 99.78% | [-0.03, 0.03] |        0% | 1.000 | 4071.00
+TreatmentΔVEL1oeLLM1 |  -0.05 | [-0.81, 0.68] | 56.85% | [-0.03, 0.03] |     8.21% | 1.000 | 3688.00
+
+# WT - ΔVEL1 ----
+
+model.VEL2.PLATE.ΔVEL1     = brm(Expression ~ Treatment, data = VEL2_expression_raw_PLATE[c(1:4,23:25),],
+                                 iter = 6000)
+
+posterior_summary(model.VEL2.PLATE.ΔVEL1)
+describe_posterior(model.VEL2.PLATE.ΔVEL1)
+rope(model.VEL2.PLATE.ΔVEL1)
+posterior = as_draws_df(model.VEL2.PLATE.ΔVEL1)
+1-mean(posterior$b_TreatmentΔVEL1   > 0) # 0.1448333
+
+# Summary of Posterior Distribution 
+
+Parameter      | Median |        95% CI |     pd |          ROPE | % in ROPE |  Rhat |     ESS
+----------------------------------------------------------------------------------------------
+(Intercept)    |   0.99 | [ 0.11, 1.84] | 98.23% | [-0.06, 0.06] |        0% | 1.000 | 5891.00
+TreatmentΔVEL1 |   0.60 | [-0.72, 1.94] | 85.52% | [-0.06, 0.06] |     4.60% | 1.000 | 5795.00
+
+# PCR Light interaction ----
+
+# Call data
+light_expression     = read_excel("datasets/WC and FRQ - my genes.xlsx",
+                                  sheet = "statistics")
+light_expression_raw = light_expression
+
+# Transform to Log2
+light_expression = light_expression %>%  mutate(across(c(Expression), 
+                                                       function(x) log2(x)))
+
+# Delete WT
+light_expression = light_expression %>% filter(Treatment != "WT")
+
+# SXM ----
+
+light_expression.SXM   = light_expression %>% filter(Stage == "SXM")
+
+light_expression.SXM_plot = light_expression.SXM %>% group_by(Genes,Treatment,Plot) %>% 
+  summarize(avg = mean(Expression), n = n(), 
+            sd = sd(Expression), se = sd/sqrt(n))
+
+Figure_light_expression.SXM = ggplot(light_expression.SXM_plot, aes(x=Genes, y=avg, fill=as.factor(Plot))) + 
+  geom_bar(stat="identity", color="black", 
+           position=position_dodge()) +
+  geom_errorbar(aes(ymin=avg-se, ymax=avg+se), width=.2,
+                position=position_dodge(.9)) + 
+  scale_fill_manual(name = "", values = c("#fec44f", "#d95f0e"), 
+                    labels = c("ΔFRQ", "ΔWC1")) + 
+  xlab("") + ylab("Expression") + theme_classic()
+Figure_light_expression.SXM
+
+pdf("Figures/Figure_light_expression.SXM.pdf",
+    width=6,height=6*3/5)
+print(Figure_light_expression.SXM)
+dev.off()
+
+# PDM ----
+
+light_expression.PDM   = light_expression %>% filter(Stage == "PDM")
+
+light_expression.PDM_plot = light_expression.PDM %>% group_by(Genes,Treatment,Plot) %>% 
+  summarize(avg = mean(Expression), n = n(), 
+            sd = sd(Expression), se = sd/sqrt(n))
+
+Figure_light_expression.PDM = ggplot(light_expression.PDM_plot, aes(x=Genes, y=avg, fill=as.factor(Plot))) + 
+  geom_bar(stat="identity", color="black", 
+           position=position_dodge()) +
+  geom_errorbar(aes(ymin=avg-se, ymax=avg+se), width=.2,
+                position=position_dodge(.9)) + 
+  scale_fill_manual(name = "", values = c("#fec44f", "#d95f0e"), 
+                    labels = c("ΔFRQ", "ΔWC1")) + 
+  xlab("") + ylab("Expression") + theme_classic()
+Figure_light_expression.PDM
+
+pdf("Figures/Figure_light_expression.PDM.pdf",
+    width=6,height=6*3/5)
+print(Figure_light_expression.PDM)
+dev.off()
+
+# PLATE ----
+
+light_expression.PLATE   = light_expression %>% filter(Stage == "PLATE")
+
+light_expression.PLATE_plot = light_expression.PLATE %>% group_by(Genes,Treatment,Plot) %>% 
+  summarize(avg = mean(Expression), n = n(), 
+            sd = sd(Expression), se = sd/sqrt(n))
+
+Figure_light_expression.PLATE = ggplot(light_expression.PLATE_plot, aes(x=Genes, y=avg, fill=as.factor(Plot))) + 
+  geom_bar(stat="identity", color="black", 
+           position=position_dodge()) +
+  geom_errorbar(aes(ymin=avg-se, ymax=avg+se), width=.2,
+                position=position_dodge(.9)) + 
+  scale_fill_manual(name = "", values = c("#fec44f", "#d95f0e"), 
+                    labels = c("ΔFRQ", "ΔWC1")) + 
+  xlab("") + ylab("Expression") + theme_classic()
+Figure_light_expression.PLATE
+
+pdf("Figures/Figure_light_expression.PLATE.pdf",
+    width=6,height=6*3/5)
+print(Figure_light_expression.PLATE)
+dev.off()
+
+# Bayesian Methods for Group Comparison ----
+
+# SXM ----
+
+# LLM1 ----
+
+light_expression_raw_SXM  = light_expression_raw %>% filter(Stage == "SXM" & Genes == "LLM1")
+light_expression_raw_SXM$Treatment    = as.factor(light_expression_raw_SXM$Treatment)
+
+# WT - ΔFRQ ----
+
+model.light.SXM.ΔFRQ     = brm(Expression ~ Treatment, data = light_expression_raw_SXM[1:6,],
+                               iter = 6000)
+
+posterior_summary(model.light.SXM.ΔFRQ)
+describe_posterior(model.light.SXM.ΔFRQ)
+rope(model.light.SXM.ΔFRQ)
+posterior = as_draws_df(model.light.SXM.ΔFRQ)
+mean(posterior$b_TreatmentΔFRQ > 0) # 0.4145833
+
+Summary of Posterior Distribution 
+
+Parameter     | Median |        95% CI |     pd |          ROPE | % in ROPE |  Rhat |     ESS
+---------------------------------------------------------------------------------------------
+(Intercept)   |   1.00 | [ 0.66, 1.33] | 99.92% | [-0.01, 0.01] |        0% | 1.000 | 5147.00
+TreatmentΔFRQ |  -0.04 | [-0.52, 0.45] | 58.54% | [-0.01, 0.01] |     6.91% | 1.000 | 4883.00
+
+# WT - ΔWC1 ----
+
+model.light.SXM.ΔWC1     = brm(Expression ~ Treatment, data = light_expression_raw_SXM[c(1:3,7:9),],
+                               iter = 6000)
+
+posterior_summary(model.light.SXM.ΔWC1)
+describe_posterior(model.light.SXM.ΔWC1)
+rope(model.light.SXM.ΔWC1)
+posterior = as_draws_df(model.light.SXM.ΔWC1)
+mean(posterior$b_TreatmentΔWC1 > 0) # 0.1526667
+
+Summary of Posterior Distribution 
+
+Parameter     | Median |        95% CI |     pd |          ROPE | % in ROPE |  Rhat |     ESS
+---------------------------------------------------------------------------------------------
+(Intercept)   |   1.00 | [ 0.83, 1.17] |   100% | [-0.01, 0.01] |        0% | 1.002 | 4827.00
+TreatmentΔWC1 |  -0.10 | [-0.34, 0.14] | 84.73% | [-0.01, 0.01] |     3.96% | 1.001 | 5050.00
+
+# AML1 ----
+
+light_expression_raw_SXM  = light_expression_raw %>% filter(Stage == "SXM" & Genes == "AML1")
+light_expression_raw_SXM$Treatment    = as.factor(light_expression_raw_SXM$Treatment)
+
+# WT - ΔFRQ ----
+
+model.light.SXM.ΔFRQ     = brm(Expression ~ Treatment, data = light_expression_raw_SXM[c(1:6),],
+                               iter = 6000)
+
+posterior_summary(model.light.SXM.ΔFRQ)
+describe_posterior(model.light.SXM.ΔFRQ)
+rope(model.light.SXM.ΔFRQ)
+posterior = as_draws_df(model.light.SXM.ΔFRQ)
+mean(posterior$b_TreatmentΔFRQ > 0) # 0.005583333
+
+Summary of Posterior Distribution 
+
+Parameter     | Median |         95% CI |     pd |          ROPE | % in ROPE |  Rhat |     ESS
+----------------------------------------------------------------------------------------------
+(Intercept)   |   1.00 | [ 0.78,  1.21] |   100% | [-0.03, 0.03] |        0% | 1.001 | 5566.00
+TreatmentΔFRQ |  -0.54 | [-0.85, -0.23] | 99.44% | [-0.03, 0.03] |        0% | 1.002 | 4878.00
+
+# WT - ΔWC1 ----
+
+model.light.SXM.ΔWC1     = brm(Expression ~ Treatment, data = light_expression_raw_SXM[c(1:3,7:9),],
+                               iter = 6000)
+
+posterior_summary(model.light.SXM.ΔWC1)
+describe_posterior(model.light.SXM.ΔWC1)
+rope(model.light.SXM.ΔWC1)
+posterior = as_draws_df(model.light.SXM.ΔWC1)
+mean(posterior$b_TreatmentΔWC1 > 0) # 0.001416667
+
+Summary of Posterior Distribution 
+
+Parameter     | Median |         95% CI |     pd |          ROPE | % in ROPE |  Rhat |     ESS
+----------------------------------------------------------------------------------------------
+(Intercept)   |   1.00 | [ 0.90,  1.10] |   100% | [-0.02, 0.02] |        0% | 1.000 | 5331.00
+TreatmentΔWC1 |  -0.37 | [-0.51, -0.23] | 99.86% | [-0.02, 0.02] |        0% | 1.000 | 6318.00
+
+# NML1 ----
+
+light_expression_raw_SXM  = light_expression_raw %>% filter(Stage == "SXM" & Genes == "NML1")
+light_expression_raw_SXM$Treatment    = as.factor(light_expression_raw_SXM$Treatment)
+
+# WT - ΔFRQ ----
+
+model.light.SXM.ΔFRQ     = brm(Expression ~ Treatment, data = light_expression_raw_SXM[c(1:6),],
+                               iter = 6000)
+
+posterior_summary(model.light.SXM.ΔFRQ)
+describe_posterior(model.light.SXM.ΔFRQ)
+rope(model.light.SXM.ΔFRQ)
+posterior = as_draws_df(model.light.SXM.ΔFRQ)
+mean(posterior$b_TreatmentΔFRQ > 0) # 0.2806667
+
+Summary of Posterior Distribution 
+
+Parameter     | Median |        95% CI |     pd |          ROPE | % in ROPE |  Rhat |     ESS
+---------------------------------------------------------------------------------------------
+(Intercept)   |   1.00 | [ 0.59, 1.43] | 99.88% | [-0.02, 0.02] |        0% | 1.002 | 4810.00
+TreatmentΔFRQ |  -0.13 | [-0.70, 0.46] | 71.93% | [-0.02, 0.02] |     5.75% | 1.001 | 4457.00
+
+# WT - ΔWC1 ----
+
+model.light.SXM.ΔWC1     = brm(Expression ~ Treatment, data = light_expression_raw_SXM[c(1:3,7:9),],
+                               iter = 6000)
+
+posterior_summary(model.light.SXM.ΔWC1)
+describe_posterior(model.light.SXM.ΔWC1)
+rope(model.light.SXM.ΔWC1)
+posterior = as_draws_df(model.light.SXM.ΔWC1)
+1-mean(posterior$b_TreatmentΔWC1 > 0) # 0.2058333
+
+Summary of Posterior Distribution 
+
+Parameter     | Median |        95% CI |     pd |          ROPE | % in ROPE |  Rhat |     ESS
+---------------------------------------------------------------------------------------------
+(Intercept)   |   1.00 | [ 0.69, 1.31] | 99.92% | [-0.02, 0.02] |        0% | 1.000 | 4802.00
+TreatmentΔWC1 |   0.13 | [-0.31, 0.59] | 79.42% | [-0.02, 0.02] |     5.13% | 1.000 | 4459.00
+
+# PDM ----
+
+# LLM1 ----
+
+light_expression_raw_PDM  = light_expression_raw %>% filter(Stage == "PDM" & Genes == "LLM1")
+light_expression_raw_PDM$Treatment    = as.factor(light_expression_raw_PDM$Treatment)
+
+# WT - ΔFRQ ----
+
+model.light.PDM.ΔFRQ     = brm(Expression ~ Treatment, data = light_expression_raw_PDM[c(1:6),],
+                               iter = 6000)
+
+posterior_summary(model.light.PDM.ΔFRQ)
+describe_posterior(model.light.PDM.ΔFRQ)
+rope(model.light.PDM.ΔFRQ)
+posterior = as_draws_df(model.light.PDM.ΔFRQ)
+mean(posterior$b_TreatmentΔFRQ > 0) # 0.1805833
+
+Summary of Posterior Distribution 
+
+Parameter     | Median |        95% CI |     pd |          ROPE | % in ROPE |  Rhat |     ESS
+---------------------------------------------------------------------------------------------
+(Intercept)   |   1.00 | [ 0.73, 1.26] | 99.98% | [-0.01, 0.01] |        0% | 1.000 | 4941.00
+TreatmentΔFRQ |  -0.13 | [-0.52, 0.26] | 81.94% | [-0.01, 0.01] |     4.35% | 1.000 | 5382.00
+
+# WT - ΔWC1 ----
+
+model.light.PDM.ΔWC1     = brm(Expression ~ Treatment, data = light_expression_raw_PDM[c(1:3,7:9),],
+                               iter = 6000)
+
+posterior_summary(model.light.PDM.ΔWC1)
+describe_posterior(model.light.PDM.ΔWC1)
+rope(model.light.PDM.ΔWC1)
+posterior = as_draws_df(model.light.PDM.ΔWC1)
+mean(posterior$b_TreatmentΔWC1 > 0) # 0.2265
+
+Summary of Posterior Distribution 
+
+Parameter     | Median |        95% CI |     pd |          ROPE | % in ROPE |  Rhat |     ESS
+---------------------------------------------------------------------------------------------
+(Intercept)   |   1.00 | [ 0.66, 1.34] | 99.92% | [-0.02, 0.02] |        0% | 1.000 | 5344.00
+TreatmentΔWC1 |  -0.13 | [-0.62, 0.38] | 77.35% | [-0.02, 0.02] |     4.82% | 1.001 | 5251.00
+
+# AML1 ----
+
+light_expression_raw_PDM  = light_expression_raw %>% filter(Stage == "PDM" & Genes == "AML1")
+light_expression_raw_PDM$Treatment    = as.factor(light_expression_raw_PDM$Treatment)
+
+# WT - ΔFRQ ----
+
+model.light.PDM.ΔFRQ     = brm(Expression ~ Treatment, data = light_expression_raw_PDM[c(1:6),],
+                               iter = 6000)
+
+posterior_summary(model.light.PDM.ΔFRQ)
+describe_posterior(model.light.PDM.ΔFRQ)
+rope(model.light.PDM.ΔFRQ)
+posterior = as_draws_df(model.light.PDM.ΔFRQ)
+1-mean(posterior$b_TreatmentΔFRQ > 0) # 0.05175
+
+Summary of Posterior Distribution 
+
+Parameter     | Median |        95% CI |     pd |          ROPE | % in ROPE |  Rhat |     ESS
+---------------------------------------------------------------------------------------------
+(Intercept)   |   0.99 | [-0.49, 2.44] | 92.95% | [-0.12, 0.12] |     3.60% | 1.000 | 6103.00
+TreatmentΔFRQ |   1.61 | [-0.50, 3.67] | 94.83% | [-0.12, 0.12] |     1.86% | 1.000 | 6002.00
+
+# WT - ΔWC1 ----
+
+model.light.PDM.ΔWC1     = brm(Expression ~ Treatment, data = light_expression_raw_PDM[c(1:3,7:9),],
+                               iter = 6000)
+
+posterior_summary(model.light.PDM.ΔWC1)
+describe_posterior(model.light.PDM.ΔWC1)
+rope(model.light.PDM.ΔWC1)
+posterior = as_draws_df(model.light.PDM.ΔWC1)
+1-mean(posterior$b_TreatmentΔWC1 > 0) # 0.005416667
+
+Summary of Posterior Distribution 
+
+Parameter     | Median |       95% CI |     pd |          ROPE | % in ROPE |  Rhat |     ESS
+--------------------------------------------------------------------------------------------
+(Intercept)   |   1.00 | [0.54, 1.43] | 99.74% | [-0.07, 0.07] |        0% | 1.000 | 4896.00
+TreatmentΔWC1 |   1.15 | [0.51, 1.81] | 99.46% | [-0.07, 0.07] |        0% | 1.001 | 4834.00
+
+# NML1 ----
+
+light_expression_raw_PDM  = light_expression_raw %>% filter(Stage == "PDM" & Genes == "NML1")
+light_expression_raw_PDM$Treatment    = as.factor(light_expression_raw_PDM$Treatment)
+
+# WT - ΔFRQ ----
+
+model.light.PDM.ΔFRQ     = brm(Expression ~ Treatment, data = light_expression_raw_PDM[c(1:6),],
+                               iter = 6000)
+
+posterior_summary(model.light.PDM.ΔFRQ)
+describe_posterior(model.light.PDM.ΔFRQ)
+rope(model.light.PDM.ΔFRQ)
+posterior = as_draws_df(model.light.PDM.ΔFRQ)
+1-mean(posterior$b_TreatmentΔFRQ > 0) # 8.333333e-05
+
+Summary of Posterior Distribution 
+
+Parameter     | Median |        95% CI |     pd |          ROPE | % in ROPE |  Rhat |     ESS
+---------------------------------------------------------------------------------------------
+(Intercept)   |   0.99 | [-0.29, 2.29] | 95.32% | [-0.42, 0.42] |    11.12% | 1.000 | 5163.00
+TreatmentΔFRQ |   7.69 | [ 6.02, 9.61] | 99.99% | [-0.42, 0.42] |        0% | 1.000 | 6059.00
+
+# WT - ΔWC1 ----
+
+model.light.PDM.ΔWC1     = brm(Expression ~ Treatment, data = light_expression_raw_PDM[c(1:3,7:9),],
+                               iter = 6000)
+
+posterior_summary(model.light.PDM.ΔWC1)
+describe_posterior(model.light.PDM.ΔWC1)
+rope(model.light.PDM.ΔWC1)
+posterior = as_draws_df(model.light.PDM.ΔWC1)
+1-mean(posterior$b_TreatmentΔWC1 > 0) # 0.01016667
+
+Summary of Posterior Distribution 
+
+Parameter     | Median |         95% CI |     pd |          ROPE | % in ROPE |  Rhat |     ESS
+----------------------------------------------------------------------------------------------
+(Intercept)   |   0.91 | [-2.87,  4.64] | 71.83% | [-0.47, 0.47] |    19.62% | 1.000 | 5887.00
+TreatmentΔWC1 |   7.57 | [ 1.84, 13.04] | 98.98% | [-0.47, 0.47] |        0% | 1.001 | 5027.00
+
+# PLATE ----
+
+# LLM1 ----
+
+light_expression_raw_PLATE  = light_expression_raw %>% filter(Stage == "PLATE" & Genes == "LLM1")
+light_expression_raw_PLATE$Treatment    = as.factor(light_expression_raw_PLATE$Treatment)
+
+# WT - ΔFRQ ----
+
+model.light.PLATE.ΔFRQ     = brm(Expression ~ Treatment, data = light_expression_raw_PLATE[c(1:6),],
+                                 iter = 6000)
+
+posterior_summary(model.light.PLATE.ΔFRQ)
+describe_posterior(model.light.PLATE.ΔFRQ)
+rope(model.light.PLATE.ΔFRQ)
+posterior = as_draws_df(model.light.PLATE.ΔFRQ)
+mean(posterior$b_TreatmentΔFRQ > 0) # 0.006083333
+
+Summary of Posterior Distribution 
+
+Parameter     | Median |         95% CI |     pd |          ROPE | % in ROPE |  Rhat |     ESS
+----------------------------------------------------------------------------------------------
+(Intercept)   |   1.00 | [ 0.82,  1.17] | 99.97% | [-0.03, 0.03] |        0% | 1.001 | 3962.00
+TreatmentΔFRQ |  -0.44 | [-0.67, -0.21] | 99.39% | [-0.03, 0.03] |        0% | 1.000 | 4112.00
+
+# WT - ΔWC1 ----
+
+model.light.PLATE.ΔWC1     = brm(Expression ~ Treatment, data = light_expression_raw_PLATE[c(1:3,7:9),],
+                                 iter = 6000)
+
+posterior_summary(model.light.PLATE.ΔWC1)
+describe_posterior(model.light.PLATE.ΔWC1)
+rope(model.light.PLATE.ΔWC1)
+posterior = as_draws_df(model.light.PLATE.ΔWC1)
+mean(posterior$b_TreatmentΔWC1 > 0) # 0.027
+
+Summary of Posterior Distribution 
+
+Parameter     | Median |        95% CI |     pd |          ROPE | % in ROPE |  Rhat |     ESS
+---------------------------------------------------------------------------------------------
+(Intercept)   |   1.00 | [ 0.81, 1.18] |   100% | [-0.02, 0.02] |        0% | 1.000 | 5339.00
+TreatmentΔWC1 |  -0.26 | [-0.51, 0.01] | 97.30% | [-0.02, 0.02] |     0.70% | 1.000 | 4865.00
+
+# AML1 ----
+
+light_expression_raw_PLATE  = light_expression_raw %>% filter(Stage == "PLATE" & Genes == "AML1")
+light_expression_raw_PLATE$Treatment    = as.factor(light_expression_raw_PLATE$Treatment)
+
+# WT - ΔFRQ ----
+
+model.light.PLATE.ΔFRQ     = brm(Expression ~ Treatment, data = light_expression_raw_PLATE[c(1:6),],
+                                 iter = 6000)
+
+posterior_summary(model.light.PLATE.ΔFRQ)
+describe_posterior(model.light.PLATE.ΔFRQ)
+rope(model.light.PLATE.ΔFRQ)
+posterior = as_draws_df(model.light.PLATE.ΔFRQ)
+mean(posterior$b_TreatmentΔFRQ > 0) # 0.3410833
+
+Summary of Posterior Distribution 
+
+Parameter     | Median |        95% CI |     pd |          ROPE | % in ROPE |  Rhat |     ESS
+---------------------------------------------------------------------------------------------
+(Intercept)   |   1.00 | [ 0.84, 1.16] |   100% | [-0.01, 0.01] |        0% | 1.000 | 5400.00
+TreatmentΔFRQ |  -0.03 | [-0.27, 0.18] | 65.89% | [-0.01, 0.01] |     6.44% | 1.001 | 4800.00
+
+# WT - ΔWC1 ----
+
+model.light.PLATE.ΔWC1     = brm(Expression ~ Treatment, data = light_expression_raw_PLATE[c(1:3,7:9),],
+                                 iter = 6000)
+
+posterior_summary(model.light.PLATE.ΔWC1)
+describe_posterior(model.light.PLATE.ΔWC1)
+rope(model.light.PLATE.ΔWC1)
+posterior = as_draws_df(model.light.PLATE.ΔWC1)
+1-mean(posterior$b_TreatmentΔWC1 > 0) # 0.0165
+
+Summary of Posterior Distribution 
+
+Parameter     | Median |       95% CI |     pd |          ROPE | % in ROPE |  Rhat |     ESS
+--------------------------------------------------------------------------------------------
+(Intercept)   |   1.00 | [0.79, 1.23] | 99.98% | [-0.02, 0.02] |        0% | 1.001 | 5110.00
+TreatmentΔWC1 |   0.39 | [0.07, 0.69] | 98.35% | [-0.02, 0.02] |        0% | 1.001 | 4799.00
+
+# NML1 ----
+
+light_expression_raw_PLATE  = light_expression_raw %>% filter(Stage == "PLATE" & Genes == "NML1")
+light_expression_raw_PLATE$Treatment    = as.factor(light_expression_raw_PLATE$Treatment)
+
+# WT - ΔFRQ ----
+
+model.light.PLATE.ΔFRQ     = brm(Expression ~ Treatment, data = light_expression_raw_PLATE[c(1:6),],
+                                 iter = 6000)
+
+posterior_summary(model.light.PLATE.ΔFRQ)
+describe_posterior(model.light.PLATE.ΔFRQ)
+rope(model.light.PLATE.ΔFRQ)
+posterior = as_draws_df(model.light.PLATE.ΔFRQ)
+mean(posterior$b_TreatmentΔFRQ > 0) # 0.47525
+
+Summary of Posterior Distribution 
+
+Parameter     | Median |        95% CI |     pd |          ROPE | % in ROPE |  Rhat |     ESS
+---------------------------------------------------------------------------------------------
+(Intercept)   |   1.00 | [ 0.53, 1.43] | 99.71% | [-0.02, 0.02] |        0% | 1.001 | 3421.00
+TreatmentΔFRQ |  -0.01 | [-0.63, 0.64] | 52.48% | [-0.02, 0.02] |     6.86% | 1.000 | 3541.00
+
+# WT - ΔWC1 ----
+
+model.light.PLATE.ΔWC1     = brm(Expression ~ Treatment, data = light_expression_raw_PLATE[c(1:3,7:9),],
+                                 iter = 6000)
+
+posterior_summary(model.light.PLATE.ΔWC1)
+describe_posterior(model.light.PLATE.ΔWC1)
+rope(model.light.PLATE.ΔWC1)
+posterior = as_draws_df(model.light.PLATE.ΔWC1)
+1-mean(posterior$b_TreatmentΔWC1 > 0) # 0.1115833
+
+Summary of Posterior Distribution 
+
+Parameter     | Median |        95% CI |     pd |          ROPE | % in ROPE |  Rhat |     ESS
+---------------------------------------------------------------------------------------------
+(Intercept)   |   1.00 | [ 0.47, 1.52] | 99.56% | [-0.03, 0.03] |        0% | 1.001 | 5435.00
+TreatmentΔWC1 |   0.35 | [-0.40, 1.08] | 88.84% | [-0.03, 0.03] |     3.20% | 1.000 | 5257.00
