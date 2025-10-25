@@ -101,7 +101,6 @@ print(Figure_PCR_PLATE)
 dev.off()
 
 # Bayesian Methods for Group Comparison ----
-library(brms)
 
 # SXM ----
 PCR_raw_SXM   = PCR_raw %>% filter(Stage == "SXM")
@@ -2726,3 +2725,502 @@ Parameter     | Median |        95% CI |     pd |          ROPE | % in ROPE |  R
 ---------------------------------------------------------------------------------------------
 (Intercept)   |   1.00 | [ 0.47, 1.52] | 99.56% | [-0.03, 0.03] |        0% | 1.001 | 5435.00
 TreatmentΔWC1 |   0.35 | [-0.40, 1.08] | 88.84% | [-0.03, 0.03] |     3.20% | 1.000 | 5257.00
+
+# PCR graphs other genes ----
+
+# Call data
+PCR_others = read_excel("datasets/All data combined.xlsx", sheet = "Thesis_2")
+PCR_raw    = PCR_others
+
+# Transform to Log2
+PCR_others = PCR_others %>%  mutate(across(c(Expression), function(x) log2(x)))
+
+# Delete WT
+PCR_others = PCR_others %>% filter(Treatment != "WT")
+
+# Plot 
+
+# SXM ----
+PCR_others_SXM   = PCR_others %>% filter(Stage == "SXM")
+PCR_others_SXM.1 = PCR_others_SXM %>% group_by(Gen,Treatment,Order) %>% 
+  summarize(avg = mean(Expression), n = n(), 
+            sd = sd(Expression), se = sd/sqrt(n))
+
+Figure_others_SXM = ggplot(PCR_others_SXM.1, aes(x=Gen, y=avg, fill=as.factor(Order))) + 
+  geom_bar(stat="identity", color="black", 
+           position=position_dodge()) +
+  geom_errorbar(aes(ymin=avg-se, ymax=avg+se), width=.2,
+                position=position_dodge(.9)) + 
+  scale_fill_manual(name = "", values = c("#d0d1e6", "#045a8d", "#fee391", "#e34a33",
+                                          "#74c476"), labels = c("ΔVel1", "oeVel1", "ΔVel2", 
+                                                                 "oeVel2", "ΔVel2_IDD")) + 
+  xlab("") + ylab("Expression") + theme_classic()
+Figure_others_SXM
+
+pdf("Figures/Figure_others_SXM.pdf",
+    width=12,height=12*3/5)
+print(Figure_others_SXM)
+dev.off()
+
+# PDM ----
+PCR_others_PDM   = PCR_others %>% filter(Stage == "PDM")
+PCR_others_PDM.1 = PCR_others_PDM %>% group_by(Gen,Treatment,Order) %>% 
+  summarize(avg = mean(Expression), n = n(), 
+            sd = sd(Expression), se = sd/sqrt(n))
+
+Figure_others_PDM = ggplot(PCR_others_PDM.1, aes(x=Gen, y=avg, fill=as.factor(Order))) + 
+  geom_bar(stat="identity", color="black", 
+           position=position_dodge()) +
+  geom_errorbar(aes(ymin=avg-se, ymax=avg+se), width=.2,
+                position=position_dodge(.9)) + 
+  scale_fill_manual(name = "", values = c("#d0d1e6", "#045a8d", "#fee391", "#e34a33",
+                                          "#74c476"), labels = c("ΔVel1", "oeVel1", "ΔVel2", 
+                                                                 "oeVel2", "ΔVel2_IDD")) + 
+  xlab("") + ylab("Expression") + theme_classic()
+Figure_others_PDM
+
+pdf("Figures/Figure_others_PDM.pdf",
+    width=12,height=12*3/5)
+print(Figure_others_PDM)
+dev.off()
+
+# PLATE ----
+PCR_others_PLATE   = PCR_others %>% filter(Stage == "PLATE")
+PCR_others_PLATE.1 = PCR_others_PLATE %>% group_by(Gen,Treatment,Order) %>% 
+  summarize(avg = mean(Expression), n = n(), 
+            sd = sd(Expression), se = sd/sqrt(n))
+
+Figure_others_PLATE = ggplot(PCR_others_PLATE.1, aes(x=Gen, y=avg, fill=as.factor(Order))) + 
+  geom_bar(stat="identity", color="black", 
+           position=position_dodge()) +
+  geom_errorbar(aes(ymin=avg-se, ymax=avg+se), width=.2,
+                position=position_dodge(.9)) + 
+  scale_fill_manual(name = "", values = c("#d0d1e6", "#045a8d", "#fee391", "#e34a33",
+                                          "#74c476"), labels = c("ΔVel1", "oeVel1", "ΔVel2", 
+                                                                 "oeVel2", "ΔVel2_IDD")) + 
+  xlab("") + ylab("Expression") + theme_classic()
+Figure_others_PLATE
+
+pdf("Figures/Figure_others_PLATE.pdf",
+    width=12,height=12*3/5)
+print(Figure_others_PLATE)
+dev.off()
+
+# Bayesian Methods for Group Comparison ----
+
+# SXM ----
+PCR_raw_SXM   = PCR_raw %>% filter(Stage == "SXM")
+PCR_raw_SXM$Treatment = as.factor(PCR_raw_SXM$Treatment)
+
+# MET1 - ΔVel1
+model.MET1.ΔVel1     = brm(Expression ~ Treatment, data = PCR_raw_SXM[1:6,],
+                           iter = 6000)
+summary(model.MET1.ΔVel1)
+posterior_summary(model.MET1.ΔVel1)
+describe_posterior(model.MET1.ΔVel1)
+rope(model.MET1.ΔVel1)
+posterior = as_draws_df(model.MET1.ΔVel1)
+1- mean(posterior$b_TreatmentΔVel1 > 0) # 0.01141667
+
+Parameter      | Median |          95% CI |     pd |          ROPE | % in ROPE |  Rhat |     ESS
+------------------------------------------------------------------------------------------------
+(Intercept)    |  -3.62 | [-28.24, 17.91] | 63.92% | [-2.99, 2.99] |    23.10% | 1.000 | 7174.00
+TreatmentΔVel1 |  43.77 | [  8.06, 79.04] | 98.86% | [-2.99, 2.99] |        0% | 1.000 | 7293.00
+
+# MET1 - ΔVel2
+model.MET1.ΔVel2     = brm(Expression ~ Treatment, data = PCR_raw_SXM[c(1:3,7:9),],
+                           iter = 6000)
+summary(model.MET1.ΔVel2)
+posterior_summary(model.MET1.ΔVel2)
+describe_posterior(model.MET1.ΔVel2)
+rope(model.MET1.ΔVel2)
+posterior = as_draws_df(model.MET1.ΔVel2)
+1- mean(posterior$b_TreatmentΔVel2 > 0) # 
+
+Parameter      | Median |       95% CI |     pd |          ROPE | % in ROPE |  Rhat |     ESS
+---------------------------------------------------------------------------------------------
+(Intercept)    |   1.00 | [0.37, 1.66] | 99.24% | [-0.12, 0.12] |        0% | 1.000 | 5692.00
+TreatmentΔVel2 |   2.14 | [1.17, 3.05] | 99.75% | [-0.12, 0.12] |        0% | 1.001 | 5539.00
+
+# MET1 - ΔVel2_IDD
+model.MET1.ΔVel2_IDD     = brm(Expression ~ Treatment, data = PCR_raw_SXM[c(1:3,10:12),],
+                               iter = 6000)
+summary(model.MET1.ΔVel2_IDD)
+posterior_summary(model.MET1.ΔVel2_IDD)
+describe_posterior(model.MET1.ΔVel2_IDD)
+rope(model.MET1.ΔVel2_IDD)
+posterior = as_draws_df(model.MET1.ΔVel2_IDD)
+1- mean(posterior$b_TreatmentΔVel2_IDD > 0) # 0.1205833
+
+Parameter          | Median |        95% CI |     pd |          ROPE | % in ROPE |  Rhat |     ESS
+--------------------------------------------------------------------------------------------------
+(Intercept)        |   1.00 | [-0.05, 1.97] | 97.22% | [-0.06, 0.06] |     0.84% | 1.001 | 5410.00
+TreatmentΔVel2_IDD |   0.72 | [-0.70, 2.18] | 87.94% | [-0.06, 0.06] |     3.64% | 1.001 | 5715.00
+
+# CTZ1 - ΔVel1
+model.CTZ1.ΔVel1     = brm(Expression ~ Treatment, data = PCR_raw_SXM[c(13:18),],
+                           iter = 6000)
+summary(model.CTZ1.ΔVel1)
+posterior_summary(model.CTZ1.ΔVel1)
+describe_posterior(model.CTZ1.ΔVel1)
+rope(model.CTZ1.ΔVel1)
+posterior = as_draws_df(model.CTZ1.ΔVel1)
+1- mean(posterior$b_TreatmentΔVel1 > 0) # 0.00
+
+Parameter      | Median |         95% CI |   pd |          ROPE | % in ROPE |  Rhat |     ESS
+---------------------------------------------------------------------------------------------
+(Intercept)    |   1.00 | [ 0.95,  1.06] | 100% | [-0.04, 0.04] |        0% | 1.000 | 6744.00
+TreatmentΔVel1 |  -0.80 | [-0.88, -0.73] | 100% | [-0.04, 0.04] |        0% | 1.000 | 6487.00
+
+# CTZ1 - ΔVel2
+model.CTZ1.ΔVel2     = brm(Expression ~ Treatment, data = PCR_raw_SXM[c(13:15,19:21),],
+                           iter = 6000)
+summary(model.CTZ1.ΔVel2)
+posterior_summary(model.CTZ1.ΔVel2)
+describe_posterior(model.CTZ1.ΔVel2)
+rope(model.CTZ1.ΔVel2)
+posterior = as_draws_df(model.CTZ1.ΔVel2)
+1- mean(posterior$b_TreatmentΔVel2 > 0) # 0.11125
+
+Parameter      | Median |        95% CI |     pd |          ROPE | % in ROPE |  Rhat |     ESS
+----------------------------------------------------------------------------------------------
+(Intercept)    |   1.00 | [-0.01, 2.04] | 97.42% | [-0.07, 0.07] |     0.63% | 1.000 | 6261.00
+TreatmentΔVel2 |   0.79 | [-0.79, 2.22] | 88.88% | [-0.07, 0.07] |     3.48% | 1.000 | 5756.00
+
+# CTZ1 - ΔVel2_IDD
+model.CTZ1.ΔVel2_IDD     = brm(Expression ~ Treatment, data = PCR_raw_SXM[c(13:15,22:24),],
+                               iter = 6000)
+summary(model.CTZ1.ΔVel2_IDD)
+posterior_summary(model.CTZ1.ΔVel2_IDD)
+describe_posterior(model.CTZ1.ΔVel2_IDD)
+rope(model.CTZ1.ΔVel2_IDD)
+posterior = as_draws_df(model.CTZ1.ΔVel2_IDD)
+1- mean(posterior$b_TreatmentΔVel2_IDD > 0) # 0.1949167
+
+Parameter          | Median |        95% CI |     pd |          ROPE | % in ROPE |  Rhat |     ESS
+--------------------------------------------------------------------------------------------------
+(Intercept)        |   0.99 | [-0.13, 1.97] | 96.43% | [-0.06, 0.06] |     1.00% | 1.000 | 5659.00
+TreatmentΔVel2_IDD |   0.50 | [-0.94, 2.05] | 80.51% | [-0.06, 0.06] |     5.00% | 1.000 | 4194.00
+
+# YAL1 - ΔVel1
+model.YAL1.ΔVel1     = brm(Expression ~ Treatment, data = PCR_raw_SXM[c(25:30),],
+                           iter = 6000)
+summary(model.YAL1.ΔVel1)
+posterior_summary(model.YAL1.ΔVel1)
+describe_posterior(model.YAL1.ΔVel1)
+rope(model.YAL1.ΔVel1)
+posterior = as_draws_df(model.YAL1.ΔVel1)
+mean(posterior$b_TreatmentΔVel1 > 0) # 0.04258333
+
+Parameter      | Median |        95% CI |     pd |          ROPE | % in ROPE |  Rhat |     ESS
+----------------------------------------------------------------------------------------------
+(Intercept)    |   1.00 | [ 0.71, 1.27] | 99.85% | [-0.02, 0.02] |        0% | 1.000 | 3811.00
+TreatmentΔVel1 |  -0.32 | [-0.70, 0.11] | 95.74% | [-0.02, 0.02] |     1.14% | 1.000 | 4797.00
+
+# YAL1 - ΔVel2
+model.YAL1.ΔVel2     = brm(Expression ~ Treatment, data = PCR_raw_SXM[c(25:27,31:33),],
+                           iter = 8000)
+summary(model.YAL1.ΔVel2)
+posterior_summary(model.YAL1.ΔVel2)
+describe_posterior(model.YAL1.ΔVel2)
+rope(model.YAL1.ΔVel2)
+posterior = as_draws_df(model.YAL1.ΔVel2)
+mean(posterior$b_TreatmentΔVel2 > 0) # 0.010125
+
+Parameter      | Median |         95% CI |     pd |          ROPE | % in ROPE |  Rhat |     ESS
+-----------------------------------------------------------------------------------------------
+(Intercept)    |   1.00 | [ 0.81,  1.20] | 99.98% | [-0.02, 0.02] |        0% | 1.001 | 6052.00
+TreatmentΔVel2 |  -0.40 | [-0.69, -0.12] | 98.99% | [-0.02, 0.02] |        0% | 1.001 | 4939.00
+
+# YAL1 - ΔVel2_IDD
+model.YAL1.ΔVel2_IDD     = brm(Expression ~ Treatment, data = PCR_raw_SXM[c(25:27,34:36),],
+                               iter = 6000)
+summary(model.YAL1.ΔVel2_IDD)
+posterior_summary(model.YAL1.ΔVel2_IDD)
+describe_posterior(model.YAL1.ΔVel2_IDD)
+rope(model.YAL1.ΔVel2_IDD)
+posterior = as_draws_df(model.YAL1.ΔVel2_IDD)
+mean(posterior$b_TreatmentΔVel2_IDD > 0) # 0.08741667
+
+Parameter          | Median |        95% CI |     pd |          ROPE | % in ROPE |  Rhat |     ESS
+--------------------------------------------------------------------------------------------------
+(Intercept)        |   1.00 | [ 0.64, 1.34] | 99.96% | [-0.02, 0.02] |        0% | 1.001 | 5334.00
+TreatmentΔVel2_IDD |  -0.30 | [-0.80, 0.20] | 91.26% | [-0.02, 0.02] |     2.65% | 1.001 | 5824.00
+
+# PDM ----
+PCR_raw_PDM   = PCR_raw %>% filter(Stage == "PDM")
+PCR_raw_PDM$Treatment = as.factor(PCR_raw_PDM$Treatment)
+
+# MET1 - ΔVel1
+model.MET1.ΔVel1     = brm(Expression ~ Treatment, data = PCR_raw_PDM[1:6,],
+                           iter = 6000)
+summary(model.MET1.ΔVel1)
+posterior_summary(model.MET1.ΔVel1)
+describe_posterior(model.MET1.ΔVel1)
+rope(model.MET1.ΔVel1)
+posterior = as_draws_df(model.MET1.ΔVel1)
+1- mean(posterior$b_TreatmentΔVel1 > 0) # 0.01691667
+
+Parameter      | Median |        95% CI |     pd |          ROPE | % in ROPE |  Rhat |     ESS
+----------------------------------------------------------------------------------------------
+(Intercept)    |   0.97 | [-0.58, 2.44] | 91.32% | [-0.16, 0.16] |     5.78% | 1.000 | 6330.00
+TreatmentΔVel1 |   2.46 | [ 0.27, 4.64] | 98.31% | [-0.16, 0.16] |        0% | 1.000 | 6323.00
+
+# MET1 - ΔVel2
+model.MET1.ΔVel2     = brm(Expression ~ Treatment, data = PCR_raw_PDM[c(1:3,7:9),],
+                           iter = 6000)
+summary(model.MET1.ΔVel2)
+posterior_summary(model.MET1.ΔVel2)
+describe_posterior(model.MET1.ΔVel2)
+rope(model.MET1.ΔVel2)
+posterior = as_draws_df(model.MET1.ΔVel2)
+1- mean(posterior$b_TreatmentΔVel2 > 0) # 0.1528333 
+
+Parameter      | Median |        95% CI |     pd |          ROPE | % in ROPE |  Rhat |     ESS
+----------------------------------------------------------------------------------------------
+(Intercept)    |   1.00 | [ 0.43, 1.58] | 99.57% | [-0.03, 0.03] |        0% | 1.001 | 4646.00
+TreatmentΔVel2 |   0.33 | [-0.51, 1.15] | 84.72% | [-0.03, 0.03] |     4.07% | 1.001 | 4680.00
+
+# MET1 - ΔVel2_IDD
+model.MET1.ΔVel2_IDD     = brm(Expression ~ Treatment, data = PCR_raw_PDM[c(1:3,10:12),],
+                               iter = 6000)
+summary(model.MET1.ΔVel2_IDD)
+posterior_summary(model.MET1.ΔVel2_IDD)
+describe_posterior(model.MET1.ΔVel2_IDD)
+rope(model.MET1.ΔVel2_IDD)
+posterior = as_draws_df(model.MET1.ΔVel2_IDD)
+1- mean(posterior$b_TreatmentΔVel2_IDD > 0) # 0.001833333
+
+Parameter          | Median |       95% CI |     pd |          ROPE | % in ROPE |  Rhat |     ESS
+-------------------------------------------------------------------------------------------------
+(Intercept)        |   1.00 | [0.70, 1.29] | 99.98% | [-0.06, 0.06] |        0% | 1.000 | 5297.00
+TreatmentΔVel2_IDD |   1.09 | [0.66, 1.53] | 99.82% | [-0.06, 0.06] |        0% | 1.001 | 4646.00
+
+# CTZ1 - ΔVel1
+model.CTZ1.ΔVel1     = brm(Expression ~ Treatment, data = PCR_raw_PDM[c(13:18),],
+                           iter = 6000)
+summary(model.CTZ1.ΔVel1)
+posterior_summary(model.CTZ1.ΔVel1)
+describe_posterior(model.CTZ1.ΔVel1)
+rope(model.CTZ1.ΔVel1)
+posterior = as_draws_df(model.CTZ1.ΔVel1)
+mean(posterior$b_TreatmentΔVel1 > 0) # 0.0006666667
+
+Parameter      | Median |         95% CI |     pd |          ROPE | % in ROPE |  Rhat |     ESS
+-----------------------------------------------------------------------------------------------
+(Intercept)    |   1.00 | [ 0.88,  1.12] |   100% | [-0.04, 0.04] |        0% | 1.001 | 5184.00
+TreatmentΔVel1 |  -0.66 | [-0.83, -0.49] | 99.93% | [-0.04, 0.04] |        0% | 1.001 | 4989.00
+
+# CTZ1 - ΔVel2
+model.CTZ1.ΔVel2     = brm(Expression ~ Treatment, data = PCR_raw_PDM[c(13:15,19:21),],
+                           iter = 6000)
+summary(model.CTZ1.ΔVel2)
+posterior_summary(model.CTZ1.ΔVel2)
+describe_posterior(model.CTZ1.ΔVel2)
+rope(model.CTZ1.ΔVel2)
+posterior = as_draws_df(model.CTZ1.ΔVel2)
+1- mean(posterior$b_TreatmentΔVel2 > 0) # 0.00001
+
+Parameter      | Median |         95% CI |   pd |          ROPE | % in ROPE |  Rhat |     ESS
+---------------------------------------------------------------------------------------------
+(Intercept)    |   1.00 | [ 0.96,  1.03] | 100% | [-0.04, 0.04] |        0% | 1.000 | 5756.00
+TreatmentΔVel2 |  -0.66 | [-0.71, -0.61] | 100% | [-0.04, 0.04] |        0% | 1.001 | 5571.00
+
+# CTZ1 - ΔVel2_IDD
+model.CTZ1.ΔVel2_IDD     = brm(Expression ~ Treatment, data = PCR_raw_PDM[c(13:15,22:24),],
+                               iter = 6000)
+summary(model.CTZ1.ΔVel2_IDD)
+posterior_summary(model.CTZ1.ΔVel2_IDD)
+describe_posterior(model.CTZ1.ΔVel2_IDD)
+rope(model.CTZ1.ΔVel2_IDD)
+posterior = as_draws_df(model.CTZ1.ΔVel2_IDD)
+mean(posterior$b_TreatmentΔVel2_IDD > 0) # 0.1081667
+
+Parameter          | Median |        95% CI |     pd |          ROPE | % in ROPE |  Rhat |     ESS
+--------------------------------------------------------------------------------------------------
+(Intercept)        |   1.00 | [ 0.29, 1.69] | 99.02% | [-0.04, 0.04] |        0% | 1.000 | 4425.00
+TreatmentΔVel2_IDD |  -0.48 | [-1.46, 0.50] | 89.18% | [-0.04, 0.04] |     3.01% | 1.000 | 4667.00
+
+# YAL1 - ΔVel1
+model.YAL1.ΔVel1     = brm(Expression ~ Treatment, data = PCR_raw_PDM[c(25:30),],
+                           iter = 6000)
+summary(model.YAL1.ΔVel1)
+posterior_summary(model.YAL1.ΔVel1)
+describe_posterior(model.YAL1.ΔVel1)
+rope(model.YAL1.ΔVel1)
+posterior = as_draws_df(model.YAL1.ΔVel1)
+1-mean(posterior$b_TreatmentΔVel1 > 0) # 0.088
+
+Parameter      | Median |        95% CI |     pd |          ROPE | % in ROPE |  Rhat |     ESS
+----------------------------------------------------------------------------------------------
+(Intercept)    |   1.00 | [ 0.65, 1.36] | 99.86% | [-0.02, 0.02] |        0% | 1.000 | 5497.00
+TreatmentΔVel1 |   0.29 | [-0.22, 0.80] | 91.20% | [-0.02, 0.02] |     2.34% | 1.000 | 4506.00
+
+# YAL1 - ΔVel2
+model.YAL1.ΔVel2     = brm(Expression ~ Treatment, data = PCR_raw_PDM[c(25:27,31:33),],
+                           iter = 6000)
+summary(model.YAL1.ΔVel2)
+posterior_summary(model.YAL1.ΔVel2)
+describe_posterior(model.YAL1.ΔVel2)
+rope(model.YAL1.ΔVel2)
+posterior = as_draws_df(model.YAL1.ΔVel2)
+1-mean(posterior$b_TreatmentΔVel2 > 0) # 0.01783333
+
+Parameter      | Median |       95% CI |     pd |          ROPE | % in ROPE |  Rhat |     ESS
+---------------------------------------------------------------------------------------------
+(Intercept)    |   1.00 | [0.39, 1.60] | 99.43% | [-0.06, 0.06] |        0% | 1.000 | 5497.00
+TreatmentΔVel2 |   0.94 | [0.09, 1.84] | 98.22% | [-0.06, 0.06] |        0% | 1.001 | 5206.00
+
+# YAL1 - ΔVel2_IDD
+model.YAL1.ΔVel2_IDD     = brm(Expression ~ Treatment, data = PCR_raw_PDM[c(25:27,34:36),],
+                               iter = 6000)
+summary(model.YAL1.ΔVel2_IDD)
+posterior_summary(model.YAL1.ΔVel2_IDD)
+describe_posterior(model.YAL1.ΔVel2_IDD)
+rope(model.YAL1.ΔVel2_IDD)
+posterior = as_draws_df(model.YAL1.ΔVel2_IDD)
+mean(posterior$b_TreatmentΔVel2_IDD > 0) # 0.08741667
+
+Parameter          | Median |         95% CI |     pd |          ROPE | % in ROPE |  Rhat |     ESS
+---------------------------------------------------------------------------------------------------
+(Intercept)        |   1.00 | [ 0.84,  1.14] | 99.99% | [-0.04, 0.04] |        0% | 1.000 | 4930.00
+TreatmentΔVel2_IDD |  -0.74 | [-0.95, -0.50] | 99.99% | [-0.04, 0.04] |        0% | 1.000 | 5574.00
+
+# PLATE ----
+PCR_raw_PLATE   = PCR_raw %>% filter(Stage == "PLATE")
+PCR_raw_PLATE$Treatment = as.factor(PCR_raw_PLATE$Treatment)
+
+# MET1 - ΔVel1
+model.MET1.ΔVel1     = brm(Expression ~ Treatment, data = PCR_raw_PLATE[1:6,],
+                           iter = 6000)
+summary(model.MET1.ΔVel1)
+posterior_summary(model.MET1.ΔVel1)
+describe_posterior(model.MET1.ΔVel1)
+rope(model.MET1.ΔVel1)
+posterior = as_draws_df(model.MET1.ΔVel1)
+1- mean(posterior$b_TreatmentΔVel1 > 0) # 0.001
+
+Parameter      | Median |         95% CI |     pd |          ROPE | % in ROPE |  Rhat |     ESS
+-----------------------------------------------------------------------------------------------
+(Intercept)    |   0.97 | [-2.75,  4.64] | 74.36% | [-0.73, 0.73] |    31.39% | 1.001 | 5490.00
+TreatmentΔVel1 |  12.95 | [ 7.82, 18.18] | 99.90% | [-0.73, 0.73] |        0% | 1.000 | 5593.00
+
+# MET1 - ΔVel2
+model.MET1.ΔVel2     = brm(Expression ~ Treatment, data = PCR_raw_PLATE[c(1:3,7:9),],
+                           iter = 6000)
+summary(model.MET1.ΔVel2)
+posterior_summary(model.MET1.ΔVel2)
+describe_posterior(model.MET1.ΔVel2)
+rope(model.MET1.ΔVel2)
+posterior = as_draws_df(model.MET1.ΔVel2)
+mean(posterior$b_TreatmentΔVel2 > 0) # 0.0105 
+
+Parameter      | Median |         95% CI |     pd |          ROPE | % in ROPE |  Rhat |     ESS
+-----------------------------------------------------------------------------------------------
+(Intercept)    |   1.00 | [ 0.74,  1.26] | 99.97% | [-0.03, 0.03] |        0% | 1.000 | 4478.00
+TreatmentΔVel2 |  -0.51 | [-0.90, -0.13] | 98.95% | [-0.03, 0.03] |        0% | 1.000 | 5381.00
+
+# MET1 - ΔVel2_IDD
+model.MET1.ΔVel2_IDD     = brm(Expression ~ Treatment, data = PCR_raw_PLATE[c(1:3,10:12),],
+                               iter = 6000)
+summary(model.MET1.ΔVel2_IDD)
+posterior_summary(model.MET1.ΔVel2_IDD)
+describe_posterior(model.MET1.ΔVel2_IDD)
+rope(model.MET1.ΔVel2_IDD)
+posterior = as_draws_df(model.MET1.ΔVel2_IDD)
+1- mean(posterior$b_TreatmentΔVel2_IDD > 0) # 0.05191667
+
+Parameter          | Median |        95% CI |     pd |          ROPE | % in ROPE |  Rhat |     ESS
+--------------------------------------------------------------------------------------------------
+(Intercept)        |   0.99 | [ 0.34, 1.58] | 99.10% | [-0.04, 0.04] |        0% | 1.000 | 5493.00
+TreatmentΔVel2_IDD |   0.64 | [-0.26, 1.59] | 94.81% | [-0.04, 0.04] |     1.53% | 1.000 | 3459.00
+
+# CTZ1 - ΔVel1
+model.CTZ1.ΔVel1     = brm(Expression ~ Treatment, data = PCR_raw_PLATE[c(13:18),],
+                           iter = 6000)
+summary(model.CTZ1.ΔVel1)
+posterior_summary(model.CTZ1.ΔVel1)
+describe_posterior(model.CTZ1.ΔVel1)
+rope(model.CTZ1.ΔVel1)
+posterior = as_draws_df(model.CTZ1.ΔVel1)
+mean(posterior$b_TreatmentΔVel1 > 0) # 0.0000
+
+Parameter      | Median |         95% CI |   pd |          ROPE | % in ROPE |  Rhat |     ESS
+---------------------------------------------------------------------------------------------
+(Intercept)    |   1.00 | [ 0.98,  1.02] | 100% | [-0.02, 0.02] |        0% | 1.001 | 4534.00
+TreatmentΔVel1 |  -0.38 | [-0.40, -0.35] | 100% | [-0.02, 0.02] |        0% | 1.001 | 4788.00
+
+# CTZ1 - ΔVel2
+model.CTZ1.ΔVel2     = brm(Expression ~ Treatment, data = PCR_raw_PLATE[c(13:15,19:21),],
+                           iter = 6000)
+summary(model.CTZ1.ΔVel2)
+posterior_summary(model.CTZ1.ΔVel2)
+describe_posterior(model.CTZ1.ΔVel2)
+rope(model.CTZ1.ΔVel2)
+posterior = as_draws_df(model.CTZ1.ΔVel2)
+mean(posterior$b_TreatmentΔVel2 > 0) # 0.001666667
+
+Parameter      | Median |         95% CI |     pd |          ROPE | % in ROPE |  Rhat |     ESS
+-----------------------------------------------------------------------------------------------
+(Intercept)    |   1.00 | [ 0.90,  1.10] |   100% | [-0.02, 0.02] |        0% | 1.000 | 5402.00
+TreatmentΔVel2 |  -0.35 | [-0.49, -0.22] | 99.83% | [-0.02, 0.02] |        0% | 1.000 | 6466.00
+
+# CTZ1 - ΔVel2_IDD
+model.CTZ1.ΔVel2_IDD     = brm(Expression ~ Treatment, data = PCR_raw_PLATE[c(13:15,22:24),],
+                               iter = 9000)
+summary(model.CTZ1.ΔVel2_IDD)
+posterior_summary(model.CTZ1.ΔVel2_IDD)
+describe_posterior(model.CTZ1.ΔVel2_IDD)
+rope(model.CTZ1.ΔVel2_IDD)
+posterior = as_draws_df(model.CTZ1.ΔVel2_IDD)
+1-mean(posterior$b_TreatmentΔVel2_IDD > 0) # 0.1992778
+
+Parameter          | Median |        95% CI |     pd |          ROPE | % in ROPE |  Rhat |     ESS
+--------------------------------------------------------------------------------------------------
+(Intercept)        |   1.00 | [ 0.57, 1.45] | 99.79% | [-0.02, 0.02] |        0% | 1.000 | 8344.00
+TreatmentΔVel2_IDD |   0.19 | [-0.42, 0.80] | 80.07% | [-0.02, 0.02] |     4.86% | 1.000 | 9293.00
+
+# YAL1 - ΔVel1
+model.YAL1.ΔVel1     = brm(Expression ~ Treatment, data = PCR_raw_PLATE[c(25:30),],
+                           iter = 6000)
+summary(model.YAL1.ΔVel1)
+posterior_summary(model.YAL1.ΔVel1)
+describe_posterior(model.YAL1.ΔVel1)
+rope(model.YAL1.ΔVel1)
+posterior = as_draws_df(model.YAL1.ΔVel1)
+1-mean(posterior$b_TreatmentΔVel1 > 0) # 0.02975
+
+Parameter      | Median |        95% CI |     pd |          ROPE | % in ROPE |  Rhat |     ESS
+----------------------------------------------------------------------------------------------
+(Intercept)    |   1.00 | [ 0.40, 1.59] | 99.38% | [-0.05, 0.05] |        0% | 1.001 | 4799.00
+TreatmentΔVel1 |   0.82 | [-0.06, 1.68] | 97.02% | [-0.05, 0.05] |     1.13% | 1.000 | 4926.00
+
+# YAL1 - ΔVel2
+model.YAL1.ΔVel2     = brm(Expression ~ Treatment, data = PCR_raw_PLATE[c(25:27,31:33),],
+                           iter = 6000)
+summary(model.YAL1.ΔVel2)
+posterior_summary(model.YAL1.ΔVel2)
+describe_posterior(model.YAL1.ΔVel2)
+rope(model.YAL1.ΔVel2)
+posterior = as_draws_df(model.YAL1.ΔVel2)
+1-mean(posterior$b_TreatmentΔVel2 > 0) # 0.01083333
+
+Parameter      | Median |       95% CI |     pd |          ROPE | % in ROPE |  Rhat |     ESS
+---------------------------------------------------------------------------------------------
+(Intercept)    |   1.00 | [0.51, 1.48] | 99.61% | [-0.05, 0.05] |        0% | 1.002 | 3399.00
+TreatmentΔVel2 |   0.88 | [0.22, 1.54] | 98.92% | [-0.05, 0.05] |        0% | 1.001 | 4767.00
+
+# YAL1 - ΔVel2_IDD
+model.YAL1.ΔVel2_IDD     = brm(Expression ~ Treatment, data = PCR_raw_PLATE[c(25:27,34:36),],
+                               iter = 6000)
+summary(model.YAL1.ΔVel2_IDD)
+posterior_summary(model.YAL1.ΔVel2_IDD)
+describe_posterior(model.YAL1.ΔVel2_IDD)
+rope(model.YAL1.ΔVel2_IDD)
+posterior = as_draws_df(model.YAL1.ΔVel2_IDD)
+mean(posterior$b_TreatmentΔVel2_IDD > 0) # 0.3263333
+
+Parameter          | Median |        95% CI |     pd |          ROPE | % in ROPE |  Rhat |     ESS
+--------------------------------------------------------------------------------------------------
+(Intercept)        |   1.00 | [ 0.55, 1.47] | 99.81% | [-0.02, 0.02] |        0% | 1.000 | 3235.00
+TreatmentΔVel2_IDD |  -0.11 | [-0.77, 0.51] | 67.37% | [-0.02, 0.02] |     6.45% | 1.000 | 3704.00

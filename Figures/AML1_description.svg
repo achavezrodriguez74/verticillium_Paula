@@ -9,6 +9,9 @@
    id="svg1"
    inkscape:version="1.3 (0e150ed6c4, 2023-07-21)"
    sodipodi:docname="AML1_description.svg"
+   inkscape:export-filename="AML1_description.pdf"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -26,14 +29,14 @@
      inkscape:document-units="mm"
      showgrid="true"
      inkscape:zoom="0.72426347"
-     inkscape:cx="269.23904"
-     inkscape:cy="1843.9422"
+     inkscape:cx="433.54389"
+     inkscape:cy="1842.5615"
      inkscape:window-width="1920"
      inkscape:window-height="991"
      inkscape:window-x="-9"
      inkscape:window-y="-9"
      inkscape:window-maximized="1"
-     inkscape:current-layer="g44">
+     inkscape:current-layer="g1">
     <inkscape:grid
        id="grid1"
        units="mm"
@@ -677,689 +680,650 @@
          inkscape:export-filename="AML1_description.pdf"
          inkscape:export-xdpi="96"
          inkscape:export-ydpi="96">
-        <rect
-           style="fill:#ffffff;stroke:#000000;stroke-width:0.806682;stroke-dasharray:none"
-           id="rect24-8-4"
-           width="579.63013"
-           height="499.76877"
-           x="-62.768536"
-           y="1516.9791" />
-        <rect
-           style="fill:#ffffff;stroke:#000000;stroke-width:0.948502;stroke-dasharray:none"
-           id="rect24-0-9-4"
-           width="1318.4629"
-           height="304.73709"
-           x="-62.52153"
-           y="2016.774" />
-        <text
-           font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
-           font-weight="400"
-           font-stretch="condensed"
-           font-size="16px"
-           id="text50-1-3-3-0-66-6"
-           x="568.86536"
-           y="2300.6489"
-           style="font-size:21.3333px"><tspan
-             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21.3333px;font-family:Arial;-inkscape-font-specification:Arial"
-             id="tspan98-0-1-5-5-6">7</tspan></text>
-        <text
-           font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
-           font-weight="400"
-           font-stretch="condensed"
-           font-size="16px"
-           id="text50-1-3-3-0-66-6-0"
-           x="635.83051"
-           y="2301.3438"
-           style="font-size:21.3333px"><tspan
-             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21.3333px;font-family:Arial;-inkscape-font-specification:Arial"
-             id="tspan98-0-1-5-5-6-5">8</tspan></text>
-        <text
-           font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
-           font-weight="400"
-           font-stretch="condensed"
-           font-size="16px"
-           id="text50-1-3-3-0-5-0"
-           x="502.36276"
-           y="2301.6489"
-           style="font-size:21.3333px"><tspan
-             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21.3333px;font-family:Arial;-inkscape-font-specification:Arial"
-             id="tspan98-0-1-5-0-8">6</tspan></text>
-        <text
-           font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
-           font-weight="400"
-           font-stretch="condensed"
-           font-size="16px"
-           id="text50-1-3-3-0-6-5"
-           x="439.77481"
-           y="2301.2319"
-           style="font-size:21.3333px"><tspan
-             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21.3333px;font-family:Arial;-inkscape-font-specification:Arial"
-             id="tspan98-0-1-5-2-4">5</tspan></text>
-        <text
-           font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
-           font-weight="400"
-           font-stretch="condensed"
-           font-size="16px"
-           id="text50-1-3-3-0-3-3"
-           x="377.21558"
-           y="2300.9587"
-           style="font-size:21.3333px"><tspan
-             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21.3333px;font-family:Arial;-inkscape-font-specification:Arial"
-             id="tspan98-0-1-5-9-0">4</tspan></text>
-        <text
-           font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
-           font-weight="400"
-           font-stretch="condensed"
-           font-size="16px"
-           id="text50-1-3-3-0-4"
-           x="303.14383"
-           y="2301.1372"
-           style="font-size:21.3333px"><tspan
-             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21.3333px;font-family:Arial;-inkscape-font-specification:Arial"
-             id="tspan98-0-1-5-8">3</tspan></text>
-        <text
-           font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
-           font-weight="400"
-           font-stretch="condensed"
-           font-size="16px"
-           id="text50-1-3-3-8-30"
-           x="242.7648"
-           y="2301.0754"
-           style="font-size:21.3333px"><tspan
-             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21.3333px;font-family:Arial;-inkscape-font-specification:Arial"
-             id="tspan98-0-1-1-3">2</tspan></text>
-        <text
-           font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
-           font-weight="400"
-           font-stretch="condensed"
-           font-size="16px"
-           id="text50-1-3-8"
-           x="167.00241"
-           y="2301.3503"
-           style="font-size:21.3333px"><tspan
-             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21.3333px;font-family:Arial;-inkscape-font-specification:Arial"
-             id="tspan98-0-6">1</tspan></text>
-        <text
-           font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
-           font-weight="400"
-           font-stretch="condensed"
-           font-size="16px"
-           id="text50-1-3-3-89"
-           x="-46.906124"
-           y="2091.9934"
-           style="font-size:21.3333px"><tspan
-             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21.3333px;font-family:Arial;-inkscape-font-specification:Arial"
-             id="tspan98-0-1-0">1</tspan></text>
-        <rect
-           style="fill:#ffffff;stroke:#000000;stroke-width:0.908906;stroke-dasharray:none"
-           id="rect24-7-9-8"
-           width="738.82288"
-           height="499.66513"
-           x="517.2807"
-           y="1517.2804" />
-        <text
-           xml:space="preserve"
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:32px;font-family:Century;-inkscape-font-specification:Century;text-align:center;text-anchor:middle;fill:none;stroke:#000000;stroke-width:0.755906;stroke-dasharray:none"
-           x="-5.1789246"
-           y="1561.1373"
-           id="text54-0-3"><tspan
-             sodipodi:role="line"
-             id="tspan54-7-2"
-             x="-5.1789246"
-             y="1561.1373"
-             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:32px;font-family:Arial;-inkscape-font-specification:Arial;fill:#000000">A</tspan></text>
-        <text
-           xml:space="preserve"
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:32px;font-family:Century;-inkscape-font-specification:Century;text-align:center;text-anchor:middle;fill:none;stroke:#000000;stroke-width:0.755906;stroke-dasharray:none"
-           x="566.50238"
-           y="1561.1902"
-           id="text54-6-7-6"><tspan
-             sodipodi:role="line"
-             id="tspan54-2-2-6"
-             x="566.50238"
-             y="1561.1902"
-             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:32px;font-family:Arial;-inkscape-font-specification:Arial;fill:#000000">B</tspan></text>
-        <text
-           xml:space="preserve"
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:32px;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;text-anchor:middle;fill:#000000;stroke:#000000;stroke-width:0.755906;stroke-dasharray:none"
-           x="-37.940346"
-           y="2055.8115"
-           id="text55-4-7"><tspan
-             sodipodi:role="line"
-             id="tspan55-7-5"
-             x="-37.940346"
-             y="2055.8115"
-             style="font-size:32px;-inkscape-font-specification:Arial;font-family:Arial;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal">C</tspan></text>
-        <rect
-           x="50.294762"
-           y="1958.5938"
-           width="121"
-           height="28"
-           fill="#ffffff"
-           id="rect12-0-9"
-           style="stroke-width:0.999999" />
         <g
-           transform="translate(-266.51409,1597.7312)"
-           id="g2">
+           id="g4">
           <text
              font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
              font-weight="400"
              font-stretch="condensed"
-             font-size="17px"
-             transform="translate(614.041,514)"
-             id="text1-1"
+             font-size="16px"
+             id="text50-1-3-3-0-66-6"
+             x="568.86536"
+             y="2300.6489"
              style="font-size:21.3333px"><tspan
                style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21.3333px;font-family:Arial;-inkscape-font-specification:Arial"
-               id="tspan67-2">% aminoacid identity</tspan></text>
-        </g>
-        <text
-           font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
-           font-weight="400"
-           font-stretch="condensed"
-           font-size="16px"
-           id="text50-1-3-3-0-66-4-4"
-           x="-44.431393"
-           y="2246.6687"
-           style="font-size:21.3333px"><tspan
-             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21.3333px;font-family:Arial;-inkscape-font-specification:Arial"
-             id="tspan98-0-1-5-5-5-7">7</tspan></text>
-        <text
-           font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
-           font-weight="400"
-           font-stretch="condensed"
-           font-size="16px"
-           id="text50-1-3-3-0-5-7-3"
-           x="-44.544781"
-           y="2219.4148"
-           style="font-size:21.3333px"><tspan
-             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21.3333px;font-family:Arial;-inkscape-font-specification:Arial"
-             id="tspan98-0-1-5-0-7-2">6</tspan></text>
-        <text
-           font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
-           font-weight="400"
-           font-stretch="condensed"
-           font-size="16px"
-           id="text50-1-3-3-0-6-2-7"
-           x="-44.648754"
-           y="2195.5068"
-           style="font-size:21.3333px"><tspan
-             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21.3333px;font-family:Arial;-inkscape-font-specification:Arial"
-             id="tspan98-0-1-5-2-7-7">5</tspan></text>
-        <text
-           font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
-           font-weight="400"
-           font-stretch="condensed"
-           font-size="16px"
-           id="text50-1-3-3-0-3-4-3"
-           x="-45.700344"
-           y="2169.8496"
-           style="font-size:21.3333px"><tspan
-             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21.3333px;font-family:Arial;-inkscape-font-specification:Arial"
-             id="tspan98-0-1-5-9-5-6">4</tspan></text>
-        <text
-           font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
-           font-weight="400"
-           font-stretch="condensed"
-           font-size="16px"
-           id="text50-1-3-3-0-8-1"
-           x="-45.572445"
-           y="2144.6914"
-           style="font-size:21.3333px"><tspan
-             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21.3333px;font-family:Arial;-inkscape-font-specification:Arial"
-             id="tspan98-0-1-5-22-8">3</tspan></text>
-        <text
-           font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
-           font-weight="400"
-           font-stretch="condensed"
-           font-size="16px"
-           id="text50-1-3-3-8-3-9"
-           x="-46.455685"
-           y="2117.2456"
-           style="font-size:21.3333px"><tspan
-             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21.3333px;font-family:Arial;-inkscape-font-specification:Arial"
-             id="tspan98-0-1-1-7-9">2</tspan></text>
-        <text
-           font-family="Arial, Arial_MSFontService, sans-serif"
-           font-weight="700"
-           font-size="18px"
-           transform="rotate(-90)"
-           id="text6"
-           x="-1917.0269"
-           y="69.921181">Normalised ChIP</text>
-        <text
-           font-family="Arial, Arial_MSFontService, sans-serif"
-           font-weight="700"
-           font-size="18px"
-           transform="rotate(-90)"
-           id="text7"
-           x="-1773.0269"
-           y="69.921181">–</text>
-        <text
-           font-family="Arial, Arial_MSFontService, sans-serif"
-           font-weight="700"
-           font-size="18px"
-           transform="rotate(-90)"
-           id="text8"
-           x="-1763.0269"
-           y="69.921181">seq read counts</text>
-        <g
-           clip-path="url(#clip0-9)"
-           transform="matrix(1.04987e-4,0,0,1.04987e-4,37.072189,1592.0268)"
-           id="g9-1">
+               id="tspan98-0-1-5-5-6">7</tspan></text>
+          <text
+             font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
+             font-weight="400"
+             font-stretch="condensed"
+             font-size="16px"
+             id="text50-1-3-3-0-66-6-0"
+             x="635.83051"
+             y="2301.3438"
+             style="font-size:21.3333px"><tspan
+               style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21.3333px;font-family:Arial;-inkscape-font-specification:Arial"
+               id="tspan98-0-1-5-5-6-5">8</tspan></text>
+          <text
+             font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
+             font-weight="400"
+             font-stretch="condensed"
+             font-size="16px"
+             id="text50-1-3-3-0-5-0"
+             x="502.36276"
+             y="2301.6489"
+             style="font-size:21.3333px"><tspan
+               style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21.3333px;font-family:Arial;-inkscape-font-specification:Arial"
+               id="tspan98-0-1-5-0-8">6</tspan></text>
+          <text
+             font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
+             font-weight="400"
+             font-stretch="condensed"
+             font-size="16px"
+             id="text50-1-3-3-0-6-5"
+             x="439.77481"
+             y="2301.2319"
+             style="font-size:21.3333px"><tspan
+               style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21.3333px;font-family:Arial;-inkscape-font-specification:Arial"
+               id="tspan98-0-1-5-2-4">5</tspan></text>
+          <text
+             font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
+             font-weight="400"
+             font-stretch="condensed"
+             font-size="16px"
+             id="text50-1-3-3-0-3-3"
+             x="377.21558"
+             y="2300.9587"
+             style="font-size:21.3333px"><tspan
+               style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21.3333px;font-family:Arial;-inkscape-font-specification:Arial"
+               id="tspan98-0-1-5-9-0">4</tspan></text>
+          <text
+             font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
+             font-weight="400"
+             font-stretch="condensed"
+             font-size="16px"
+             id="text50-1-3-3-0-4"
+             x="303.14383"
+             y="2301.1372"
+             style="font-size:21.3333px"><tspan
+               style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21.3333px;font-family:Arial;-inkscape-font-specification:Arial"
+               id="tspan98-0-1-5-8">3</tspan></text>
+          <text
+             font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
+             font-weight="400"
+             font-stretch="condensed"
+             font-size="16px"
+             id="text50-1-3-3-8-30"
+             x="242.7648"
+             y="2301.0754"
+             style="font-size:21.3333px"><tspan
+               style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21.3333px;font-family:Arial;-inkscape-font-specification:Arial"
+               id="tspan98-0-1-1-3">2</tspan></text>
+          <text
+             font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
+             font-weight="400"
+             font-stretch="condensed"
+             font-size="16px"
+             id="text50-1-3-8"
+             x="167.00241"
+             y="2301.3503"
+             style="font-size:21.3333px"><tspan
+               style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21.3333px;font-family:Arial;-inkscape-font-specification:Arial"
+               id="tspan98-0-6">1</tspan></text>
+          <text
+             font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
+             font-weight="400"
+             font-stretch="condensed"
+             font-size="16px"
+             id="text50-1-3-3-89"
+             x="-46.906124"
+             y="2091.9934"
+             style="font-size:21.3333px"><tspan
+               style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21.3333px;font-family:Arial;-inkscape-font-specification:Arial"
+               id="tspan98-0-1-0">1</tspan></text>
+          <rect
+             x="51.350529"
+             y="1978.1132"
+             width="129.98206"
+             height="29.486921"
+             fill="#ffffff"
+             id="rect12-0-9"
+             style="stroke-width:1.06361" />
           <g
-             clip-path="url(#clip2-0)"
-             transform="matrix(1.07585,0,0,1,-2873872,-0.125)"
-             id="g8">
-            <use
-               width="100%"
-               height="100%"
-               xlink:href="#img1-0"
-               transform="scale(6437.59)"
-               id="use8" />
+             transform="translate(-267.8948,1575.6398)"
+             id="g2">
+            <text
+               font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
+               font-weight="400"
+               font-stretch="condensed"
+               font-size="17px"
+               transform="translate(614.041,514)"
+               id="text1-1"
+               style="font-size:21.3333px"><tspan
+                 style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21.3333px;font-family:Arial;-inkscape-font-specification:Arial"
+                 id="tspan67-2">% aminoacid identity</tspan></text>
           </g>
-        </g>
-        <path
-           d="M 36.572189,1591.5268 H 221.57219 v 415 H 36.572189 Z"
-           stroke="#595959"
-           stroke-linejoin="round"
-           stroke-miterlimit="10"
-           fill="none"
-           fill-rule="evenodd"
-           id="path9" />
-        <g
-           clip-path="url(#clip3-2)"
-           transform="matrix(1.04987e-4,0,0,1.04987e-4,37.072189,1808.0268)"
-           id="g11">
+          <text
+             font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
+             font-weight="400"
+             font-stretch="condensed"
+             font-size="16px"
+             id="text50-1-3-3-0-66-4-4"
+             x="-44.431393"
+             y="2246.6687"
+             style="font-size:21.3333px"><tspan
+               style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21.3333px;font-family:Arial;-inkscape-font-specification:Arial"
+               id="tspan98-0-1-5-5-5-7">7</tspan></text>
+          <text
+             font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
+             font-weight="400"
+             font-stretch="condensed"
+             font-size="16px"
+             id="text50-1-3-3-0-5-7-3"
+             x="-44.544781"
+             y="2219.4148"
+             style="font-size:21.3333px"><tspan
+               style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21.3333px;font-family:Arial;-inkscape-font-specification:Arial"
+               id="tspan98-0-1-5-0-7-2">6</tspan></text>
+          <text
+             font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
+             font-weight="400"
+             font-stretch="condensed"
+             font-size="16px"
+             id="text50-1-3-3-0-6-2-7"
+             x="-44.648754"
+             y="2195.5068"
+             style="font-size:21.3333px"><tspan
+               style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21.3333px;font-family:Arial;-inkscape-font-specification:Arial"
+               id="tspan98-0-1-5-2-7-7">5</tspan></text>
+          <text
+             font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
+             font-weight="400"
+             font-stretch="condensed"
+             font-size="16px"
+             id="text50-1-3-3-0-3-4-3"
+             x="-45.700344"
+             y="2169.8496"
+             style="font-size:21.3333px"><tspan
+               style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21.3333px;font-family:Arial;-inkscape-font-specification:Arial"
+               id="tspan98-0-1-5-9-5-6">4</tspan></text>
+          <text
+             font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
+             font-weight="400"
+             font-stretch="condensed"
+             font-size="16px"
+             id="text50-1-3-3-0-8-1"
+             x="-45.572445"
+             y="2144.6914"
+             style="font-size:21.3333px"><tspan
+               style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21.3333px;font-family:Arial;-inkscape-font-specification:Arial"
+               id="tspan98-0-1-5-22-8">3</tspan></text>
+          <text
+             font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
+             font-weight="400"
+             font-stretch="condensed"
+             font-size="16px"
+             id="text50-1-3-3-8-3-9"
+             x="-46.455685"
+             y="2117.2456"
+             style="font-size:21.3333px"><tspan
+               style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21.3333px;font-family:Arial;-inkscape-font-specification:Arial"
+               id="tspan98-0-1-1-7-9">2</tspan></text>
+          <text
+             font-family="Arial, Arial_MSFontService, sans-serif"
+             font-weight="700"
+             font-size="19.1451px"
+             transform="matrix(0,-0.99011738,1.0099813,0,0,0)"
+             id="text6"
+             x="-1953.646"
+             y="71.718018"
+             style="stroke-width:1.06362">Normalised ChIP</text>
+          <text
+             font-family="Arial, Arial_MSFontService, sans-serif"
+             font-weight="700"
+             font-size="19.1451px"
+             transform="matrix(0,-0.99011738,1.0099813,0,0,0)"
+             id="text7"
+             x="-1800.4854"
+             y="71.718018"
+             style="stroke-width:1.06362">–</text>
+          <text
+             font-family="Arial, Arial_MSFontService, sans-serif"
+             font-weight="700"
+             font-size="19.1451px"
+             transform="matrix(0,-0.99011738,1.0099813,0,0,0)"
+             id="text8"
+             x="-1789.8492"
+             y="71.718018"
+             style="stroke-width:1.06362">seq read counts</text>
           <g
-             clip-path="url(#clip4)"
-             transform="matrix(1.06557,0,0,1,-2873872,-823226)"
-             id="g10-2">
-            <use
-               width="100%"
-               height="100%"
-               xlink:href="#img1-0"
-               transform="scale(6499.7)"
-               id="use9" />
+             clip-path="url(#clip0-9)"
+             transform="matrix(1.1278038e-4,0,0,1.1056227e-4,37.146421,1592.0799)"
+             id="g9-1">
+            <g
+               clip-path="url(#clip2-0)"
+               transform="matrix(1.07585,0,0,1,-2873872,-0.125)"
+               id="g8">
+              <use
+                 width="100%"
+                 height="100%"
+                 xlink:href="#img1-0"
+                 transform="scale(6437.59)"
+                 id="use8" />
+            </g>
           </g>
-        </g>
-        <g
-           clip-path="url(#clip5)"
-           transform="matrix(1.04987e-4,0,0,1.04987e-4,37.072189,1677.0268)"
-           id="g13-6">
-          <g
-             clip-path="url(#clip6)"
-             transform="matrix(1.0643,0,0,1,-2873872,-2057268)"
-             id="g12">
-            <use
-               width="100%"
-               height="100%"
-               xlink:href="#img1-0"
-               transform="scale(6507.44)"
-               id="use11" />
-          </g>
-        </g>
-        <path
-           d="m 122.85219,1952.0268 -8.61376,10e-5 1e-5,1 8.61375,-10e-5 z m -7.28045,-3.4999 -7.99995,4 8.00001,4 z"
-           id="path13" />
-        <path
-           d="m 101.57219,1959.5268 2,-7 2,7 z"
-           stroke="#ff0000"
-           stroke-width="2.66667"
-           stroke-linejoin="round"
-           stroke-miterlimit="10"
-           fill="#ff0000"
-           fill-rule="evenodd"
-           id="path14" />
-        <text
-           font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
-           font-weight="700"
-           font-stretch="condensed"
-           font-size="16px"
-           id="text14"
-           x="71.200188"
-           y="1976.0269">Chr2g05600a</text>
-        <text
-           font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
-           font-weight="700"
-           font-stretch="condensed"
-           font-size="18px"
-           transform="rotate(-90)"
-           id="text15"
-           x="-1967.0269"
-           y="23.724281">Normalised ChIP</text>
-        <text
-           font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
-           font-weight="700"
-           font-stretch="condensed"
-           font-size="18px"
-           transform="rotate(-90)"
-           id="text16"
-           x="-1796.0269"
-           y="23.724281">–</text>
-        <text
-           font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
-           font-weight="700"
-           font-stretch="condensed"
-           font-size="18px"
-           transform="rotate(-90)"
-           id="text17"
-           x="-1781.0269"
-           y="23.724281">seq read counts</text>
-        <text
-           font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
-           font-style="italic"
-           font-weight="700"
-           font-stretch="condensed"
-           font-size="21px"
-           id="text18"
-           x="105.67519"
-           y="1548.0269">AML</text>
-        <text
-           font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
-           font-style="italic"
-           font-weight="700"
-           font-stretch="condensed"
-           font-size="21px"
-           id="text19"
-           x="155.00819"
-           y="1548.0269">1</text>
-        <text
-           font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
-           font-weight="400"
-           font-stretch="condensed"
-           font-size="19px"
-           id="text20"
-           x="29.971489"
-           y="1577.0269">(</text>
-        <text
-           font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
-           font-weight="400"
-           font-stretch="condensed"
-           font-size="19px"
-           id="text21"
-           x="36.138191"
-           y="1577.0269">VDAG_JR2_Chr2g05600a</text>
-        <text
-           font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
-           font-weight="400"
-           font-stretch="condensed"
-           font-size="19px"
-           id="text22"
-           x="277.1312"
-           y="1577.0269">)</text>
-        <text
-           font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
-           font-weight="700"
-           font-stretch="condensed"
-           font-size="17px"
-           id="text23"
-           x="251.2542"
-           y="1747.0269">ChIP IPs with anti</text>
-        <text
-           font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
-           font-weight="700"
-           font-stretch="condensed"
-           font-size="17px"
-           id="text24"
-           x="425.96118"
-           y="1747.0269">-</text>
-        <text
-           font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
-           font-weight="700"
-           font-stretch="condensed"
-           font-size="17px"
-           id="text25"
-           x="435.79419"
-           y="1747.0269">GFP:</text>
-        <text
-           fill="#0000ff"
-           font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
-           font-weight="400"
-           font-stretch="condensed"
-           font-size="17px"
-           id="text26"
-           x="251.2542"
-           y="1779.0269">WT</text>
-        <text
-           fill="#ff0000"
-           font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
-           font-weight="400"
-           font-stretch="condensed"
-           font-size="17px"
-           id="text27"
-           x="251.2542"
-           y="1810.0269">Vel2</text>
-        <text
-           fill="#ff0000"
-           font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
-           font-weight="400"
-           font-stretch="condensed"
-           font-size="17px"
-           id="text28"
-           x="288.3212"
-           y="1810.0269">-</text>
-        <text
-           fill="#ff0000"
-           font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
-           font-weight="400"
-           font-stretch="condensed"
-           font-size="17px"
-           id="text29"
-           x="298.15417"
-           y="1810.0269">GFP</text>
-        <text
-           fill="#339933"
-           font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
-           font-weight="400"
-           font-stretch="condensed"
-           font-size="17px"
-           id="text30"
-           x="251.2542"
-           y="1841.0269">Vel2</text>
-        <text
-           fill="#339933"
-           font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
-           font-weight="400"
-           font-stretch="condensed"
-           font-size="12px"
-           id="text31"
-           x="288.3212"
-           y="1836.0269">Δ</text>
-        <text
-           fill="#339933"
-           font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
-           font-weight="400"
-           font-stretch="condensed"
-           font-size="12px"
-           id="text32"
-           x="296.98819"
-           y="1836.0269">IDD</text>
-        <text
-           fill="#339933"
-           font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
-           font-weight="400"
-           font-stretch="condensed"
-           font-size="17px"
-           id="text33"
-           x="320.67419"
-           y="1841.0269">-</text>
-        <text
-           fill="#339933"
-           font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
-           font-weight="400"
-           font-stretch="condensed"
-           font-size="17px"
-           id="text34"
-           x="330.50818"
-           y="1841.0269">GFP</text>
-        <text
-           font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
-           font-weight="400"
-           font-stretch="condensed"
-           font-size="17px"
-           id="text35"
-           x="280.25418"
-           y="1872.0269">Transcription</text>
-        <path
-           d="m 249.57219,1866.8598 h 16.8 v 1.334 h -16.8 z m 15.467,-3.333 8,4 -8,4 z"
-           id="path35" />
-        <g
-           transform="translate(-0.26240151,1454.9882)"
-           id="g40">
-          <text
-             font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
-             font-style="italic"
-             font-weight="400"
-             font-stretch="condensed"
-             font-size="19px"
-             transform="translate(581.648,266)"
-             id="text2">VdAML1</text>
-          <text
-             font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
-             font-weight="400"
-             font-stretch="condensed"
-             font-size="19px"
-             transform="translate(581.648,292)"
-             id="text3">gDNA</text>
-          <text
-             font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
-             font-style="italic"
-             font-weight="400"
-             font-stretch="condensed"
-             font-size="19px"
-             transform="translate(581.648,349)"
-             id="text4-3">VdAML1</text>
-          <text
-             font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
-             font-weight="400"
-             font-stretch="condensed"
-             font-size="19px"
-             transform="translate(581.648,372)"
-             id="text5">pre</text>
-          <text
-             font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
-             font-weight="400"
-             font-stretch="condensed"
-             font-size="19px"
-             transform="translate(606.475,372)"
-             id="text6-0">-</text>
-          <text
-             font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
-             font-weight="400"
-             font-stretch="condensed"
-             font-size="19px"
-             transform="translate(612.641,372)"
-             id="text7-48">mRNA</text>
-          <text
-             font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
-             font-weight="400"
-             font-stretch="condensed"
-             font-size="19px"
-             transform="translate(581.648,433)"
-             id="text8-7">VdAml1</text>
-          <text
-             font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
-             font-weight="400"
-             font-stretch="condensed"
-             font-size="19px"
-             transform="translate(581.648,456)"
-             id="text9">Protein</text>
-          <text
-             font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
-             font-weight="400"
-             font-stretch="condensed"
-             font-size="17px"
-             transform="translate(1090.82,314)"
-             id="text10">1576 bp</text>
-          <text
-             font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
-             font-weight="400"
-             font-stretch="condensed"
-             font-size="17px"
-             transform="translate(1092.45,376)"
-             id="text11">1297 bp</text>
-          <text
-             font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
-             font-weight="400"
-             font-stretch="condensed"
-             font-size="17px"
-             transform="translate(1012.51,489)"
-             id="text12">251 aa</text>
-          <text
-             font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
-             font-weight="400"
-             font-stretch="condensed"
-             font-size="17px"
-             transform="translate(840.981,449)"
-             id="text13">N</text>
-          <text
-             font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
-             font-weight="400"
-             font-stretch="condensed"
-             font-size="17px"
-             transform="translate(851.647,449)"
-             id="text14-7">-</text>
-          <text
-             font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
-             font-weight="400"
-             font-stretch="condensed"
-             font-size="17px"
-             transform="translate(857.761,449)"
-             id="text15-0">terminus</text>
-          <text
-             font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
-             font-weight="400"
-             font-stretch="condensed"
-             font-size="17px"
-             transform="translate(1037.96,450)"
-             id="text16-0">C</text>
-          <text
-             font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
-             font-weight="400"
-             font-stretch="condensed"
-             font-size="17px"
-             transform="translate(1048.22,450)"
-             id="text17-3">-</text>
-          <text
-             font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
-             font-weight="400"
-             font-stretch="condensed"
-             font-size="17px"
-             transform="translate(1054.34,450)"
-             id="text18-1">terminus</text>
           <path
-             d="M 3.48187e-6,-3 75.4574,-2.99991 v 6 L -3.48187e-6,3 Z M 72.4574,-8.99992 l 18,9.000024987 -18,8.999975013 z"
-             transform="matrix(-1,0,0,1,1006.46,197)"
+             d="M 36.609305,1591.5534 H 235.3422 v 437.0383 H 36.609305 Z"
+             stroke="#595959"
+             stroke-linejoin="round"
+             stroke-miterlimit="10"
+             fill="none"
+             fill-rule="evenodd"
+             id="path9"
+             style="stroke-width:1.06362" />
+          <g
+             clip-path="url(#clip3-2)"
+             transform="matrix(1.1278038e-4,0,0,1.1056227e-4,37.146421,1819.5504)"
+             id="g11">
+            <g
+               clip-path="url(#clip4)"
+               transform="matrix(1.06557,0,0,1,-2873872,-823226)"
+               id="g10-2">
+              <use
+                 width="100%"
+                 height="100%"
+                 xlink:href="#img1-0"
+                 transform="scale(6499.7)"
+                 id="use9" />
+            </g>
+          </g>
+          <g
+             clip-path="url(#clip5)"
+             transform="matrix(1.1278038e-4,0,0,1.1056227e-4,37.146421,1681.5938)"
+             id="g13-6">
+            <g
+               clip-path="url(#clip6)"
+               transform="matrix(1.0643,0,0,1,-2873872,-2057268)"
+               id="g12">
+              <use
+                 width="100%"
+                 height="100%"
+                 xlink:href="#img1-0"
+                 transform="scale(6507.44)"
+                 id="use11" />
+            </g>
+          </g>
+          <path
+             d="m 129.29403,1971.1975 -9.25317,10e-5 1e-5,1.0531 9.25316,-10e-5 z m -7.82089,-3.6858 -8.5938,4.2124 8.59387,4.2124 z"
+             id="path13"
+             style="stroke-width:1.06362" />
+          <path
+             d="m 106.43438,1979.0958 2.14846,-7.3718 2.14847,7.3718 z"
+             stroke="#ff0000"
+             stroke-width="2.83631"
+             stroke-linejoin="round"
+             stroke-miterlimit="10"
+             fill="#ff0000"
+             fill-rule="evenodd"
+             id="path14" />
+          <text
+             font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
+             font-weight="700"
+             font-stretch="condensed"
+             font-size="17.0179px"
+             id="text14"
+             x="73.078392"
+             y="2016.3993"
+             transform="scale(1.0099813,0.99011738)"
+             style="font-size:16px;stroke-width:1.06362">Chr2g05600a</text>
+          <text
+             font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
+             font-weight="700"
+             font-stretch="condensed"
+             font-size="18px"
+             transform="rotate(-90)"
+             id="text15"
+             x="-1985.7375"
+             y="18.201437">Normalized ChIP</text>
+          <text
+             font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
+             font-weight="700"
+             font-stretch="condensed"
+             font-size="18px"
+             transform="rotate(-90)"
+             id="text16"
+             x="-1814.7375"
+             y="18.201437">–</text>
+          <text
+             font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
+             font-weight="700"
+             font-stretch="condensed"
+             font-size="18px"
+             transform="rotate(-90)"
+             id="text17"
+             x="-1799.7375"
+             y="18.201437">seq read counts</text>
+          <text
+             font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
+             font-style="italic"
+             font-weight="700"
+             font-stretch="condensed"
+             font-size="21px"
+             id="text18"
+             x="98.771629"
+             y="1549.4076">AML</text>
+          <text
+             font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
+             font-style="italic"
+             font-weight="700"
+             font-stretch="condensed"
+             font-size="21px"
+             id="text19"
+             x="148.10463"
+             y="1549.4076">1</text>
+          <text
+             font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
+             font-weight="400"
+             font-stretch="condensed"
+             font-size="19px"
+             id="text20"
+             x="5.1186543"
+             y="1575.6461">(</text>
+          <text
+             font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
+             font-weight="400"
+             font-stretch="condensed"
+             font-size="19px"
+             id="text21"
+             x="11.285357"
+             y="1575.6461">VDAG_JR2_Chr2g05600a</text>
+          <text
+             font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
+             font-weight="400"
+             font-stretch="condensed"
+             font-size="19px"
+             id="text22"
+             x="252.27837"
+             y="1575.6461">)</text>
+          <text
+             font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
+             font-weight="700"
+             font-stretch="condensed"
+             font-size="17px"
+             id="text23"
+             x="252.6349"
+             y="1747.0269">ChIP IPs with anti</text>
+          <text
+             font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
+             font-weight="700"
+             font-stretch="condensed"
+             font-size="17px"
+             id="text24"
+             x="427.34189"
+             y="1747.0269">-</text>
+          <text
+             font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
+             font-weight="700"
+             font-stretch="condensed"
+             font-size="17px"
+             id="text25"
+             x="437.1749"
+             y="1747.0269">GFP:</text>
+          <text
+             fill="#0000ff"
+             font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
+             font-weight="400"
+             font-stretch="condensed"
+             font-size="17px"
+             id="text26"
+             x="252.6349"
+             y="1779.0269">WT</text>
+          <text
+             fill="#ff0000"
+             font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
+             font-weight="400"
+             font-stretch="condensed"
+             font-size="17px"
+             id="text27"
+             x="252.6349"
+             y="1810.0269">Vel2</text>
+          <text
+             fill="#ff0000"
+             font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
+             font-weight="400"
+             font-stretch="condensed"
+             font-size="17px"
+             id="text28"
+             x="289.7019"
+             y="1810.0269">-</text>
+          <text
+             fill="#ff0000"
+             font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
+             font-weight="400"
+             font-stretch="condensed"
+             font-size="17px"
+             id="text29"
+             x="299.53488"
+             y="1810.0269">GFP</text>
+          <text
+             fill="#339933"
+             font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
+             font-weight="400"
+             font-stretch="condensed"
+             font-size="17px"
+             id="text30"
+             x="252.6349"
+             y="1841.0269">Vel2</text>
+          <text
+             fill="#339933"
+             font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
+             font-weight="400"
+             font-stretch="condensed"
+             font-size="12px"
+             id="text31"
+             x="289.7019"
+             y="1836.0269">Δ</text>
+          <text
+             fill="#339933"
+             font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
+             font-weight="400"
+             font-stretch="condensed"
+             font-size="12px"
+             id="text32"
+             x="298.3689"
+             y="1836.0269">IDD</text>
+          <text
+             fill="#339933"
+             font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
+             font-weight="400"
+             font-stretch="condensed"
+             font-size="17px"
+             id="text33"
+             x="322.0549"
+             y="1841.0269">-</text>
+          <text
+             fill="#339933"
+             font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
+             font-weight="400"
+             font-stretch="condensed"
+             font-size="17px"
+             id="text34"
+             x="331.88889"
+             y="1841.0269">GFP</text>
+          <text
+             font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
+             font-weight="400"
+             font-stretch="condensed"
+             font-size="17px"
+             id="text35"
+             x="281.63489"
+             y="1872.0269">Transcription</text>
+          <path
+             d="m 250.9529,1866.8598 h 16.8 v 1.334 h -16.8 z m 15.467,-3.333 8,4 -8,4 z"
+             id="path35" />
+          <text
+             font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
+             font-style="italic"
+             font-weight="400"
+             font-stretch="condensed"
+             font-size="19px"
+             id="text2"
+             x="581.38562"
+             y="1720.9882">VdAML1</text>
+          <text
+             font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
+             font-weight="400"
+             font-stretch="condensed"
+             font-size="19px"
+             id="text3"
+             x="581.38562"
+             y="1746.9882">gDNA</text>
+          <text
+             font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
+             font-style="italic"
+             font-weight="400"
+             font-stretch="condensed"
+             font-size="19px"
+             id="text4-3"
+             x="581.38562"
+             y="1803.9882">VdAML1</text>
+          <text
+             font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
+             font-weight="400"
+             font-stretch="condensed"
+             font-size="19px"
+             id="text5"
+             x="581.38562"
+             y="1826.9882">pre</text>
+          <text
+             font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
+             font-weight="400"
+             font-stretch="condensed"
+             font-size="19px"
+             id="text6-0"
+             x="606.21259"
+             y="1826.9882">-</text>
+          <text
+             font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
+             font-weight="400"
+             font-stretch="condensed"
+             font-size="19px"
+             id="text7-48"
+             x="612.3786"
+             y="1826.9882">mRNA</text>
+          <text
+             font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
+             font-weight="400"
+             font-stretch="condensed"
+             font-size="19px"
+             id="text8-7"
+             x="581.38562"
+             y="1887.9882">VdAml1</text>
+          <text
+             font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
+             font-weight="400"
+             font-stretch="condensed"
+             font-size="19px"
+             id="text9"
+             x="581.38562"
+             y="1910.9882">Protein</text>
+          <text
+             font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
+             font-weight="400"
+             font-stretch="condensed"
+             font-size="17px"
+             id="text10"
+             x="1090.5576"
+             y="1768.9882">1576 bp</text>
+          <text
+             font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
+             font-weight="400"
+             font-stretch="condensed"
+             font-size="17px"
+             id="text11"
+             x="1092.1876"
+             y="1830.9882">1297 bp</text>
+          <text
+             font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
+             font-weight="400"
+             font-stretch="condensed"
+             font-size="17px"
+             id="text12"
+             x="1012.2476"
+             y="1943.9882">251 aa</text>
+          <text
+             font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
+             font-weight="400"
+             font-stretch="condensed"
+             font-size="17px"
+             id="text13"
+             x="840.71863"
+             y="1903.9882">N</text>
+          <text
+             font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
+             font-weight="400"
+             font-stretch="condensed"
+             font-size="17px"
+             id="text14-7"
+             x="851.38458"
+             y="1903.9882">-</text>
+          <text
+             font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
+             font-weight="400"
+             font-stretch="condensed"
+             font-size="17px"
+             id="text15-0"
+             x="857.4986"
+             y="1903.9882">terminus</text>
+          <text
+             font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
+             font-weight="400"
+             font-stretch="condensed"
+             font-size="17px"
+             id="text16-0"
+             x="1037.6976"
+             y="1904.9882">C</text>
+          <text
+             font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
+             font-weight="400"
+             font-stretch="condensed"
+             font-size="17px"
+             id="text17-3"
+             x="1047.9576"
+             y="1904.9882">-</text>
+          <text
+             font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
+             font-weight="400"
+             font-stretch="condensed"
+             font-size="17px"
+             id="text18-1"
+             x="1054.0776"
+             y="1904.9882">terminus</text>
+          <path
+             d="m 1006.1976,1648.9882 -75.4574,10e-5 v 6 l 75.4574,-10e-5 z m -72.4574,-5.9999 -18,9 18,9 z"
              id="path18" />
           <text
              font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
              font-weight="400"
              font-stretch="condensed"
              font-size="19px"
-             transform="translate(581.648,180)"
-             id="text19-5">Gene location on</text>
+             id="text19-5"
+             x="581.38562"
+             y="1634.9882">Gene location on</text>
           <text
              font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
              font-weight="400"
              font-stretch="condensed"
              font-size="19px"
-             transform="translate(581.648,206)"
-             id="text20-8">Chromosome II</text>
+             id="text20-8"
+             x="581.38562"
+             y="1660.9882">Chromosome II</text>
           <path
-             d="m 762,194 h 111.236 v 6 H 762 Z m 108.236,-6 18,9 -18,9 z"
+             d="m 761.7376,1648.9882 h 111.236 v 6 h -111.236 z m 108.236,-6 18,9 -18,9 z"
              id="path20" />
-          <path
-             d="m 941.5,386.5 h 19.573"
-             stroke="#ffffff"
-             stroke-width="3"
-             stroke-linejoin="round"
-             stroke-miterlimit="10"
-             fill="none"
-             fill-rule="evenodd"
-             id="path21" />
           <rect
-             x="938"
-             y="427"
+             x="937.73761"
+             y="1881.9882"
              width="79"
              height="38"
              stroke="#000000"
@@ -1369,8 +1333,8 @@
              fill="#ffcc00"
              id="rect21" />
           <rect
-             x="959.5"
-             y="426.5"
+             x="959.23761"
+             y="1881.4882"
              width="23"
              height="39"
              stroke="#000000"
@@ -1379,8 +1343,8 @@
              fill="#254061"
              id="rect22" />
           <rect
-             x="978"
-             y="428"
+             x="977.73761"
+             y="1882.9882"
              width="4"
              height="37"
              stroke="#000000"
@@ -1391,7 +1355,7 @@
              id="rect23" />
           <g
              clip-path="url(#clip0-0)"
-             transform="matrix(1.04987e-4,0,0,1.04987e-4,772,244)"
+             transform="matrix(1.04987e-4,0,0,1.04987e-4,771.7376,1698.9882)"
              id="g24">
             <g
                clip-path="url(#clip2-56)"
@@ -1406,7 +1370,7 @@
             </g>
           </g>
           <path
-             d="m 900,351 h 46.945"
+             d="m 899.7376,1805.9882 h 46.945"
              stroke="#000000"
              stroke-width="2"
              stroke-linejoin="round"
@@ -1415,7 +1379,7 @@
              fill-rule="evenodd"
              id="path24" />
           <path
-             d="m 808,351 h 98.409"
+             d="m 807.7376,1805.9882 h 98.409"
              stroke="#000000"
              stroke-width="2"
              stroke-linejoin="round"
@@ -1425,7 +1389,7 @@
              fill-rule="evenodd"
              id="path25" />
           <path
-             d="m 1077,351 h 34.78"
+             d="m 1076.7376,1805.9882 h 34.78"
              stroke="#000000"
              stroke-width="2"
              stroke-linejoin="round"
@@ -1435,7 +1399,7 @@
              fill-rule="evenodd"
              id="path26" />
           <path
-             d="m 964,351 h 14.565"
+             d="m 963.7376,1805.9882 h 14.565"
              stroke="#000000"
              stroke-width="2"
              stroke-linejoin="round"
@@ -1444,17 +1408,16 @@
              fill-rule="evenodd"
              id="path27" />
           <path
-             d="M 0,0 81.1993,0.307717"
+             d="m 994.7376,1806.2962 81.1993,-0.3077"
              stroke="#000000"
              stroke-width="2"
              stroke-linejoin="round"
              stroke-miterlimit="10"
              fill="none"
              fill-rule="evenodd"
-             transform="matrix(1,0,0,-1,995,351.308)"
              id="path28" />
           <path
-             d="m 955,338 9.231,13.846"
+             d="m 954.7376,1792.9882 9.231,13.846"
              stroke="#000000"
              stroke-width="2"
              stroke-linejoin="round"
@@ -1463,7 +1426,7 @@
              fill-rule="evenodd"
              id="path29" />
           <path
-             d="m 987,338 9.231,13.846"
+             d="m 986.7376,1792.9882 9.231,13.846"
              stroke="#000000"
              stroke-width="2"
              stroke-linejoin="round"
@@ -1472,41 +1435,41 @@
              fill-rule="evenodd"
              id="path30" />
           <path
-             d="M 0,0 9.23076,13.8461"
+             d="m 946.7376,1805.8342 9.23076,-13.8461"
              stroke="#000000"
              stroke-width="2"
              stroke-linejoin="round"
              stroke-miterlimit="10"
              fill="none"
              fill-rule="evenodd"
-             transform="matrix(1,0,0,-1,947,350.846)"
              id="path31" />
           <path
-             d="M 0,0 9.23076,13.8461"
+             d="m 977.7376,1805.8342 9.23076,-13.8461"
              stroke="#000000"
              stroke-width="2"
              stroke-linejoin="round"
              stroke-miterlimit="10"
              fill="none"
              fill-rule="evenodd"
-             transform="matrix(1,0,0,-1,978,350.846)"
              id="path32" />
           <text
              font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
              font-weight="400"
              font-stretch="condensed"
              font-size="17px"
-             transform="translate(736.218,280)"
-             id="text32-0">5’FR</text>
+             id="text32-0"
+             x="735.95563"
+             y="1734.9882">5’FR</text>
           <text
              font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
              font-weight="400"
              font-stretch="condensed"
              font-size="17px"
-             transform="translate(1153.38,280)"
-             id="text33-7">3’FR</text>
+             id="text33-7"
+             x="1153.1176"
+             y="1734.9882">3’FR</text>
           <path
-             d="M 0,0 104.008,58.4656"
+             d="m 810.7376,1712.4542 104.008,-58.4656"
              stroke="#000000"
              stroke-width="2"
              stroke-linejoin="round"
@@ -1514,10 +1477,9 @@
              stroke-dasharray="8, 6"
              fill="none"
              fill-rule="evenodd"
-             transform="matrix(1,0,0,-1,811,257.466)"
              id="path33" />
           <path
-             d="M 1110.75,259.276 1009,197"
+             d="m 1110.4876,1714.2642 -101.75,-62.276"
              stroke="#000000"
              stroke-width="2"
              stroke-linejoin="round"
@@ -1531,1192 +1493,1233 @@
              font-weight="400"
              font-stretch="condensed"
              font-size="17px"
-             transform="translate(929.989,489)"
-             id="text34-3">1</text>
+             id="text34-3"
+             x="929.72662"
+             y="1943.9882">1</text>
           <text
              font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
              font-weight="400"
              font-stretch="condensed"
              font-size="17px"
-             transform="translate(804.379,314)"
-             id="text35-0">+1</text>
+             id="text35-0"
+             x="804.11658"
+             y="1768.9882">+1</text>
           <text
              font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
              font-weight="400"
              font-stretch="condensed"
              font-size="17px"
-             transform="translate(894.058,375)"
-             id="text36">AUG</text>
+             id="text36"
+             x="893.79559"
+             y="1829.9882">AUG</text>
           <text
              font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
              font-weight="400"
              font-stretch="condensed"
              font-size="17px"
-             transform="translate(947.675,417)"
-             id="text37">76</text>
+             id="text37"
+             x="941.4126"
+             y="1871.9882">76</text>
           <text
              font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
              font-weight="400"
              font-stretch="condensed"
              font-size="17px"
-             transform="translate(965.008,417)"
-             id="text38">-</text>
+             id="text38"
+             x="964.74561"
+             y="1871.9882">-</text>
           <text
              font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
              font-weight="400"
              font-stretch="condensed"
              font-size="17px"
-             transform="translate(970.842,417)"
-             id="text39">138</text>
+             id="text39"
+             x="974.57959"
+             y="1871.9882">138</text>
           <text
              font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
              font-style="italic"
              font-weight="700"
              font-stretch="condensed"
              font-size="20px"
-             transform="translate(947.068,180)"
-             id="text40">AML1</text>
-        </g>
-        <g
-           id="g47"
-           transform="translate(-18.54992,33.194593)">
-          <path
-             d="m 159.53272,2037.9335 v 206.94"
-             stroke="#000000"
-             stroke-width="1.33333"
-             stroke-linejoin="round"
-             stroke-miterlimit="10"
-             fill="none"
-             fill-rule="evenodd"
-             id="path1" />
-          <path
-             d="m 231.93572,2037.9335 v 206.94"
-             stroke="#000000"
-             stroke-width="1.33333"
-             stroke-linejoin="round"
-             stroke-miterlimit="10"
-             fill="none"
-             fill-rule="evenodd"
-             id="path2" />
-          <path
-             d="m 296.33872,2063.6345 v 181.239"
-             stroke="#000000"
-             stroke-width="1.33333"
-             stroke-linejoin="round"
-             stroke-miterlimit="10"
-             fill="none"
-             fill-rule="evenodd"
-             id="path3" />
-          <path
-             d="m 362.74172,2089.3345 v 155.539"
-             stroke="#000000"
-             stroke-width="1.33333"
-             stroke-linejoin="round"
-             stroke-miterlimit="10"
-             fill="none"
-             fill-rule="evenodd"
-             id="path4" />
-          <path
-             d="m 429.14472,2115.0355 v 129.838"
-             stroke="#000000"
-             stroke-width="1.33333"
-             stroke-linejoin="round"
-             stroke-miterlimit="10"
-             fill="none"
-             fill-rule="evenodd"
-             id="path5" />
-          <path
-             d="m 493.54772,2140.7365 v 104.137"
-             stroke="#000000"
-             stroke-width="1.33333"
-             stroke-linejoin="round"
-             stroke-miterlimit="10"
-             fill="none"
-             fill-rule="evenodd"
-             id="path6" />
-          <path
-             d="m 559.95072,2166.4375 v 78.436"
-             stroke="#000000"
-             stroke-width="1.33333"
-             stroke-linejoin="round"
-             stroke-miterlimit="10"
-             fill="none"
-             fill-rule="evenodd"
-             id="path7" />
-          <path
-             d="m 626.35372,2192.1385 v 52.735"
-             stroke="#000000"
-             stroke-width="1.33333"
-             stroke-linejoin="round"
-             stroke-miterlimit="10"
-             fill="none"
-             fill-rule="evenodd"
-             id="path8" />
-          <path
-             d="M -10.456984,2064.6666 H 296.811"
-             stroke="#000000"
-             stroke-width="1.5167"
-             stroke-linejoin="round"
-             stroke-miterlimit="10"
-             fill="none"
-             fill-rule="evenodd"
-             id="path9-0" />
-          <path
-             d="M -10.456984,2090.0015 H 363.12644"
-             stroke="#000000"
-             stroke-width="1.51368"
-             stroke-linejoin="round"
-             stroke-miterlimit="10"
-             fill="none"
-             fill-rule="evenodd"
-             id="path10" />
-          <path
-             d="M -10.456984,2115.7025 H 428.70964"
-             stroke="#000000"
-             stroke-width="1.51032"
-             stroke-linejoin="round"
-             stroke-miterlimit="10"
-             fill="none"
-             fill-rule="evenodd"
-             id="path11" />
-          <path
-             d="M -10.456984,2141.4035 H 493.63623"
-             stroke="#000000"
-             stroke-width="1.50687"
-             stroke-linejoin="round"
-             stroke-miterlimit="10"
-             fill="none"
-             fill-rule="evenodd"
-             id="path12" />
-          <path
-             d="M -10.456984,2167.2255 H 559.87705"
-             stroke="#000000"
-             stroke-width="1.50596"
-             stroke-linejoin="round"
-             stroke-miterlimit="10"
-             fill="none"
-             fill-rule="evenodd"
-             id="path13-5" />
-          <path
-             d="M -10.456984,2192.8045 H 626.92473"
-             stroke="#000000"
-             stroke-width="1.50619"
-             stroke-linejoin="round"
-             stroke-miterlimit="10"
-             fill="none"
-             fill-rule="evenodd"
-             id="path14-2" />
-          <path
-             d="M -10.456984,2218.5055 H 691.04346"
-             stroke="#000000"
-             stroke-width="1.50324"
-             stroke-linejoin="round"
-             stroke-miterlimit="10"
-             fill="none"
-             fill-rule="evenodd"
-             id="path15" />
-          <path
-             d="m -9.790384,2037.9335 v 206.94"
-             stroke="#000000"
-             stroke-width="1.33333"
-             stroke-linejoin="round"
-             stroke-miterlimit="10"
-             fill="none"
-             fill-rule="evenodd"
-             id="path16" />
-          <path
-             d="m 690.75672,2217.8385 v 27.035"
-             stroke="#000000"
-             stroke-width="1.33333"
-             stroke-linejoin="round"
-             stroke-miterlimit="10"
-             fill="none"
-             fill-rule="evenodd"
-             id="path17" />
-          <path
-             d="M -10.456984,2038.6005 H 232.2041"
-             stroke="#000000"
-             stroke-width="1.5268"
-             stroke-linejoin="round"
-             stroke-miterlimit="10"
-             fill="none"
-             fill-rule="evenodd"
-             id="path18-4" />
-          <path
-             d="M -10.456984,2244.2065 H 690.55531"
-             stroke="#000000"
-             stroke-width="1.50272"
-             stroke-linejoin="round"
-             stroke-miterlimit="10"
-             fill="none"
-             fill-rule="evenodd"
-             id="path19" />
+             id="text40"
+             x="946.8056"
+             y="1634.9882">AML1</text>
           <g
-             id="g19"
-             transform="translate(-41.262284,1866.7715)">
-            <text
-               font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
-               font-weight="400"
-               font-stretch="condensed"
-               font-size="17px"
-               transform="translate(207.496,192)"
-               id="text19-2"
-               style="font-size:21.3333px"><tspan
-                 style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Arial;-inkscape-font-specification:Arial"
-                 id="tspan4">100,0</tspan></text>
-          </g>
-          <g
-             id="g20-7"
-             transform="translate(-75.262284,1866.7715)">
-            <text
-               font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
-               font-style="italic"
-               font-weight="400"
-               font-stretch="condensed"
-               font-size="17px"
-               transform="translate(70.2719,192)"
-               id="text20-2"
-               style="font-size:21.3333px"><tspan
-                 style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Arial;-inkscape-font-specification:'Arial Italic'"
-                 id="tspan12">V. dahliae</tspan></text>
-          </g>
-          <g
-             id="g21-2"
-             transform="translate(-21.262284,1866.7715)">
-            <text
-               font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
-               font-weight="400"
-               font-stretch="condensed"
-               font-size="17px"
-               transform="translate(259.899,217)"
-               id="text21-6"
-               style="font-size:21.3333px"><tspan
-                 style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Arial;-inkscape-font-specification:Arial"
-                 id="tspan20">100,0</tspan></text>
-          </g>
-          <text
-             font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
-             font-weight="400"
-             font-stretch="condensed"
-             font-size="17px"
-             id="text22-4"
-             x="170.56673"
-             y="2083.7715"
-             style="font-size:21.3333px"><tspan
-               style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Arial;-inkscape-font-specification:Arial"
-               id="tspan5">97,6</tspan></text>
-          <g
-             id="g23-8"
-             transform="translate(-75.262284,1866.7715)">
-            <text
-               font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
-               font-style="italic"
-               font-weight="400"
-               font-stretch="condensed"
-               font-size="17px"
-               transform="translate(70.2719,217)"
-               id="text23-5"
-               style="font-size:21.3333px"><tspan
-                 style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Arial;-inkscape-font-specification:'Arial Italic'"
-                 id="tspan13">V. longisporum</tspan></text>
-          </g>
-          <g
-             id="g24-9"
-             transform="translate(-9.262284,1866.7715)">
-            <text
-               font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
-               font-weight="400"
-               font-stretch="condensed"
-               font-size="17px"
-               transform="translate(312.302,243)"
-               id="text24-41"
-               style="font-size:21.3333px"><tspan
-                 style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21.3333px;font-family:Arial;-inkscape-font-specification:Arial"
-                 id="tspan27">100,0</tspan></text>
-          </g>
-          <text
-             font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
-             font-weight="400"
-             font-stretch="condensed"
-             font-size="17px"
-             id="text25-7"
-             x="242.96973"
-             y="2109.7715"
-             style="font-size:21.3333px"><tspan
-               style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21.3333px;font-family:Arial;-inkscape-font-specification:Arial"
-               id="tspan21">88,0</tspan></text>
-          <text
-             font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
-             font-weight="400"
-             font-stretch="condensed"
-             font-size="17px"
-             id="text26-0"
-             x="170.56673"
-             y="2109.7715"
-             style="font-size:21.3333px"><tspan
-               style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Arial;-inkscape-font-specification:Arial"
-               id="tspan6">74,4</tspan></text>
-          <g
-             id="g27"
-             transform="translate(-75.262284,1866.7715)">
-            <text
-               font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
-               font-style="italic"
-               font-weight="400"
-               font-stretch="condensed"
-               font-size="17px"
-               transform="translate(70.2719,243)"
-               id="text27-1"
-               style="font-size:21.3333px"><tspan
-                 style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Arial;-inkscape-font-specification:'Arial Italic'"
-                 id="tspan14">C. graminicola</tspan></text>
-          </g>
-          <g
-             id="g28"
-             transform="translate(4.7377161,1866.7715)">
-            <text
-               font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
-               font-weight="400"
-               font-stretch="condensed"
-               font-size="17px"
-               transform="translate(364.705,269)"
-               id="text28-97"
-               style="font-size:21.3333px"><tspan
-                 style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21.3333px;font-family:Arial;-inkscape-font-specification:Arial"
-                 id="tspan33">100,0</tspan></text>
-          </g>
-          <text
-             font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
-             font-weight="400"
-             font-stretch="condensed"
-             font-size="17px"
-             id="text29-6"
-             x="307.37372"
-             y="2135.7715"
-             style="font-size:21.3333px"><tspan
-               style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21.3333px;font-family:Arial;-inkscape-font-specification:Arial"
-               id="tspan28">88,9</tspan></text>
-          <text
-             font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
-             font-weight="400"
-             font-stretch="condensed"
-             font-size="17px"
-             id="text30-1"
-             x="242.96973"
-             y="2135.7715"
-             style="font-size:21.3333px"><tspan
-               style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21.3333px;font-family:Arial;-inkscape-font-specification:Arial"
-               id="tspan22">90,4</tspan></text>
-          <text
-             font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
-             font-weight="400"
-             font-stretch="condensed"
-             font-size="17px"
-             id="text31-6"
-             x="170.56673"
-             y="2135.7715"
-             style="font-size:21.3333px"><tspan
-               style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Arial;-inkscape-font-specification:Arial"
-               id="tspan7">74,3</tspan></text>
-          <g
-             id="g32"
-             transform="translate(-75.262284,1866.7715)">
-            <text
-               font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
-               font-style="italic"
-               font-weight="400"
-               font-stretch="condensed"
-               font-size="17px"
-               transform="translate(70.2719,269)"
-               id="text32-9"
-               style="font-size:21.3333px"><tspan
-                 style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Arial;-inkscape-font-specification:'Arial Italic'"
-                 id="tspan15">C. higginsianum</tspan></text>
-          </g>
-          <g
-             id="g33"
-             transform="translate(18.737716,1866.7715)">
-            <text
-               font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
-               font-weight="400"
-               font-stretch="condensed"
-               font-size="17px"
-               transform="translate(417.108,294)"
-               id="text33-1"
-               style="font-size:21.3333px"><tspan
-                 style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21.3333px;font-family:Arial;-inkscape-font-specification:Arial"
-                 id="tspan38">100,0</tspan></text>
-          </g>
-          <text
-             font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
-             font-weight="400"
-             font-stretch="condensed"
-             font-size="17px"
-             id="text34-16"
-             x="373.77673"
-             y="2160.7715"
-             style="font-size:21.3333px"><tspan
-               style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21.3333px;font-family:Arial;-inkscape-font-specification:Arial"
-               id="tspan34">66,3</tspan></text>
-          <text
-             font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
-             font-weight="400"
-             font-stretch="condensed"
-             font-size="17px"
-             id="text35-20"
-             x="307.37372"
-             y="2160.7715"
-             style="font-size:21.3333px"><tspan
-               style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Arial;-inkscape-font-specification:Arial"
-               id="tspan29">66,0</tspan></text>
-          <text
-             font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
-             font-weight="400"
-             font-stretch="condensed"
-             font-size="17px"
-             id="text36-1"
-             x="242.96973"
-             y="2160.7715"
-             style="font-size:21.3333px"><tspan
-               style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21.3333px;font-family:Arial;-inkscape-font-specification:Arial"
-               id="tspan23">72,0</tspan></text>
-          <text
-             font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
-             font-weight="400"
-             font-stretch="condensed"
-             font-size="17px"
-             id="text37-6"
-             x="170.56673"
-             y="2160.7715"
-             style="font-size:21.3333px"><tspan
-               style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Arial;-inkscape-font-specification:Arial"
-               id="tspan8">66,7</tspan></text>
-          <g
-             id="g38"
-             transform="translate(-75.262284,1866.7715)">
-            <text
-               font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
-               font-style="italic"
-               font-weight="400"
-               font-stretch="condensed"
-               font-size="17px"
-               transform="translate(70.2719,294)"
-               id="text38-9"
-               style="font-size:21.3333px"><tspan
-                 style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Arial;-inkscape-font-specification:'Arial Italic'"
-                 id="tspan16">T. virens</tspan></text>
-          </g>
-          <g
-             id="g39"
-             transform="translate(30.737716,1866.7715)">
-            <text
-               font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
-               font-weight="400"
-               font-stretch="condensed"
-               font-size="17px"
-               transform="translate(469.511,320)"
-               id="text39-1"
-               style="font-size:21.3333px"><tspan
-                 style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21.3333px;font-family:Arial;-inkscape-font-specification:Arial"
-                 id="tspan42">100,0</tspan></text>
-          </g>
-          <text
-             font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
-             font-weight="400"
-             font-stretch="condensed"
-             font-size="17px"
-             id="text40-9"
-             x="440.17972"
-             y="2186.7715"
-             style="font-size:21.3333px"><tspan
-               style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Arial;-inkscape-font-specification:Arial"
-               id="tspan39">64,3</tspan></text>
-          <text
-             font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
-             font-weight="400"
-             font-stretch="condensed"
-             font-size="17px"
-             id="text41"
-             x="373.77673"
-             y="2186.7715"
-             style="font-size:21.3333px"><tspan
-               style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Arial;-inkscape-font-specification:Arial"
-               id="tspan35">66,9</tspan></text>
-          <text
-             font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
-             font-weight="400"
-             font-stretch="condensed"
-             font-size="17px"
-             id="text42"
-             x="307.37372"
-             y="2186.7715"
-             style="font-size:21.3333px"><tspan
-               style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21.3333px;font-family:Arial;-inkscape-font-specification:Arial"
-               id="tspan30">66,3</tspan></text>
-          <text
-             font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
-             font-weight="400"
-             font-stretch="condensed"
-             font-size="17px"
-             id="text43"
-             x="242.96973"
-             y="2186.7715"
-             style="font-size:21.3333px"><tspan
-               style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21.3333px;font-family:Arial;-inkscape-font-specification:Arial"
-               id="tspan24">72,3</tspan></text>
-          <text
-             font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
-             font-weight="400"
-             font-stretch="condensed"
-             font-size="17px"
-             id="text44"
-             x="170.56673"
-             y="2186.7715"
-             style="font-size:21.3333px"><tspan
-               style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Arial;-inkscape-font-specification:Arial"
-               id="tspan9">64,8</tspan></text>
-          <g
-             id="g45"
-             transform="translate(-75.262284,1866.7715)">
-            <text
-               font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
-               font-style="italic"
-               font-weight="400"
-               font-stretch="condensed"
-               font-size="17px"
-               transform="translate(70.2719,320)"
-               id="text45"
-               style="font-size:21.3333px"><tspan
-                 style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Arial;-inkscape-font-specification:'Arial Italic'"
-                 id="tspan17">F. oxysporum</tspan></text>
-          </g>
-          <g
-             id="g46"
-             transform="translate(44.737716,1866.7715)">
-            <text
-               font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
-               font-weight="400"
-               font-stretch="condensed"
-               font-size="17px"
-               transform="translate(521.914,346)"
-               id="text46"
-               style="font-size:21.3333px"><tspan
-                 style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21.3333px;font-family:Arial;-inkscape-font-specification:Arial"
-                 id="tspan45">100,0</tspan></text>
-          </g>
-          <text
-             font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
-             font-weight="400"
-             font-stretch="condensed"
-             font-size="17px"
-             id="text47"
-             x="504.58273"
-             y="2212.7715"
-             style="font-size:21.3333px"><tspan
-               style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21.3333px;font-family:Arial;-inkscape-font-specification:Arial"
-               id="tspan43">63,8</tspan></text>
-          <text
-             font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
-             font-weight="400"
-             font-stretch="condensed"
-             font-size="17px"
-             id="text48"
-             x="440.17972"
-             y="2212.7715"
-             style="font-size:21.3333px"><tspan
-               style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21.3333px;font-family:Arial;-inkscape-font-specification:Arial"
-               id="tspan40">62,4</tspan></text>
-          <text
-             font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
-             font-weight="400"
-             font-stretch="condensed"
-             font-size="17px"
-             id="text49"
-             x="373.77673"
-             y="2212.7715"
-             style="font-size:21.3333px"><tspan
-               style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21.3333px;font-family:Arial;-inkscape-font-specification:Arial"
-               id="tspan36">62,1</tspan></text>
-          <text
-             font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
-             font-weight="400"
-             font-stretch="condensed"
-             font-size="17px"
-             id="text50"
-             x="307.37372"
-             y="2212.7715"
-             style="font-size:21.3333px"><tspan
-               style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21.3333px;font-family:Arial;-inkscape-font-specification:Arial"
-               id="tspan31">60,2</tspan></text>
-          <text
-             font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
-             font-weight="400"
-             font-stretch="condensed"
-             font-size="17px"
-             id="text51"
-             x="242.96973"
-             y="2212.7715"
-             style="font-size:21.3333px"><tspan
-               style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21.3333px;font-family:Arial;-inkscape-font-specification:Arial"
-               id="tspan25">70,7</tspan></text>
-          <text
-             font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
-             font-weight="400"
-             font-stretch="condensed"
-             font-size="17px"
-             id="text52-7"
-             x="170.56673"
-             y="2212.7715"
-             style="font-size:21.3333px"><tspan
-               style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Arial;-inkscape-font-specification:Arial"
-               id="tspan10">65,2</tspan></text>
-          <g
-             id="g53"
-             transform="translate(-75.262284,1866.7715)">
-            <text
-               font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
-               font-style="italic"
-               font-weight="400"
-               font-stretch="condensed"
-               font-size="17px"
-               transform="translate(70.2719,346)"
-               id="text53-9"
-               style="font-size:21.3333px"><tspan
-                 style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Arial;-inkscape-font-specification:'Arial Italic'"
-                 id="tspan18">N. crassa</tspan></text>
-          </g>
-          <g
-             id="g54"
-             transform="translate(58.737716,1866.7715)">
-            <text
-               font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
-               font-weight="400"
-               font-stretch="condensed"
-               font-size="17px"
-               transform="translate(574.317,372)"
-               id="text54"
-               style="font-size:21.3333px"><tspan
-                 style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21.3333px;font-family:Arial;-inkscape-font-specification:Arial"
-                 id="tspan47">100,0</tspan></text>
-          </g>
-          <text
-             font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
-             font-weight="400"
-             font-stretch="condensed"
-             font-size="17px"
-             id="text55"
-             x="570.98572"
-             y="2238.7715"
-             style="font-size:21.3333px"><tspan
-               style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21.3333px;font-family:Arial;-inkscape-font-specification:Arial"
-               id="tspan46">42,0</tspan></text>
-          <text
-             font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
-             font-weight="400"
-             font-stretch="condensed"
-             font-size="17px"
-             id="text56"
-             x="504.58273"
-             y="2238.7715"
-             style="font-size:21.3333px"><tspan
-               style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21.3333px;font-family:Arial;-inkscape-font-specification:Arial"
-               id="tspan44">45,1</tspan></text>
-          <text
-             font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
-             font-weight="400"
-             font-stretch="condensed"
-             font-size="17px"
-             id="text57"
-             x="440.17972"
-             y="2238.7715"
-             style="font-size:21.3333px"><tspan
-               style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21.3333px;font-family:Arial;-inkscape-font-specification:Arial"
-               id="tspan41">44,0</tspan></text>
-          <text
-             font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
-             font-weight="400"
-             font-stretch="condensed"
-             font-size="17px"
-             id="text58"
-             x="373.77673"
-             y="2238.7715"
-             style="font-size:21.3333px"><tspan
-               style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21.3333px;font-family:Arial;-inkscape-font-specification:Arial"
-               id="tspan37">43,9</tspan></text>
-          <text
-             font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
-             font-weight="400"
-             font-stretch="condensed"
-             font-size="17px"
-             id="text59"
-             x="307.37372"
-             y="2238.7715"
-             style="font-size:21.3333px"><tspan
-               style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21.3333px;font-family:Arial;-inkscape-font-specification:Arial"
-               id="tspan32">43,0</tspan></text>
-          <text
-             font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
-             font-weight="400"
-             font-stretch="condensed"
-             font-size="17px"
-             id="text60"
-             x="242.96973"
-             y="2238.7715"
-             style="font-size:21.3333px"><tspan
-               style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21.3333px;font-family:Arial;-inkscape-font-specification:Arial"
-               id="tspan26">35,4</tspan></text>
-          <text
-             font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
-             font-weight="400"
-             font-stretch="condensed"
-             font-size="17px"
-             id="text61"
-             x="170.56673"
-             y="2238.7715"
-             style="font-size:21.3333px"><tspan
-               style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Arial;-inkscape-font-specification:Arial"
-               id="tspan11">42,8</tspan></text>
-          <g
-             id="g62"
-             transform="translate(-75.262284,1866.7715)">
-            <text
-               font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
-               font-style="italic"
-               font-weight="400"
-               font-stretch="condensed"
-               font-size="17px"
-               transform="translate(70.2719,372)"
-               id="text62"
-               style="font-size:21.3333px"><tspan
-                 style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Arial;-inkscape-font-specification:'Arial Italic'"
-                 id="tspan19">A. nidulans</tspan></text>
-          </g>
-        </g>
-        <text
-           font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
-           font-weight="400"
-           font-stretch="condensed"
-           font-size="16px"
-           id="text50-1-3-3-0-66-6-0-9"
-           x="-44.274086"
-           y="2272.3535"
-           style="font-size:21.3333px"><tspan
-             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21.3333px;font-family:Arial;-inkscape-font-specification:Arial"
-             id="tspan98-0-1-5-5-6-5-1">8</tspan></text>
-        <g
-           id="g48">
-          <g
-             clip-path="url(#clip0-8)"
-             transform="matrix(1.04987e-4,0,0,1.04987e-4,692.61072,2043.7886)"
-             id="g3">
+             id="g47"
+             transform="translate(-18.54992,33.194593)">
+            <path
+               d="m 159.53272,2037.9335 v 206.94"
+               stroke="#000000"
+               stroke-width="1.33333"
+               stroke-linejoin="round"
+               stroke-miterlimit="10"
+               fill="none"
+               fill-rule="evenodd"
+               id="path1" />
+            <path
+               d="m 231.93572,2037.9335 v 206.94"
+               stroke="#000000"
+               stroke-width="1.33333"
+               stroke-linejoin="round"
+               stroke-miterlimit="10"
+               fill="none"
+               fill-rule="evenodd"
+               id="path2" />
+            <path
+               d="m 296.33872,2063.6345 v 181.239"
+               stroke="#000000"
+               stroke-width="1.33333"
+               stroke-linejoin="round"
+               stroke-miterlimit="10"
+               fill="none"
+               fill-rule="evenodd"
+               id="path3" />
+            <path
+               d="m 362.74172,2089.3345 v 155.539"
+               stroke="#000000"
+               stroke-width="1.33333"
+               stroke-linejoin="round"
+               stroke-miterlimit="10"
+               fill="none"
+               fill-rule="evenodd"
+               id="path4" />
+            <path
+               d="m 429.14472,2115.0355 v 129.838"
+               stroke="#000000"
+               stroke-width="1.33333"
+               stroke-linejoin="round"
+               stroke-miterlimit="10"
+               fill="none"
+               fill-rule="evenodd"
+               id="path5" />
+            <path
+               d="m 493.54772,2140.7365 v 104.137"
+               stroke="#000000"
+               stroke-width="1.33333"
+               stroke-linejoin="round"
+               stroke-miterlimit="10"
+               fill="none"
+               fill-rule="evenodd"
+               id="path6" />
+            <path
+               d="m 559.95072,2166.4375 v 78.436"
+               stroke="#000000"
+               stroke-width="1.33333"
+               stroke-linejoin="round"
+               stroke-miterlimit="10"
+               fill="none"
+               fill-rule="evenodd"
+               id="path7" />
+            <path
+               d="m 626.35372,2192.1385 v 52.735"
+               stroke="#000000"
+               stroke-width="1.33333"
+               stroke-linejoin="round"
+               stroke-miterlimit="10"
+               fill="none"
+               fill-rule="evenodd"
+               id="path8" />
+            <path
+               d="M -10.456984,2064.6666 H 296.811"
+               stroke="#000000"
+               stroke-width="1.5167"
+               stroke-linejoin="round"
+               stroke-miterlimit="10"
+               fill="none"
+               fill-rule="evenodd"
+               id="path9-0" />
+            <path
+               d="M -10.456984,2090.0015 H 363.12644"
+               stroke="#000000"
+               stroke-width="1.51368"
+               stroke-linejoin="round"
+               stroke-miterlimit="10"
+               fill="none"
+               fill-rule="evenodd"
+               id="path10" />
+            <path
+               d="M -10.456984,2115.7025 H 428.70964"
+               stroke="#000000"
+               stroke-width="1.51032"
+               stroke-linejoin="round"
+               stroke-miterlimit="10"
+               fill="none"
+               fill-rule="evenodd"
+               id="path11" />
+            <path
+               d="M -10.456984,2141.4035 H 493.63623"
+               stroke="#000000"
+               stroke-width="1.50687"
+               stroke-linejoin="round"
+               stroke-miterlimit="10"
+               fill="none"
+               fill-rule="evenodd"
+               id="path12" />
+            <path
+               d="M -10.456984,2167.2255 H 559.87705"
+               stroke="#000000"
+               stroke-width="1.50596"
+               stroke-linejoin="round"
+               stroke-miterlimit="10"
+               fill="none"
+               fill-rule="evenodd"
+               id="path13-5" />
+            <path
+               d="M -10.456984,2192.8045 H 626.92473"
+               stroke="#000000"
+               stroke-width="1.50619"
+               stroke-linejoin="round"
+               stroke-miterlimit="10"
+               fill="none"
+               fill-rule="evenodd"
+               id="path14-2" />
+            <path
+               d="M -10.456984,2218.5055 H 691.04346"
+               stroke="#000000"
+               stroke-width="1.50324"
+               stroke-linejoin="round"
+               stroke-miterlimit="10"
+               fill="none"
+               fill-rule="evenodd"
+               id="path15" />
+            <path
+               d="m -9.790384,2037.9335 v 206.94"
+               stroke="#000000"
+               stroke-width="1.33333"
+               stroke-linejoin="round"
+               stroke-miterlimit="10"
+               fill="none"
+               fill-rule="evenodd"
+               id="path16" />
+            <path
+               d="m 690.75672,2217.8385 v 27.035"
+               stroke="#000000"
+               stroke-width="1.33333"
+               stroke-linejoin="round"
+               stroke-miterlimit="10"
+               fill="none"
+               fill-rule="evenodd"
+               id="path17" />
+            <path
+               d="M -10.456984,2038.6005 H 232.2041"
+               stroke="#000000"
+               stroke-width="1.5268"
+               stroke-linejoin="round"
+               stroke-miterlimit="10"
+               fill="none"
+               fill-rule="evenodd"
+               id="path18-4" />
+            <path
+               d="M -10.456984,2244.2065 H 690.55531"
+               stroke="#000000"
+               stroke-width="1.50272"
+               stroke-linejoin="round"
+               stroke-miterlimit="10"
+               fill="none"
+               fill-rule="evenodd"
+               id="path19" />
             <g
-               clip-path="url(#clip2-57)"
-               transform="scale(1.00429,1)"
-               id="g2-5">
-              <use
-                 width="100%"
-                 height="100%"
-                 xlink:href="#img1-00"
-                 transform="scale(7595.5)"
-                 id="use2" />
+               id="g19"
+               transform="translate(-41.262284,1866.7715)">
+              <text
+                 font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
+                 font-weight="400"
+                 font-stretch="condensed"
+                 font-size="17px"
+                 transform="translate(207.496,192)"
+                 id="text19-2"
+                 style="font-size:21.3333px"><tspan
+                   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Arial;-inkscape-font-specification:Arial"
+                   id="tspan4">100,0</tspan></text>
+            </g>
+            <g
+               id="g20-7"
+               transform="translate(-75.262284,1866.7715)">
+              <text
+                 font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
+                 font-style="italic"
+                 font-weight="400"
+                 font-stretch="condensed"
+                 font-size="17px"
+                 transform="translate(70.2719,192)"
+                 id="text20-2"
+                 style="font-size:21.3333px"><tspan
+                   style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Arial;-inkscape-font-specification:'Arial Italic'"
+                   id="tspan12">V. dahliae</tspan></text>
+            </g>
+            <g
+               id="g21-2"
+               transform="translate(-21.262284,1866.7715)">
+              <text
+                 font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
+                 font-weight="400"
+                 font-stretch="condensed"
+                 font-size="17px"
+                 transform="translate(259.899,217)"
+                 id="text21-6"
+                 style="font-size:21.3333px"><tspan
+                   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Arial;-inkscape-font-specification:Arial"
+                   id="tspan20">100,0</tspan></text>
+            </g>
+            <text
+               font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
+               font-weight="400"
+               font-stretch="condensed"
+               font-size="17px"
+               id="text22-4"
+               x="170.56673"
+               y="2083.7715"
+               style="font-size:21.3333px"><tspan
+                 style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Arial;-inkscape-font-specification:Arial"
+                 id="tspan5">97,6</tspan></text>
+            <g
+               id="g23-8"
+               transform="translate(-75.262284,1866.7715)">
+              <text
+                 font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
+                 font-style="italic"
+                 font-weight="400"
+                 font-stretch="condensed"
+                 font-size="17px"
+                 transform="translate(70.2719,217)"
+                 id="text23-5"
+                 style="font-size:21.3333px"><tspan
+                   style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Arial;-inkscape-font-specification:'Arial Italic'"
+                   id="tspan13">V. longisporum</tspan></text>
+            </g>
+            <g
+               id="g24-9"
+               transform="translate(-9.262284,1866.7715)">
+              <text
+                 font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
+                 font-weight="400"
+                 font-stretch="condensed"
+                 font-size="17px"
+                 transform="translate(312.302,243)"
+                 id="text24-41"
+                 style="font-size:21.3333px"><tspan
+                   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21.3333px;font-family:Arial;-inkscape-font-specification:Arial"
+                   id="tspan27">100,0</tspan></text>
+            </g>
+            <text
+               font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
+               font-weight="400"
+               font-stretch="condensed"
+               font-size="17px"
+               id="text25-7"
+               x="242.96973"
+               y="2109.7715"
+               style="font-size:21.3333px"><tspan
+                 style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21.3333px;font-family:Arial;-inkscape-font-specification:Arial"
+                 id="tspan21">88,0</tspan></text>
+            <text
+               font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
+               font-weight="400"
+               font-stretch="condensed"
+               font-size="17px"
+               id="text26-0"
+               x="170.56673"
+               y="2109.7715"
+               style="font-size:21.3333px"><tspan
+                 style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Arial;-inkscape-font-specification:Arial"
+                 id="tspan6">74,4</tspan></text>
+            <g
+               id="g27"
+               transform="translate(-75.262284,1866.7715)">
+              <text
+                 font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
+                 font-style="italic"
+                 font-weight="400"
+                 font-stretch="condensed"
+                 font-size="17px"
+                 transform="translate(70.2719,243)"
+                 id="text27-1"
+                 style="font-size:21.3333px"><tspan
+                   style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Arial;-inkscape-font-specification:'Arial Italic'"
+                   id="tspan14">C. graminicola</tspan></text>
+            </g>
+            <g
+               id="g28"
+               transform="translate(4.7377161,1866.7715)">
+              <text
+                 font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
+                 font-weight="400"
+                 font-stretch="condensed"
+                 font-size="17px"
+                 transform="translate(364.705,269)"
+                 id="text28-97"
+                 style="font-size:21.3333px"><tspan
+                   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21.3333px;font-family:Arial;-inkscape-font-specification:Arial"
+                   id="tspan33">100,0</tspan></text>
+            </g>
+            <text
+               font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
+               font-weight="400"
+               font-stretch="condensed"
+               font-size="17px"
+               id="text29-6"
+               x="307.37372"
+               y="2135.7715"
+               style="font-size:21.3333px"><tspan
+                 style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21.3333px;font-family:Arial;-inkscape-font-specification:Arial"
+                 id="tspan28">88,9</tspan></text>
+            <text
+               font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
+               font-weight="400"
+               font-stretch="condensed"
+               font-size="17px"
+               id="text30-1"
+               x="242.96973"
+               y="2135.7715"
+               style="font-size:21.3333px"><tspan
+                 style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21.3333px;font-family:Arial;-inkscape-font-specification:Arial"
+                 id="tspan22">90,4</tspan></text>
+            <text
+               font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
+               font-weight="400"
+               font-stretch="condensed"
+               font-size="17px"
+               id="text31-6"
+               x="170.56673"
+               y="2135.7715"
+               style="font-size:21.3333px"><tspan
+                 style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Arial;-inkscape-font-specification:Arial"
+                 id="tspan7">74,3</tspan></text>
+            <g
+               id="g32"
+               transform="translate(-75.262284,1866.7715)">
+              <text
+                 font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
+                 font-style="italic"
+                 font-weight="400"
+                 font-stretch="condensed"
+                 font-size="17px"
+                 transform="translate(70.2719,269)"
+                 id="text32-9"
+                 style="font-size:21.3333px"><tspan
+                   style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Arial;-inkscape-font-specification:'Arial Italic'"
+                   id="tspan15">C. higginsianum</tspan></text>
+            </g>
+            <g
+               id="g33"
+               transform="translate(18.737716,1866.7715)">
+              <text
+                 font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
+                 font-weight="400"
+                 font-stretch="condensed"
+                 font-size="17px"
+                 transform="translate(417.108,294)"
+                 id="text33-1"
+                 style="font-size:21.3333px"><tspan
+                   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21.3333px;font-family:Arial;-inkscape-font-specification:Arial"
+                   id="tspan38">100,0</tspan></text>
+            </g>
+            <text
+               font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
+               font-weight="400"
+               font-stretch="condensed"
+               font-size="17px"
+               id="text34-16"
+               x="373.77673"
+               y="2160.7715"
+               style="font-size:21.3333px"><tspan
+                 style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21.3333px;font-family:Arial;-inkscape-font-specification:Arial"
+                 id="tspan34">66,3</tspan></text>
+            <text
+               font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
+               font-weight="400"
+               font-stretch="condensed"
+               font-size="17px"
+               id="text35-20"
+               x="307.37372"
+               y="2160.7715"
+               style="font-size:21.3333px"><tspan
+                 style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Arial;-inkscape-font-specification:Arial"
+                 id="tspan29">66,0</tspan></text>
+            <text
+               font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
+               font-weight="400"
+               font-stretch="condensed"
+               font-size="17px"
+               id="text36-1"
+               x="242.96973"
+               y="2160.7715"
+               style="font-size:21.3333px"><tspan
+                 style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21.3333px;font-family:Arial;-inkscape-font-specification:Arial"
+                 id="tspan23">72,0</tspan></text>
+            <text
+               font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
+               font-weight="400"
+               font-stretch="condensed"
+               font-size="17px"
+               id="text37-6"
+               x="170.56673"
+               y="2160.7715"
+               style="font-size:21.3333px"><tspan
+                 style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Arial;-inkscape-font-specification:Arial"
+                 id="tspan8">66,7</tspan></text>
+            <g
+               id="g38"
+               transform="translate(-75.262284,1866.7715)">
+              <text
+                 font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
+                 font-style="italic"
+                 font-weight="400"
+                 font-stretch="condensed"
+                 font-size="17px"
+                 transform="translate(70.2719,294)"
+                 id="text38-9"
+                 style="font-size:21.3333px"><tspan
+                   style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Arial;-inkscape-font-specification:'Arial Italic'"
+                   id="tspan16">T. virens</tspan></text>
+            </g>
+            <g
+               id="g39"
+               transform="translate(30.737716,1866.7715)">
+              <text
+                 font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
+                 font-weight="400"
+                 font-stretch="condensed"
+                 font-size="17px"
+                 transform="translate(469.511,320)"
+                 id="text39-1"
+                 style="font-size:21.3333px"><tspan
+                   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21.3333px;font-family:Arial;-inkscape-font-specification:Arial"
+                   id="tspan42">100,0</tspan></text>
+            </g>
+            <text
+               font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
+               font-weight="400"
+               font-stretch="condensed"
+               font-size="17px"
+               id="text40-9"
+               x="440.17972"
+               y="2186.7715"
+               style="font-size:21.3333px"><tspan
+                 style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Arial;-inkscape-font-specification:Arial"
+                 id="tspan39">64,3</tspan></text>
+            <text
+               font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
+               font-weight="400"
+               font-stretch="condensed"
+               font-size="17px"
+               id="text41"
+               x="373.77673"
+               y="2186.7715"
+               style="font-size:21.3333px"><tspan
+                 style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Arial;-inkscape-font-specification:Arial"
+                 id="tspan35">66,9</tspan></text>
+            <text
+               font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
+               font-weight="400"
+               font-stretch="condensed"
+               font-size="17px"
+               id="text42"
+               x="307.37372"
+               y="2186.7715"
+               style="font-size:21.3333px"><tspan
+                 style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21.3333px;font-family:Arial;-inkscape-font-specification:Arial"
+                 id="tspan30">66,3</tspan></text>
+            <text
+               font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
+               font-weight="400"
+               font-stretch="condensed"
+               font-size="17px"
+               id="text43"
+               x="242.96973"
+               y="2186.7715"
+               style="font-size:21.3333px"><tspan
+                 style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21.3333px;font-family:Arial;-inkscape-font-specification:Arial"
+                 id="tspan24">72,3</tspan></text>
+            <text
+               font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
+               font-weight="400"
+               font-stretch="condensed"
+               font-size="17px"
+               id="text44"
+               x="170.56673"
+               y="2186.7715"
+               style="font-size:21.3333px"><tspan
+                 style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Arial;-inkscape-font-specification:Arial"
+                 id="tspan9">64,8</tspan></text>
+            <g
+               id="g45"
+               transform="translate(-75.262284,1866.7715)">
+              <text
+                 font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
+                 font-style="italic"
+                 font-weight="400"
+                 font-stretch="condensed"
+                 font-size="17px"
+                 transform="translate(70.2719,320)"
+                 id="text45"
+                 style="font-size:21.3333px"><tspan
+                   style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Arial;-inkscape-font-specification:'Arial Italic'"
+                   id="tspan17">F. oxysporum</tspan></text>
+            </g>
+            <g
+               id="g46"
+               transform="translate(44.737716,1866.7715)">
+              <text
+                 font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
+                 font-weight="400"
+                 font-stretch="condensed"
+                 font-size="17px"
+                 transform="translate(521.914,346)"
+                 id="text46"
+                 style="font-size:21.3333px"><tspan
+                   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21.3333px;font-family:Arial;-inkscape-font-specification:Arial"
+                   id="tspan45">100,0</tspan></text>
+            </g>
+            <text
+               font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
+               font-weight="400"
+               font-stretch="condensed"
+               font-size="17px"
+               id="text47"
+               x="504.58273"
+               y="2212.7715"
+               style="font-size:21.3333px"><tspan
+                 style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21.3333px;font-family:Arial;-inkscape-font-specification:Arial"
+                 id="tspan43">63,8</tspan></text>
+            <text
+               font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
+               font-weight="400"
+               font-stretch="condensed"
+               font-size="17px"
+               id="text48"
+               x="440.17972"
+               y="2212.7715"
+               style="font-size:21.3333px"><tspan
+                 style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21.3333px;font-family:Arial;-inkscape-font-specification:Arial"
+                 id="tspan40">62,4</tspan></text>
+            <text
+               font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
+               font-weight="400"
+               font-stretch="condensed"
+               font-size="17px"
+               id="text49"
+               x="373.77673"
+               y="2212.7715"
+               style="font-size:21.3333px"><tspan
+                 style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21.3333px;font-family:Arial;-inkscape-font-specification:Arial"
+                 id="tspan36">62,1</tspan></text>
+            <text
+               font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
+               font-weight="400"
+               font-stretch="condensed"
+               font-size="17px"
+               id="text50"
+               x="307.37372"
+               y="2212.7715"
+               style="font-size:21.3333px"><tspan
+                 style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21.3333px;font-family:Arial;-inkscape-font-specification:Arial"
+                 id="tspan31">60,2</tspan></text>
+            <text
+               font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
+               font-weight="400"
+               font-stretch="condensed"
+               font-size="17px"
+               id="text51"
+               x="242.96973"
+               y="2212.7715"
+               style="font-size:21.3333px"><tspan
+                 style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21.3333px;font-family:Arial;-inkscape-font-specification:Arial"
+                 id="tspan25">70,7</tspan></text>
+            <text
+               font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
+               font-weight="400"
+               font-stretch="condensed"
+               font-size="17px"
+               id="text52-7"
+               x="170.56673"
+               y="2212.7715"
+               style="font-size:21.3333px"><tspan
+                 style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Arial;-inkscape-font-specification:Arial"
+                 id="tspan10">65,2</tspan></text>
+            <g
+               id="g53"
+               transform="translate(-75.262284,1866.7715)">
+              <text
+                 font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
+                 font-style="italic"
+                 font-weight="400"
+                 font-stretch="condensed"
+                 font-size="17px"
+                 transform="translate(70.2719,346)"
+                 id="text53-9"
+                 style="font-size:21.3333px"><tspan
+                   style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Arial;-inkscape-font-specification:'Arial Italic'"
+                   id="tspan18">N. crassa</tspan></text>
+            </g>
+            <g
+               id="g54"
+               transform="translate(58.737716,1866.7715)">
+              <text
+                 font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
+                 font-weight="400"
+                 font-stretch="condensed"
+                 font-size="17px"
+                 transform="translate(574.317,372)"
+                 id="text54"
+                 style="font-size:21.3333px"><tspan
+                   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21.3333px;font-family:Arial;-inkscape-font-specification:Arial"
+                   id="tspan47">100,0</tspan></text>
+            </g>
+            <text
+               font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
+               font-weight="400"
+               font-stretch="condensed"
+               font-size="17px"
+               id="text55"
+               x="570.98572"
+               y="2238.7715"
+               style="font-size:21.3333px"><tspan
+                 style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21.3333px;font-family:Arial;-inkscape-font-specification:Arial"
+                 id="tspan46">42,0</tspan></text>
+            <text
+               font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
+               font-weight="400"
+               font-stretch="condensed"
+               font-size="17px"
+               id="text56"
+               x="504.58273"
+               y="2238.7715"
+               style="font-size:21.3333px"><tspan
+                 style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21.3333px;font-family:Arial;-inkscape-font-specification:Arial"
+                 id="tspan44">45,1</tspan></text>
+            <text
+               font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
+               font-weight="400"
+               font-stretch="condensed"
+               font-size="17px"
+               id="text57"
+               x="440.17972"
+               y="2238.7715"
+               style="font-size:21.3333px"><tspan
+                 style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21.3333px;font-family:Arial;-inkscape-font-specification:Arial"
+                 id="tspan41">44,0</tspan></text>
+            <text
+               font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
+               font-weight="400"
+               font-stretch="condensed"
+               font-size="17px"
+               id="text58"
+               x="373.77673"
+               y="2238.7715"
+               style="font-size:21.3333px"><tspan
+                 style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21.3333px;font-family:Arial;-inkscape-font-specification:Arial"
+                 id="tspan37">43,9</tspan></text>
+            <text
+               font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
+               font-weight="400"
+               font-stretch="condensed"
+               font-size="17px"
+               id="text59"
+               x="307.37372"
+               y="2238.7715"
+               style="font-size:21.3333px"><tspan
+                 style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21.3333px;font-family:Arial;-inkscape-font-specification:Arial"
+                 id="tspan32">43,0</tspan></text>
+            <text
+               font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
+               font-weight="400"
+               font-stretch="condensed"
+               font-size="17px"
+               id="text60"
+               x="242.96973"
+               y="2238.7715"
+               style="font-size:21.3333px"><tspan
+                 style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21.3333px;font-family:Arial;-inkscape-font-specification:Arial"
+                 id="tspan26">35,4</tspan></text>
+            <text
+               font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
+               font-weight="400"
+               font-stretch="condensed"
+               font-size="17px"
+               id="text61"
+               x="170.56673"
+               y="2238.7715"
+               style="font-size:21.3333px"><tspan
+                 style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Arial;-inkscape-font-specification:Arial"
+                 id="tspan11">42,8</tspan></text>
+            <g
+               id="g62"
+               transform="translate(-75.262284,1866.7715)">
+              <text
+                 font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
+                 font-style="italic"
+                 font-weight="400"
+                 font-stretch="condensed"
+                 font-size="17px"
+                 transform="translate(70.2719,372)"
+                 id="text62"
+                 style="font-size:21.3333px"><tspan
+                   style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Arial;-inkscape-font-specification:'Arial Italic'"
+                   id="tspan19">A. nidulans</tspan></text>
             </g>
           </g>
+          <text
+             font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
+             font-weight="400"
+             font-stretch="condensed"
+             font-size="16px"
+             id="text50-1-3-3-0-66-6-0-9"
+             x="-44.274086"
+             y="2272.3535"
+             style="font-size:21.3333px"><tspan
+               style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21.3333px;font-family:Arial;-inkscape-font-specification:Arial"
+               id="tspan98-0-1-5-5-6-5-1">8</tspan></text>
+          <g
+             id="g48"
+             transform="translate(30.375687,1.380713)">
+            <g
+               clip-path="url(#clip0-8)"
+               transform="matrix(1.04987e-4,0,0,1.04987e-4,692.61072,2043.7886)"
+               id="g3">
+              <g
+                 clip-path="url(#clip2-57)"
+                 transform="scale(1.00429,1)"
+                 id="g2-5">
+                <use
+                   width="100%"
+                   height="100%"
+                   xlink:href="#img1-00"
+                   transform="scale(7595.5)"
+                   id="use2" />
+              </g>
+            </g>
+            <rect
+               x="1052.6107"
+               y="2077.7886"
+               width="154"
+               height="30"
+               fill="#ffffff"
+               id="rect3-8" />
+            <text
+               font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
+               font-style="italic"
+               font-weight="400"
+               font-stretch="condensed"
+               font-size="17px"
+               id="text3-1"
+               x="1055.2708"
+               y="2098.7886"
+               style="font-size:21.3333px"><tspan
+                 style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21.3333px;font-family:Arial;-inkscape-font-specification:'Arial Italic'"
+                 id="tspan48">Aspergillus nidulans</tspan></text>
+            <rect
+               x="884.61072"
+               y="2156.7886"
+               width="196"
+               height="30"
+               fill="#ffffff"
+               id="rect4-6" />
+            <text
+               font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
+               font-style="italic"
+               font-weight="400"
+               font-stretch="condensed"
+               font-size="17px"
+               id="text4-1"
+               x="894.1347"
+               y="2177.7886"
+               style="font-size:21.3333px"><tspan
+                 style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21.3333px;font-family:Arial;-inkscape-font-specification:'Arial Italic'"
+                 id="tspan54">Colletotrichum graminicola</tspan></text>
+            <rect
+               x="891.61072"
+               y="2208.7886"
+               width="148"
+               height="30"
+               fill="#ffffff"
+               id="rect5-3" />
+            <text
+               font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
+               font-style="italic"
+               font-weight="400"
+               font-stretch="condensed"
+               font-size="17px"
+               id="text5-6"
+               x="903.49072"
+               y="2229.7886"
+               style="font-size:21.3333px"><tspan
+                 style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21.3333px;font-family:Arial;-inkscape-font-specification:'Arial Italic'"
+                 id="tspan56">Verticillium dahliae</tspan></text>
+            <rect
+               x="884.61072"
+               y="2129.7886"
+               width="149"
+               height="30"
+               fill="#ffffff"
+               id="rect6-5" />
+            <text
+               font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
+               font-style="italic"
+               font-weight="400"
+               font-stretch="condensed"
+               font-size="17px"
+               id="text6-5"
+               x="895.39471"
+               y="2150.7886"
+               style="font-size:21.3333px"><tspan
+                 style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21.3333px;font-family:Arial;-inkscape-font-specification:'Arial Italic'"
+                 id="tspan52">Trichoderma</tspan></text>
+            <text
+               font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
+               font-style="italic"
+               font-weight="400"
+               font-stretch="condensed"
+               font-size="17px"
+               id="text7-5"
+               x="1016.5087"
+               y="2150.7886"
+               style="font-size:21.3333px"><tspan
+                 style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21.3333px;font-family:Arial;-inkscape-font-specification:'Arial Italic'"
+                 id="tspan53">virens</tspan></text>
+            <rect
+               x="886.61072"
+               y="2103.7886"
+               width="148"
+               height="30"
+               fill="#ffffff"
+               id="rect7" />
+            <text
+               font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
+               font-style="italic"
+               font-weight="400"
+               font-stretch="condensed"
+               font-size="17px"
+               id="text8-0"
+               x="898.21173"
+               y="2124.7886"
+               style="font-size:21.3333px"><tspan
+                 style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21.3333px;font-family:Arial;-inkscape-font-specification:'Arial Italic'"
+                 id="tspan49">N</tspan></text>
+            <text
+               font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
+               font-style="italic"
+               font-weight="400"
+               font-stretch="condensed"
+               font-size="17px"
+               id="text9-5"
+               x="912.54474"
+               y="2124.7886"
+               style="font-size:21.3333px"><tspan
+                 style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21.3333px;font-family:Arial;-inkscape-font-specification:'Arial Italic'"
+                 id="tspan50">eurospora</tspan></text>
+            <rect
+               x="857.61072"
+               y="2235.7886"
+               width="182"
+               height="29"
+               fill="#ffffff"
+               id="rect10-8" />
+            <text
+               font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
+               font-style="italic"
+               font-weight="400"
+               font-stretch="condensed"
+               font-size="17px"
+               id="text11-5"
+               x="868.00574"
+               y="2255.7886"
+               style="font-size:21.3333px"><tspan
+                 style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21.3333px;font-family:Arial;-inkscape-font-specification:'Arial Italic'"
+                 id="tspan57">Verticillium longisporum</tspan></text>
+            <rect
+               x="857.61072"
+               y="2261.7886"
+               width="162"
+               height="29"
+               fill="#ffffff"
+               id="rect11" />
+            <text
+               font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
+               font-style="italic"
+               font-weight="400"
+               font-stretch="condensed"
+               font-size="17px"
+               id="text12-9"
+               x="869.01672"
+               y="2281.7886"
+               style="font-size:21.3333px"><tspan
+                 style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21.3333px;font-family:Arial;-inkscape-font-specification:'Arial Italic'"
+                 id="tspan58">F</tspan></text>
+            <text
+               font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
+               font-style="italic"
+               font-weight="400"
+               font-stretch="condensed"
+               font-size="17px"
+               id="text13-2"
+               x="879.9967"
+               y="2281.7886"
+               style="font-size:21.3333px"><tspan
+                 style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21.3333px;font-family:Arial;-inkscape-font-specification:'Arial Italic'"
+                 id="tspan59">usarium</tspan></text>
+            <rect
+               x="1033.6107"
+               y="2103.7886"
+               width="37"
+               height="30"
+               fill="#ffffff"
+               id="rect14-2" />
+            <rect
+               x="877.61072"
+               y="2182.7886"
+               width="212"
+               height="30"
+               fill="#ffffff"
+               id="rect15-9" />
+            <text
+               font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
+               font-style="italic"
+               font-weight="400"
+               font-stretch="condensed"
+               font-size="17px"
+               id="text15-8"
+               x="888.97974"
+               y="2203.7886"
+               style="font-size:21.3333px"><tspan
+                 style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21.3333px;font-family:Arial;-inkscape-font-specification:'Arial Italic'"
+                 id="tspan55">Colletotrichum higginsianum</tspan></text>
+            <rect
+               x="1015.6107"
+               y="2260.7886"
+               width="37"
+               height="29"
+               fill="#ffffff"
+               id="rect16-0" />
+            <path
+               d="m 852.11072,2251.2886 h 11.339"
+               stroke="#aeaeae"
+               stroke-width="3"
+               stroke-miterlimit="8"
+               fill="none"
+               fill-rule="evenodd"
+               id="path16-9"
+               style="fill:#000000" />
+            <text
+               font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
+               font-style="italic"
+               font-weight="400"
+               font-stretch="condensed"
+               font-size="17px"
+               id="text10-1"
+               x="1012.2587"
+               y="2124.7886"
+               style="font-size:21.3333px"><tspan
+                 style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21.3333px;font-family:Arial;-inkscape-font-specification:'Arial Italic'"
+                 id="tspan51">crassa</tspan></text>
+            <text
+               font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
+               font-style="italic"
+               font-weight="400"
+               font-stretch="condensed"
+               font-size="17px"
+               id="text14-6"
+               x="960.32971"
+               y="2281.7886"
+               style="font-size:21.3333px"><tspan
+                 style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21.3333px;font-family:Arial;-inkscape-font-specification:'Arial Italic'"
+                 id="tspan60">oxysporum</tspan></text>
+            <path
+               style="fill:#ffffff;stroke:#000000;stroke-width:1.51181"
+               d="M 717.07711,2070.8986 H 1124.0423"
+               id="path60" />
+            <path
+               style="fill:#ffffff;stroke:#000000;stroke-width:1.51181"
+               d="m 821.83871,2065.5484 0.17258,4.6599"
+               id="path61" />
+            <path
+               style="fill:#ffffff;stroke:#000000;stroke-width:1.51181"
+               d="m 927.63584,2065.8935 0.17259,4.4874"
+               id="path62" />
+            <path
+               style="fill:#ffffff;stroke:#000000;stroke-width:1.51181"
+               d="m 716.99245,2065.2251 v 5.3697"
+               id="path63" />
+            <path
+               style="fill:#ffffff;stroke:#000000;stroke-width:1.51181"
+               d="m 1123.9924,2065.3471 0.122,5.4918"
+               id="path65" />
+            <path
+               style="fill:#ffffff;stroke:#000000;stroke-width:1.51181"
+               d="m 1031.975,2065.7132 v 4.6375"
+               id="path66" />
+            <path
+               style="fill:#ffffff;stroke:#000000;stroke-width:1.51181"
+               d="M 717.42228,2094.3707 1051.9,2094.7159"
+               id="path67" />
+            <path
+               style="fill:#ffffff;stroke:#000000;stroke-width:1.51181"
+               d="m 722.94514,2119.9139 162.57895,0.6904"
+               id="path68" />
+            <path
+               style="fill:#ffffff;stroke:#000000;stroke-width:1.51181"
+               d="m 735.71673,2145.8023 143.59415,0.3452"
+               id="path69" />
+            <path
+               style="fill:#ffffff;stroke:#000000;stroke-width:1.51181"
+               d="m 793.01632,2236.9294 h 56.26406"
+               id="path70" />
+            <path
+               style="fill:#ffffff;stroke:#000000;stroke-width:1.51181"
+               d="m 853.07734,2223.8126 h 37.96961"
+               id="path71" />
+            <path
+               style="fill:#ffffff;stroke:#000000;stroke-width:1.51181"
+               d="m 831.67629,2171.6907 52.12191,-0.3452"
+               id="path72" />
+            <path
+               style="fill:#ffffff;stroke:#000000;stroke-width:1.51181"
+               d="m 832.36664,2197.9242 42.45693,0.3452"
+               id="path73" />
+            <path
+               style="fill:#ffffff;stroke:#000000;stroke-width:1.51181"
+               d="m 792.32596,2184.4623 35.20819,0.3451"
+               id="path74" />
+            <path
+               style="fill:#ffffff;stroke:#000000;stroke-width:1.51181"
+               d="m 717.07711,2275.5893 140.14237,-0.3452"
+               id="path75" />
+            <path
+               style="fill:#ffffff;stroke:#000000;stroke-width:1.51181"
+               d="m 736.06191,2210.6958 53.84781,0.3452"
+               id="path76" />
+            <path
+               style="fill:#ffffff;stroke:#000000;stroke-width:1.51181"
+               d="m 736.06191,2145.4571 v 29.3402"
+               id="path77" />
+            <path
+               style="fill:#ffffff;stroke:#000000;stroke-width:1.51181"
+               d="m 735.71673,2182.3912 0.34518,28.132"
+               id="path78" />
+            <path
+               style="fill:#ffffff;stroke:#000000;stroke-width:1.51181"
+               d="m 831.84888,2171.5181 0.17258,9.3198"
+               id="path79" />
+            <path
+               style="fill:#ffffff;stroke:#000000;stroke-width:1.51181"
+               d="m 831.67629,2188.777 v 9.3198"
+               id="path80" />
+            <path
+               style="fill:#ffffff;stroke:#000000;stroke-width:1.51181"
+               d="m 723.29031,2119.9139 v 25.0255"
+               id="path81" />
+            <path
+               style="fill:#ffffff;stroke:#000000;stroke-width:1.51181"
+               d="m 722.94514,2153.7414 v 24.1625 l 8.97464,0.1726"
+               id="path82" />
+            <path
+               style="fill:#ffffff;stroke:#000000;stroke-width:1.51181"
+               d="m 853.24993,2240.8989 0.17259,9.8376"
+               id="path83" />
+            <path
+               style="fill:#ffffff;stroke:#000000;stroke-width:1.51181"
+               d="m 852.90475,2224.1578 v 8.9746"
+               id="path84" />
+            <path
+               style="fill:#ffffff;stroke:#000000;stroke-width:1.51181"
+               d="m 792.49855,2184.4623 -0.17258,23.1269"
+               id="path85" />
+            <path
+               style="fill:#ffffff;stroke:#000000;stroke-width:1.51181"
+               d="m 792.32597,2214.1476 0.34517,22.7818"
+               id="path86" />
+            <path
+               style="fill:#ffffff;stroke:#000000;stroke-width:1.51181"
+               d="m 717.07711,2176.5232 v 98.7209"
+               id="path87" />
+            <path
+               style="fill:#ffffff;stroke:#000000;stroke-width:1.51181"
+               d="m 716.90452,2094.1982 0.17259,74.731"
+               id="path88" />
+            <path
+               style="fill:#ffffff;stroke:#000000;stroke-width:1.51181"
+               d="m 717.24969,2149.2541 2.41625,0.1726"
+               id="path89" />
+            <path
+               style="fill:#000000;stroke:#000000;stroke-width:1.51181"
+               d="m 853.06588,2251.0904 10.12923,-0.122"
+               id="path90" />
+          </g>
           <rect
-             x="1052.6107"
-             y="2077.7886"
-             width="154"
-             height="30"
-             fill="#ffffff"
-             id="rect3-8" />
+             style="fill:#ffffff;stroke:#000000;stroke-width:0;stroke-dasharray:none"
+             id="rect90"
+             width="265.09689"
+             height="22.436586"
+             x="820.2854"
+             y="2042.2489" />
           <text
              font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
-             font-style="italic"
              font-weight="400"
              font-stretch="condensed"
-             font-size="17px"
-             id="text3-1"
-             x="1055.2708"
-             y="2098.7886"
+             font-size="16px"
+             id="text50-1-3-3-0-66-6-0-0"
+             x="834.68378"
+             y="2062.3901"
              style="font-size:21.3333px"><tspan
-               style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21.3333px;font-family:Arial;-inkscape-font-specification:'Arial Italic'"
-               id="tspan48">Aspergillus nidulans</tspan></text>
-          <rect
-             x="884.61072"
-             y="2156.7886"
-             width="196"
-             height="30"
-             fill="#ffffff"
-             id="rect4-6" />
+               style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21.3333px;font-family:Arial;-inkscape-font-specification:Arial"
+               id="tspan98-0-1-5-5-6-5-2">0.10</tspan></text>
           <text
              font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
-             font-style="italic"
              font-weight="400"
              font-stretch="condensed"
-             font-size="17px"
-             id="text4-1"
-             x="894.1347"
-             y="2177.7886"
+             font-size="16px"
+             id="text50-1-3-3-0-66-6-0-0-8"
+             x="939.59192"
+             y="2062.8218"
              style="font-size:21.3333px"><tspan
-               style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21.3333px;font-family:Arial;-inkscape-font-specification:'Arial Italic'"
-               id="tspan54">Colletotrichum graminicola</tspan></text>
-          <rect
-             x="891.61072"
-             y="2208.7886"
-             width="148"
-             height="30"
-             fill="#ffffff"
-             id="rect5-3" />
+               style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21.3333px;font-family:Arial;-inkscape-font-specification:Arial"
+               id="tspan98-0-1-5-5-6-5-2-9">0.20</tspan></text>
           <text
              font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
-             font-style="italic"
              font-weight="400"
              font-stretch="condensed"
-             font-size="17px"
-             id="text5-6"
-             x="903.49072"
-             y="2229.7886"
+             font-size="16px"
+             id="text50-1-3-3-0-66-6-0-0-8-3"
+             x="1042.399"
+             y="2062.583"
              style="font-size:21.3333px"><tspan
-               style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21.3333px;font-family:Arial;-inkscape-font-specification:'Arial Italic'"
-               id="tspan56">Verticillium dahliae</tspan></text>
-          <rect
-             x="884.61072"
-             y="2129.7886"
-             width="149"
-             height="30"
-             fill="#ffffff"
-             id="rect6-5" />
+               style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21.3333px;font-family:Arial;-inkscape-font-specification:Arial"
+               id="tspan98-0-1-5-5-6-5-2-9-2">0.30</tspan></text>
           <text
-             font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
-             font-style="italic"
-             font-weight="400"
-             font-stretch="condensed"
-             font-size="17px"
-             id="text6-5"
-             x="895.39471"
-             y="2150.7886"
-             style="font-size:21.3333px"><tspan
-               style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21.3333px;font-family:Arial;-inkscape-font-specification:'Arial Italic'"
-               id="tspan52">Trichoderma</tspan></text>
+             xml:space="preserve"
+             style="font-size:29.3333px;text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#000000"
+             x="517.87714"
+             y="1544.963"
+             id="text2-2"><tspan
+               sodipodi:role="line"
+               id="tspan2-3"
+               x="517.87714"
+               y="1544.963"
+               style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Arial;-inkscape-font-specification:Arial">B</tspan></text>
           <text
-             font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
-             font-style="italic"
-             font-weight="400"
-             font-stretch="condensed"
-             font-size="17px"
-             id="text7-5"
-             x="1016.5087"
-             y="2150.7886"
-             style="font-size:21.3333px"><tspan
-               style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21.3333px;font-family:Arial;-inkscape-font-specification:'Arial Italic'"
-               id="tspan53">virens</tspan></text>
-          <rect
-             x="886.61072"
-             y="2103.7886"
-             width="148"
-             height="30"
-             fill="#ffffff"
-             id="rect7" />
+             xml:space="preserve"
+             style="font-size:29.3333px;text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#000000"
+             x="-84.403511"
+             y="1545.6592"
+             id="text2-2-3"><tspan
+               sodipodi:role="line"
+               id="tspan2-3-8"
+               x="-84.403511"
+               y="1545.6592"
+               style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Arial;-inkscape-font-specification:Arial">A</tspan></text>
           <text
-             font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
-             font-style="italic"
-             font-weight="400"
-             font-stretch="condensed"
-             font-size="17px"
-             id="text8-0"
-             x="898.21173"
-             y="2124.7886"
-             style="font-size:21.3333px"><tspan
-               style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21.3333px;font-family:Arial;-inkscape-font-specification:'Arial Italic'"
-               id="tspan49">N</tspan></text>
-          <text
-             font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
-             font-style="italic"
-             font-weight="400"
-             font-stretch="condensed"
-             font-size="17px"
-             id="text9-5"
-             x="912.54474"
-             y="2124.7886"
-             style="font-size:21.3333px"><tspan
-               style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21.3333px;font-family:Arial;-inkscape-font-specification:'Arial Italic'"
-               id="tspan50">eurospora</tspan></text>
-          <rect
-             x="857.61072"
-             y="2235.7886"
-             width="182"
-             height="29"
-             fill="#ffffff"
-             id="rect10-8" />
-          <text
-             font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
-             font-style="italic"
-             font-weight="400"
-             font-stretch="condensed"
-             font-size="17px"
-             id="text11-5"
-             x="868.00574"
-             y="2255.7886"
-             style="font-size:21.3333px"><tspan
-               style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21.3333px;font-family:Arial;-inkscape-font-specification:'Arial Italic'"
-               id="tspan57">Verticillium longisporum</tspan></text>
-          <rect
-             x="857.61072"
-             y="2261.7886"
-             width="162"
-             height="29"
-             fill="#ffffff"
-             id="rect11" />
-          <text
-             font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
-             font-style="italic"
-             font-weight="400"
-             font-stretch="condensed"
-             font-size="17px"
-             id="text12-9"
-             x="869.01672"
-             y="2281.7886"
-             style="font-size:21.3333px"><tspan
-               style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21.3333px;font-family:Arial;-inkscape-font-specification:'Arial Italic'"
-               id="tspan58">F</tspan></text>
-          <text
-             font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
-             font-style="italic"
-             font-weight="400"
-             font-stretch="condensed"
-             font-size="17px"
-             id="text13-2"
-             x="879.9967"
-             y="2281.7886"
-             style="font-size:21.3333px"><tspan
-               style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21.3333px;font-family:Arial;-inkscape-font-specification:'Arial Italic'"
-               id="tspan59">usarium</tspan></text>
-          <rect
-             x="1033.6107"
-             y="2103.7886"
-             width="37"
-             height="30"
-             fill="#ffffff"
-             id="rect14-2" />
-          <rect
-             x="877.61072"
-             y="2182.7886"
-             width="212"
-             height="30"
-             fill="#ffffff"
-             id="rect15-9" />
-          <text
-             font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
-             font-style="italic"
-             font-weight="400"
-             font-stretch="condensed"
-             font-size="17px"
-             id="text15-8"
-             x="888.97974"
-             y="2203.7886"
-             style="font-size:21.3333px"><tspan
-               style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21.3333px;font-family:Arial;-inkscape-font-specification:'Arial Italic'"
-               id="tspan55">Colletotrichum higginsianum</tspan></text>
-          <rect
-             x="1015.6107"
-             y="2260.7886"
-             width="37"
-             height="29"
-             fill="#ffffff"
-             id="rect16-0" />
-          <path
-             d="m 852.11072,2251.2886 h 11.339"
-             stroke="#aeaeae"
-             stroke-width="3"
-             stroke-miterlimit="8"
-             fill="none"
-             fill-rule="evenodd"
-             id="path16-9"
-             style="fill:#000000" />
-          <text
-             font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
-             font-style="italic"
-             font-weight="400"
-             font-stretch="condensed"
-             font-size="17px"
-             id="text10-1"
-             x="1012.2587"
-             y="2124.7886"
-             style="font-size:21.3333px"><tspan
-               style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21.3333px;font-family:Arial;-inkscape-font-specification:'Arial Italic'"
-               id="tspan51">crassa</tspan></text>
-          <text
-             font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
-             font-style="italic"
-             font-weight="400"
-             font-stretch="condensed"
-             font-size="17px"
-             id="text14-6"
-             x="960.32971"
-             y="2281.7886"
-             style="font-size:21.3333px"><tspan
-               style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21.3333px;font-family:Arial;-inkscape-font-specification:'Arial Italic'"
-               id="tspan60">oxysporum</tspan></text>
-          <path
-             style="fill:#ffffff;stroke:#000000;stroke-width:1.51181"
-             d="M 717.07711,2070.8986 H 1124.0423"
-             id="path60" />
-          <path
-             style="fill:#ffffff;stroke:#000000;stroke-width:1.51181"
-             d="m 821.83871,2065.5484 0.17258,4.6599"
-             id="path61" />
-          <path
-             style="fill:#ffffff;stroke:#000000;stroke-width:1.51181"
-             d="m 927.63584,2065.8935 0.17259,4.4874"
-             id="path62" />
-          <path
-             style="fill:#ffffff;stroke:#000000;stroke-width:1.51181"
-             d="m 716.99245,2065.2251 v 5.3697"
-             id="path63" />
-          <path
-             style="fill:#ffffff;stroke:#000000;stroke-width:1.51181"
-             d="m 1123.9924,2065.3471 0.122,5.4918"
-             id="path65" />
-          <path
-             style="fill:#ffffff;stroke:#000000;stroke-width:1.51181"
-             d="m 1031.975,2065.7132 v 4.6375"
-             id="path66" />
-          <path
-             style="fill:#ffffff;stroke:#000000;stroke-width:1.51181"
-             d="M 717.42228,2094.3707 1051.9,2094.7159"
-             id="path67" />
-          <path
-             style="fill:#ffffff;stroke:#000000;stroke-width:1.51181"
-             d="m 722.94514,2119.9139 162.57895,0.6904"
-             id="path68" />
-          <path
-             style="fill:#ffffff;stroke:#000000;stroke-width:1.51181"
-             d="m 735.71673,2145.8023 143.59415,0.3452"
-             id="path69" />
-          <path
-             style="fill:#ffffff;stroke:#000000;stroke-width:1.51181"
-             d="m 793.01632,2236.9294 h 56.26406"
-             id="path70" />
-          <path
-             style="fill:#ffffff;stroke:#000000;stroke-width:1.51181"
-             d="m 853.07734,2223.8126 h 37.96961"
-             id="path71" />
-          <path
-             style="fill:#ffffff;stroke:#000000;stroke-width:1.51181"
-             d="m 831.67629,2171.6907 52.12191,-0.3452"
-             id="path72" />
-          <path
-             style="fill:#ffffff;stroke:#000000;stroke-width:1.51181"
-             d="m 832.36664,2197.9242 42.45693,0.3452"
-             id="path73" />
-          <path
-             style="fill:#ffffff;stroke:#000000;stroke-width:1.51181"
-             d="m 792.32596,2184.4623 35.20819,0.3451"
-             id="path74" />
-          <path
-             style="fill:#ffffff;stroke:#000000;stroke-width:1.51181"
-             d="m 717.07711,2275.5893 140.14237,-0.3452"
-             id="path75" />
-          <path
-             style="fill:#ffffff;stroke:#000000;stroke-width:1.51181"
-             d="m 736.06191,2210.6958 53.84781,0.3452"
-             id="path76" />
-          <path
-             style="fill:#ffffff;stroke:#000000;stroke-width:1.51181"
-             d="m 736.06191,2145.4571 v 29.3402"
-             id="path77" />
-          <path
-             style="fill:#ffffff;stroke:#000000;stroke-width:1.51181"
-             d="m 735.71673,2182.3912 0.34518,28.132"
-             id="path78" />
-          <path
-             style="fill:#ffffff;stroke:#000000;stroke-width:1.51181"
-             d="m 831.84888,2171.5181 0.17258,9.3198"
-             id="path79" />
-          <path
-             style="fill:#ffffff;stroke:#000000;stroke-width:1.51181"
-             d="m 831.67629,2188.777 v 9.3198"
-             id="path80" />
-          <path
-             style="fill:#ffffff;stroke:#000000;stroke-width:1.51181"
-             d="m 723.29031,2119.9139 v 25.0255"
-             id="path81" />
-          <path
-             style="fill:#ffffff;stroke:#000000;stroke-width:1.51181"
-             d="m 722.94514,2153.7414 v 24.1625 l 8.97464,0.1726"
-             id="path82" />
-          <path
-             style="fill:#ffffff;stroke:#000000;stroke-width:1.51181"
-             d="m 853.24993,2240.8989 0.17259,9.8376"
-             id="path83" />
-          <path
-             style="fill:#ffffff;stroke:#000000;stroke-width:1.51181"
-             d="m 852.90475,2224.1578 v 8.9746"
-             id="path84" />
-          <path
-             style="fill:#ffffff;stroke:#000000;stroke-width:1.51181"
-             d="m 792.49855,2184.4623 -0.17258,23.1269"
-             id="path85" />
-          <path
-             style="fill:#ffffff;stroke:#000000;stroke-width:1.51181"
-             d="m 792.32597,2214.1476 0.34517,22.7818"
-             id="path86" />
-          <path
-             style="fill:#ffffff;stroke:#000000;stroke-width:1.51181"
-             d="m 717.07711,2176.5232 v 98.7209"
-             id="path87" />
-          <path
-             style="fill:#ffffff;stroke:#000000;stroke-width:1.51181"
-             d="m 716.90452,2094.1982 0.17259,74.731"
-             id="path88" />
-          <path
-             style="fill:#ffffff;stroke:#000000;stroke-width:1.51181"
-             d="m 717.24969,2149.2541 2.41625,0.1726"
-             id="path89" />
-          <path
-             style="fill:#000000;stroke:#000000;stroke-width:1.51181"
-             d="m 853.06588,2251.0904 10.12923,-0.122"
-             id="path90" />
+             xml:space="preserve"
+             style="font-size:29.3333px;text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#000000"
+             x="-85.241333"
+             y="2063.1572"
+             id="text2-2-3-7"><tspan
+               sodipodi:role="line"
+               id="tspan2-3-8-9"
+               x="-85.241333"
+               y="2063.1572"
+               style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Arial;-inkscape-font-specification:Arial">C</tspan></text>
         </g>
-        <rect
-           style="fill:#ffffff;stroke:#000000;stroke-width:0;stroke-dasharray:none"
-           id="rect90"
-           width="265.09689"
-           height="22.436586"
-           x="789.90973"
-           y="2040.8682" />
-        <text
-           font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
-           font-weight="400"
-           font-stretch="condensed"
-           font-size="16px"
-           id="text50-1-3-3-0-66-6-0-0"
-           x="804.30811"
-           y="2061.0095"
-           style="font-size:21.3333px"><tspan
-             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21.3333px;font-family:Arial;-inkscape-font-specification:Arial"
-             id="tspan98-0-1-5-5-6-5-2">0.10</tspan></text>
-        <text
-           font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
-           font-weight="400"
-           font-stretch="condensed"
-           font-size="16px"
-           id="text50-1-3-3-0-66-6-0-0-8"
-           x="909.21625"
-           y="2061.4412"
-           style="font-size:21.3333px"><tspan
-             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21.3333px;font-family:Arial;-inkscape-font-specification:Arial"
-             id="tspan98-0-1-5-5-6-5-2-9">0.20</tspan></text>
-        <text
-           font-family="'Arial Nova Cond', 'Arial Nova Cond_MSFontService', sans-serif"
-           font-weight="400"
-           font-stretch="condensed"
-           font-size="16px"
-           id="text50-1-3-3-0-66-6-0-0-8-3"
-           x="1012.0234"
-           y="2061.2024"
-           style="font-size:21.3333px"><tspan
-             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21.3333px;font-family:Arial;-inkscape-font-specification:Arial"
-             id="tspan98-0-1-5-5-6-5-2-9-2">0.30</tspan></text>
       </g>
     </g>
   </g>
