@@ -100,7 +100,7 @@ pdf("Figures/Figure_PCR_PLATE.pdf",
 print(Figure_PCR_PLATE)
 dev.off()
 
-# Preliminary PCR results
+# Preliminary PCR results ----
 PCR_preliminary = read_excel("datasets/OE summary Real Time.xlsx", 
                              sheet = "OE")
 # Transform to Log2
