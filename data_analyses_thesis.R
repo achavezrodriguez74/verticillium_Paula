@@ -100,6 +100,32 @@ pdf("Figures/Figure_PCR_PLATE.pdf",
 print(Figure_PCR_PLATE)
 dev.off()
 
+# Preliminary PCR results
+PCR_preliminary = read_excel("datasets/OE summary Real Time.xlsx", 
+                             sheet = "OE")
+# Transform to Log2
+PCR_preliminary = PCR_preliminary %>%  mutate(across(c(Expression), function(x) log2(x)))
+
+# Delete WT
+PCR_preliminary   = PCR_preliminary %>% filter(Treatment != "WT")
+PCR_preliminary.1 = PCR_preliminary %>% group_by(Stage) %>% 
+  summarize(avg = mean(Expression), n = n(), 
+            sd = sd(Expression), se = sd/sqrt(n))
+# Plot
+Figure_PCR_preliminary = ggplot(PCR_preliminary.1, aes(x=Stage, y=avg, fill=as.factor(Stage))) + 
+  geom_bar(stat="identity", color="black", 
+           position=position_dodge()) +
+  geom_errorbar(aes(ymin=avg-se, ymax=avg+se), width=.2,
+                position=position_dodge(.9)) + 
+  scale_fill_manual(name = "", values = c("#e34a33", "#045a8d", "#74c476"), labels = c("PDM", "PLATE", "SXM")) + 
+  xlab("") + ylab("Expression") + theme_classic()
+Figure_PCR_preliminary
+
+pdf("Figures/Figure_PCR_preliminary.pdf",
+    width=12,height=12*3/5)
+print(Figure_PCR_preliminary)
+dev.off()
+
 # Bayesian Methods for Group Comparison ----
 
 # SXM ----
